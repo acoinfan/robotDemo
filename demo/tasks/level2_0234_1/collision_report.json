@@ -1,0 +1,90 @@
+{
+  "task": "level2_0234_1",
+  "status": "error",
+  "object": "2_alarm_clock_0",
+  "target": "2_alarm_clock_0",
+  "position_delta_cm": 24.373967540338306,
+  "max_speed_mps": 0.12186983770169153,
+  "events": [
+    {
+      "time": 4.433,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_alarm_clock_0 contacts 7_computer_0",
+      "count": 95,
+      "first_time": 4.433,
+      "last_time": 6.0
+    },
+    {
+      "time": 4.75,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 7_computer_0",
+      "count": 76,
+      "first_time": 4.75,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_alarm_clock_0 contacts 7_computer_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 7_computer_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.467,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_alarm_clock_0 contacts 1_mouse_0",
+      "count": 33,
+      "first_time": 7.467,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_alarm_clock_0 contacts 1_mouse_0",
+      "count": 32,
+      "first_time": 8.017,
+      "last_time": 8.533
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_alarm_clock_0 contacts 7_computer_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 7_computer_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    }
+  ]
+}

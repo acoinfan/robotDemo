@@ -1,0 +1,80 @@
+{
+  "task": "level2_0835_1",
+  "status": "error",
+  "object": "4_clipboard_1",
+  "target": "4_clipboard_1",
+  "position_delta_cm": 11.63969592265931,
+  "max_speed_mps": 0.058198479613296564,
+  "events": [
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_clipboard_1 contacts 5_printer_0",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_clipboard_1 contacts 5_printer_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.433,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_clipboard_1 contacts 3_clipboard_0",
+      "count": 35,
+      "first_time": 7.433,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.75,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_clipboard_0",
+      "count": 16,
+      "first_time": 7.75,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_clipboard_1 contacts 3_clipboard_0",
+      "count": 34,
+      "first_time": 8.017,
+      "last_time": 8.567
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_clipboard_0",
+      "count": 15,
+      "first_time": 8.017,
+      "last_time": 8.25
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_clipboard_1 contacts 5_printer_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    }
+  ]
+}

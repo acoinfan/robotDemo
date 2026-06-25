@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MesaSkill Pick Demo - level5_0181_0</title>
+    <style>
+:root {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #eef1f4;
+  color: #17202a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  height: 100vh;
+}
+
+.stage {
+  min-width: 0;
+  min-height: 0;
+  background: #d7dde3;
+}
+
+#scene {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 18px;
+  border-left: 1px solid #c4ccd4;
+  background: #f7f8fa;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+}
+
+label,
+dt {
+  color: #53606f;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+select,
+button,
+input {
+  font: inherit;
+}
+
+select {
+  width: 100%;
+  min-height: 36px;
+  padding: 6px 8px;
+  border: 1px solid #b5bfca;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #17202a;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+button {
+  min-height: 38px;
+  border: 1px solid #2f6fed;
+  border-radius: 6px;
+  background: #2f6fed;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button + button {
+  border-color: #a9b3bf;
+  background: #ffffff;
+  color: #17202a;
+}
+
+.timeline {
+  width: 100%;
+  accent-color: #2f6fed;
+}
+
+.stats {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.stats div {
+  display: grid;
+  gap: 3px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d6dce2;
+}
+
+dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+@media (max-width: 820px) {
+  body {
+    overflow: auto;
+  }
+
+  .shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(420px, 64vh) auto;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .panel {
+    border-left: 0;
+    border-top: 1px solid #c4ccd4;
+  }
+}
+
+</style>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="stage">
+        <canvas id="scene" width="1100" height="760"></canvas>
+      </section>
+      <aside class="panel">
+        <div class="field">
+          <label for="taskSelect">Task</label>
+          <select id="taskSelect"></select>
+        </div>
+        <div class="toolbar" aria-label="Playback controls">
+          <button id="playButton" type="button">Play</button>
+          <button id="resetButton" type="button">Reset</button>
+        </div>
+        <input id="timeline" class="timeline" type="range" min="0" max="1000" value="0">
+        <dl class="stats">
+          <div>
+            <dt>Object</dt>
+            <dd id="objectName">-</dd>
+          </div>
+          <div>
+            <dt>Move</dt>
+            <dd id="moveDelta">-</dd>
+          </div>
+          <div>
+            <dt>Grip</dt>
+            <dd id="gripWidth">-</dd>
+          </div>
+          <div>
+            <dt>Variant</dt>
+            <dd id="variantName">-</dd>
+          </div>
+        </dl>
+      </aside>
+    </main>
+    <script>
+window.DEMO_PAYLOAD = {"task": "level5_0181_0", "origin": {"scene_settings": {"units": "centimeters", "up_axis": "Z"}, "item_placement_zone": [0.0, 118.4, 0.0, 91.8], "objects": [{"name": "10_pen_5_06708e597c60482d92161fe3cf770cf6", "instance": "10_pen_5", "retrieved_uid": "06708e597c60482d92161fe3cf770cf6", "selected_uid": "06708e597c60482d92161fe3cf770cf6", "original_size": [0.0075081149116158485, 0.07324732840061188, 0.006820155307650566], "scale_factor": [150.57652685202888, 150.60490415619302, 150.56120453917356], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [1.1, 11.0, 1.0], "position": [43.4, 39.7, 0.5]}, {"name": "11_notebook_0_921ea963c74c4d71880d49a37eac19bc", "instance": "11_notebook_0", "retrieved_uid": "921ea963c74c4d71880d49a37eac19bc", "selected_uid": "921ea963c74c4d71880d49a37eac19bc", "original_size": [0.2440604865550995, 0.3228314518928528, 0.09548622369766235], "scale_factor": [73.32601060102623, 73.3233086628923, 73.32754208192526], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [17.9, 23.7, 7.0], "position": [68.0, 19.7, 3.5]}, {"name": "12_pen_6_1e305b5d90244f8ab23721d98150f425", "instance": "12_pen_6", "retrieved_uid": "1e305b5d90244f8ab23721d98150f425", "selected_uid": "1e305b5d90244f8ab23721d98150f425", "original_size": [0.4556609094142914, 4.475797653198242, 0.4294912815093994], "scale_factor": [2.0266487356679685, 2.0265028098478117, 2.0263868599130315], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [1.0, 9.1, 0.8], "position": [32.8, 39.7, 0.5]}, {"name": "13_pen_7_2d090a51da824b8a9f3550f5e2f105e0", "instance": "13_pen_7", "retrieved_uid": "2d090a51da824b8a9f3550f5e2f105e0", "selected_uid": "2d090a51da824b8a9f3550f5e2f105e0", "original_size": [0.010760847479104996, 0.21148468554019928, 0.00931917130947113], "scale_factor": [52.85296395931482, 52.82801229577959, 52.83353789238484], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [0.6, 11.2, 0.5], "position": [40.8, 40.5, 0.3]}, {"name": "14_tablet_0_da9bb99cebeb46de97e4a0765d142ff2", "instance": "14_tablet_0", "retrieved_uid": "da9bb99cebeb46de97e4a0765d142ff2", "selected_uid": "da9bb99cebeb46de97e4a0765d142ff2", "original_size": [4.233333110809326, 0.8106849193572998, 6.34999942779541], "scale_factor": [6.992099095578766, 6.993545795124439, 6.992099212566664], "rotation": [-0.5011109709739685, 0.5007244348526001, -0.4988879859447479, 0.4992730915546417], "z_rotation": -1.5700247287750244, "size": [29.6, 44.5, 5.8], "position": [67.8, 63.5, 2.9]}, {"name": "15_folder_0_gen_a3fd1be6-3ece-4350-829c-e466b0750646", "instance": "15_folder_0", "retrieved_uid": "gen_a3fd1be6-3ece-4350-829c-e466b0750646", "selected_uid": "gen_a3fd1be6-3ece-4350-829c-e466b0750646", "original_size": [1.81888747215271, 0.4944056272506714, 1.9923393726348877], "scale_factor": [22.529217532580024, 22.526025297500652, 22.528764668976464], "rotation": [0.0, 0.0, 0.7330252528190613, 0.6802014112472534], "z_rotation": 1.6455178260803223, "size": [41.0, 11.2, 45.0], "position": [13.8, 68.0, 22.4]}, {"name": "16_folder_1_gen_8b10a834-a777-4149-957d-4db0a3ab4d0d", "instance": "16_folder_1", "retrieved_uid": "gen_8b10a834-a777-4149-957d-4db0a3ab4d0d", "selected_uid": "gen_8b10a834-a777-4149-957d-4db0a3ab4d0d", "original_size": [1.8360021114349365, 0.4172109365463257, 1.9746732711791992], "scale_factor": [18.805188443949103, 18.80231683711811, 18.804567178309988], "rotation": [0.0, 0.0, -0.7078935503959656, 0.7063191533088684], "z_rotation": -1.5730228424072266, "size": [34.6, 7.8, 37.1], "position": [33.6, 65.4, 18.6]}, {"name": "17_pen_8_1e305b5d90244f8ab23721d98150f425", "instance": "17_pen_8", "retrieved_uid": "1e305b5d90244f8ab23721d98150f425", "selected_uid": "1e305b5d90244f8ab23721d98150f425", "original_size": [0.4556609094142914, 4.475797653198242, 0.4294912815093994], "scale_factor": [2.0969286636663695, 2.0967775311146575, 2.0966577963233153], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [1.0, 9.4, 1.0], "position": [34.6, 39.7, 0.5]}, {"name": "18_folder_2_gen_8b10a834-a777-4149-957d-4db0a3ab4d0d", "instance": "18_folder_2", "retrieved_uid": "gen_8b10a834-a777-4149-957d-4db0a3ab4d0d", "selected_uid": "gen_8b10a834-a777-4149-957d-4db0a3ab4d0d", "original_size": [1.8360021114349365, 0.4172109365463257, 1.9746732711791992], "scale_factor": [14.20541335856889, 14.203244499161555, 14.204945178705215], "rotation": [0.0, 0.0, -0.7047809958457947, 0.7094249129295349], "z_rotation": -1.5642290115356445, "size": [26.1, 5.9, 28.0], "position": [41.6, 64.8, 14.1]}, {"name": "1_mouse_0_e3818e10-f7c7-4bdd-8dca-392bfa0aa853", "instance": "1_mouse_0", "retrieved_uid": "e3818e10-f7c7-4bdd-8dca-392bfa0aa853", "selected_uid": "e3818e10-f7c7-4bdd-8dca-392bfa0aa853", "original_size": [0.05858845263719559, 0.11334414780139923, 0.021234426647424698], "scale_factor": [106.05470925751307, 106.06093946084376, 106.05166709698852], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [6.2, 12.0, 2.2], "position": [39.4, 24.2, 1.1]}, {"name": "20_folder_4_gen_a3fd1be6-3ece-4350-829c-e466b0750646", "instance": "20_folder_4", "retrieved_uid": "gen_a3fd1be6-3ece-4350-829c-e466b0750646", "selected_uid": "gen_a3fd1be6-3ece-4350-829c-e466b0750646", "original_size": [1.81888747215271, 0.4944056272506714, 1.9923393726348877], "scale_factor": [19.664429429993564, 19.66164424042592, 19.66404286868006], "rotation": [0.0, 0.0, 0.7216180562973022, 0.6922914385795593], "z_rotation": 1.6122734546661377, "size": [35.8, 9.8, 39.2], "position": [24.0, 66.1, 19.5]}, {"name": "21_pen_9_0e8155b9bf94494f9754901c53764942", "instance": "21_pen_9", "retrieved_uid": "0e8155b9bf94494f9754901c53764942", "selected_uid": "0e8155b9bf94494f9754901c53764942", "original_size": [3.838439702987671, 10.255468368530273, 2.014038562774658], "scale_factor": [0.9608667123680841, 0.9608457589035903, 0.9607243364527354], "rotation": [-0.04688991606235504, -0.008350852876901627, -0.17513702809810638, 0.9833914041519165], "z_rotation": -0.3510233461856842, "size": [3.7, 9.9, 1.3], "position": [38.9, 40.6, 1.4]}, {"name": "3_smartphone_0_3923dbced4e64a479efcad63ba8e3e03", "instance": "3_smartphone_0", "retrieved_uid": "3923dbced4e64a479efcad63ba8e3e03", "selected_uid": "3923dbced4e64a479efcad63ba8e3e03", "original_size": [2.0171852111816406, 4.112580299377441, 0.19040831923484802], "scale_factor": [6.60754078287195, 6.607311028583547, 6.6115234545972035], "rotation": [0.0, 0.0, -0.7114892601966858, 0.7026969790458679], "z_rotation": -1.5832304954528809, "size": [13.3, 27.2, 1.3], "position": [74.2, 40.0, 0.6]}, {"name": "4_pen_0_0e8155b9bf94494f9754901c53764942", "instance": "4_pen_0", "retrieved_uid": "0e8155b9bf94494f9754901c53764942", "selected_uid": "0e8155b9bf94494f9754901c53764942", "original_size": [3.838439702987671, 10.255468368530273, 2.014038562774658], "scale_factor": [1.1119640078834696, 1.111939696645251, 1.111799735710453], "rotation": [-0.042981211096048355, 0.0, 0.0, 0.9990758895874023], "z_rotation": 0.0, "size": [4.3, 11.5, 1.6], "position": [91.4, 29.8, 0.8]}, {"name": "5_clock_0_489266e9e2c44b5fbba13b2d933956f8", "instance": "5_clock_0", "retrieved_uid": "489266e9e2c44b5fbba13b2d933956f8", "selected_uid": "489266e9e2c44b5fbba13b2d933956f8", "original_size": [17.2241268157959, 10.75599479675293, 19.214460372924805], "scale_factor": [0.6439887828224857, 0.6439884755089139, 0.6439871968072393], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [11.0, 6.9, 12.3], "position": [105.9, 61.8, 6.2]}, {"name": "6_pen_1_0e8155b9bf94494f9754901c53764942", "instance": "6_pen_1", "retrieved_uid": "0e8155b9bf94494f9754901c53764942", "selected_uid": "0e8155b9bf94494f9754901c53764942", "original_size": [3.838439702987671, 10.255468368530273, 2.014038562774658], "scale_factor": [1.1757385613342592, 1.1757117221626945, 1.1755634286432421], "rotation": [-0.05394928157329559, 0.0, 0.0, 0.9985436797142029], "z_rotation": 0.0, "size": [4.5, 12.2, 1.6], "position": [96.5, 31.4, 0.8]}, {"name": "7_pen_2_1e305b5d90244f8ab23721d98150f425", "instance": "7_pen_2", "retrieved_uid": "1e305b5d90244f8ab23721d98150f425", "selected_uid": "1e305b5d90244f8ab23721d98150f425", "original_size": [0.4556609094142914, 4.475797653198242, 0.4294912815093994], "scale_factor": [2.3773378070913327, 2.377166633083091, 2.3770307129710835], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [1.1, 10.6, 1.0], "position": [45.8, 39.8, 0.5]}, {"name": "8_pen_3_d971961e-c476-4279-bbcf-e3e07ab5f468", "instance": "8_pen_3", "retrieved_uid": "d971961e-c476-4279-bbcf-e3e07ab5f468", "selected_uid": "d971961e-c476-4279-bbcf-e3e07ab5f468", "original_size": [0.015487927943468094, 0.15403404831886292, 0.012608285527676344], "scale_factor": [66.0653580504866, 66.07698931231873, 66.07638206968932], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [1.0, 10.2, 0.8], "position": [30.4, 39.7, 0.5]}, {"name": "9_pen_4_1e305b5d90244f8ab23721d98150f425", "instance": "9_pen_4", "retrieved_uid": "1e305b5d90244f8ab23721d98150f425", "selected_uid": "1e305b5d90244f8ab23721d98150f425", "original_size": [0.4556609094142914, 4.475797653198242, 0.4294912815093994], "scale_factor": [2.1542363895083727, 2.15408144373862, 2.1539582385796376], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [1.0, 9.6, 1.0], "position": [36.6, 40.8, 0.5]}]}, "end": {"scene_settings": {"units": "centimeters", "up_axis": "Z"}, "item_placement_zone": [0.0, 118.4, 0.0, 91.8], "objects": [{"name": "10_pen_5_06708e597c60482d92161fe3cf770cf6", "instance": "10_pen_5", "retrieved_uid": "06708e597c60482d92161fe3cf770cf6", "selected_uid": "06708e597c60482d92161fe3cf770cf6", "original_size": [0.0075081149116158485, 0.07324732840061188, 0.006820155307650566], "scale_factor": [150.57652685202888, 150.60490415619302, 150.56120453917356], "rotation": [0.0, 0.945638373291876, 0.0, -0.3248870091081471], "z_rotation": 0.0, "size": [1.1, 11.0, 1.0], "position": [19.827539443969727, 71.50382232666016, 0.43876197934150696]}, {"name": "11_notebook_0_921ea963c74c4d71880d49a37eac19bc", "instance": "11_notebook_0", "retrieved_uid": "921ea963c74c4d71880d49a37eac19bc", "selected_uid": "921ea963c74c4d71880d49a37eac19bc", "original_size": [0.2440604865550995, 0.3228314518928528, 0.09548622369766235], "scale_factor": [73.32601060102623, 73.3233086628923, 73.32754208192526], "rotation": [0.0, 0.0, 0.0, 0.9994757592468204], "z_rotation": 0.0, "size": [17.9, 23.7, 7.0], "position": [68.11576080322266, 19.700807571411133, 3.036154270172119]}, {"name": "12_pen_6_1e305b5d90244f8ab23721d98150f425", "instance": "12_pen_6", "retrieved_uid": "1e305b5d90244f8ab23721d98150f425", "selected_uid": "1e305b5d90244f8ab23721d98150f425", "original_size": [0.4556609094142914, 4.475797653198242, 0.4294912815093994], "scale_factor": [2.0266487356679685, 2.0265028098478117, 2.0263868599130315], "rotation": [0.0, -0.1344414694209727, 0.12400530192251387, 0.9830664300540075], "z_rotation": 0.0, "size": [1.0, 9.1, 0.8], "position": [42.20658493041992, 38.65426254272461, 0.35487228631973267]}, {"name": "13_pen_7_2d090a51da824b8a9f3550f5e2f105e0", "instance": "13_pen_7", "retrieved_uid": "2d090a51da824b8a9f3550f5e2f105e0", "selected_uid": "2d090a51da824b8a9f3550f5e2f105e0", "original_size": [0.010760847479104996, 0.21148468554019928, 0.00931917130947113], "scale_factor": [52.85296395931482, 52.82801229577959, 52.83353789238484], "rotation": [0.0, 0.0, 0.0, 0.9999954557061113], "z_rotation": 0.0, "size": [0.6, 11.2, 0.5], "position": [40.76201248168945, 40.51000213623047, 0.24254734814167023]}, {"name": "14_tablet_0_da9bb99cebeb46de97e4a0765d142ff2", "instance": "14_tablet_0", "retrieved_uid": "da9bb99cebeb46de97e4a0765d142ff2", "selected_uid": "da9bb99cebeb46de97e4a0765d142ff2", "original_size": [4.233333110809326, 0.8106849193572998, 6.34999942779541], "scale_factor": [6.992099095578766, 6.993545795124439, 6.992099212566664], "rotation": [-0.5021405276532153, 0.5017208757887122, -0.497834481209382, 0.49828895492971104], "z_rotation": -1.5700247287750244, "size": [29.6, 44.5, 5.8], "position": [68.01472473144531, 63.435890197753906, 3.0]}, {"name": "15_folder_0_gen_a3fd1be6-3ece-4350-829c-e466b0750646", "instance": "15_folder_0", "retrieved_uid": "gen_a3fd1be6-3ece-4350-829c-e466b0750646", "selected_uid": "gen_a3fd1be6-3ece-4350-829c-e466b0750646", "original_size": [1.81888747215271, 0.4944056272506714, 1.9923393726348877], "scale_factor": [22.529217532580024, 22.526025297500652, 22.528764668976464], "rotation": [0.0, 0.0, 0.732135283048097, 0.6811071077714108], "z_rotation": 1.6455178260803223, "size": [41.0, 11.2, 45.0], "position": [13.4108247756958, 68.00431823730469, 22.385417938232422]}, {"name": "16_folder_1_gen_8b10a834-a777-4149-957d-4db0a3ab4d0d", "instance": "16_folder_1", "retrieved_uid": "gen_8b10a834-a777-4149-957d-4db0a3ab4d0d", "selected_uid": "gen_8b10a834-a777-4149-957d-4db0a3ab4d0d", "original_size": [1.8360021114349365, 0.4172109365463257, 1.9746732711791992], "scale_factor": [18.805188443949103, 18.80231683711811, 18.804567178309988], "rotation": [0.0, 0.0, -0.7078943500030098, 0.7063164774742565], "z_rotation": -1.5730228424072266, "size": [34.6, 7.8, 37.1], "position": [33.544471740722656, 65.4220962524414, 18.540285110473633]}, {"name": "17_pen_8_1e305b5d90244f8ab23721d98150f425", "instance": "17_pen_8", "retrieved_uid": "1e305b5d90244f8ab23721d98150f425", "selected_uid": "1e305b5d90244f8ab23721d98150f425", "original_size": [0.4556609094142914, 4.475797653198242, 0.4294912815093994], "scale_factor": [2.0969286636663695, 2.0967775311146575, 2.0966577963233153], "rotation": [0.0, -0.9606768581874653, 0.0, 0.27662826199027607], "z_rotation": 0.0, "size": [1.0, 9.4, 1.0], "position": [64.24979400634766, 67.94525909423828, 0.43514925241470337]}, {"name": "18_folder_2_gen_8b10a834-a777-4149-957d-4db0a3ab4d0d", "instance": "18_folder_2", "retrieved_uid": "gen_8b10a834-a777-4149-957d-4db0a3ab4d0d", "selected_uid": "gen_8b10a834-a777-4149-957d-4db0a3ab4d0d", "original_size": [1.8360021114349365, 0.4172109365463257, 1.9746732711791992], "scale_factor": [14.20541335856889, 14.203244499161555, 14.204945178705215], "rotation": [0.0, 0.0, -0.7048033693622446, 0.7094008737486911], "z_rotation": -1.5642290115356445, "size": [26.1, 5.9, 28.0], "position": [41.55230712890625, 64.81298065185547, 13.992656707763672]}, {"name": "1_mouse_0_e3818e10-f7c7-4bdd-8dca-392bfa0aa853", "instance": "1_mouse_0", "retrieved_uid": "e3818e10-f7c7-4bdd-8dca-392bfa0aa853", "selected_uid": "e3818e10-f7c7-4bdd-8dca-392bfa0aa853", "original_size": [0.05858845263719559, 0.11334414780139923, 0.021234426647424698], "scale_factor": [106.05470925751307, 106.06093946084376, 106.05166709698852], "rotation": [0.0, 0.0, 0.0, 0.9999999715433199], "z_rotation": 0.0, "size": [6.2, 12.0, 2.2], "position": [39.39946365356445, 24.19987678527832, 1.1262582540512085]}, {"name": "20_folder_4_gen_a3fd1be6-3ece-4350-829c-e466b0750646", "instance": "20_folder_4", "retrieved_uid": "gen_a3fd1be6-3ece-4350-829c-e466b0750646", "selected_uid": "gen_a3fd1be6-3ece-4350-829c-e466b0750646", "original_size": [1.81888747215271, 0.4944056272506714, 1.9923393726348877], "scale_factor": [19.664429429993564, 19.66164424042592, 19.66404286868006], "rotation": [0.0, 0.0, 0.7241569827300539, 0.6895832129617281], "z_rotation": 1.6122734546661377, "size": [35.8, 9.8, 39.2], "position": [23.79339027404785, 66.10795593261719, 19.502172470092773]}, {"name": "21_pen_9_0e8155b9bf94494f9754901c53764942", "instance": "21_pen_9", "retrieved_uid": "0e8155b9bf94494f9754901c53764942", "selected_uid": "0e8155b9bf94494f9754901c53764942", "original_size": [3.838439702987671, 10.255468368530273, 2.014038562774658], "scale_factor": [0.9608667123680841, 0.9608457589035903, 0.9607243364527354], "rotation": [0.0, -0.12324112451695717, -0.17968137114018476, 0.9755228989604906], "z_rotation": -0.3510233461856842, "size": [3.7, 9.9, 1.3], "position": [38.824520111083984, 40.607749938964844, 0.3234059512615204]}, {"name": "3_smartphone_0_3923dbced4e64a479efcad63ba8e3e03", "instance": "3_smartphone_0", "retrieved_uid": "3923dbced4e64a479efcad63ba8e3e03", "selected_uid": "3923dbced4e64a479efcad63ba8e3e03", "original_size": [2.0171852111816406, 4.112580299377441, 0.19040831923484802], "scale_factor": [6.60754078287195, 6.607311028583547, 6.6115234545972035], "rotation": [0.0, 0.0, -0.711480600043977, 0.7026890842211416], "z_rotation": -1.5832304954528809, "size": [13.3, 27.2, 1.3], "position": [74.1937484741211, 40.00041961669922, 0.5584881901741028]}, {"name": "4_pen_0_0e8155b9bf94494f9754901c53764942", "instance": "4_pen_0", "retrieved_uid": "0e8155b9bf94494f9754901c53764942", "selected_uid": "0e8155b9bf94494f9754901c53764942", "original_size": [3.838439702987671, 10.255468368530273, 2.014038562774658], "scale_factor": [1.1119640078834696, 1.111939696645251, 1.111799735710453], "rotation": [0.07712539645745473, -0.35135933203900044, 0.0, 0.9328322814928994], "z_rotation": 0.0, "size": [4.3, 11.5, 1.6], "position": [91.1014175415039, 29.706371307373047, 0.43317684531211853]}, {"name": "5_clock_0_489266e9e2c44b5fbba13b2d933956f8", "instance": "5_clock_0", "retrieved_uid": "489266e9e2c44b5fbba13b2d933956f8", "selected_uid": "489266e9e2c44b5fbba13b2d933956f8", "original_size": [17.2241268157959, 10.75599479675293, 19.214460372924805], "scale_factor": [0.6439887828224857, 0.6439884755089139, 0.6439871968072393], "rotation": [0.0, 0.0, 0.0, 0.9995136680383182], "z_rotation": 0.0, "size": [11.0, 6.9, 12.3], "position": [105.85554504394531, 62.193687438964844, 5.958740711212158]}, {"name": "6_pen_1_0e8155b9bf94494f9754901c53764942", "instance": "6_pen_1", "retrieved_uid": "0e8155b9bf94494f9754901c53764942", "selected_uid": "0e8155b9bf94494f9754901c53764942", "original_size": [3.838439702987671, 10.255468368530273, 2.014038562774658], "scale_factor": [1.1757385613342592, 1.1757117221626945, 1.1755634286432421], "rotation": [0.0, -0.12923027385265323, 0.0, 0.9915701672147379], "z_rotation": 0.0, "size": [4.5, 12.2, 1.6], "position": [96.39859771728516, 31.366342544555664, 0.39781251549720764]}, {"name": "7_pen_2_1e305b5d90244f8ab23721d98150f425", "instance": "7_pen_2", "retrieved_uid": "1e305b5d90244f8ab23721d98150f425", "selected_uid": "1e305b5d90244f8ab23721d98150f425", "original_size": [0.4556609094142914, 4.475797653198242, 0.4294912815093994], "scale_factor": [2.3773378070913327, 2.377166633083091, 2.3770307129710835], "rotation": [0.0, -0.20583179312627828, 0.0, 0.9785673588957213], "z_rotation": 0.0, "size": [1.1, 10.6, 1.0], "position": [45.61393737792969, 39.8007926940918, 0.43873149156570435]}, {"name": "8_pen_3_d971961e-c476-4279-bbcf-e3e07ab5f468", "instance": "8_pen_3", "retrieved_uid": "d971961e-c476-4279-bbcf-e3e07ab5f468", "selected_uid": "d971961e-c476-4279-bbcf-e3e07ab5f468", "original_size": [0.015487927943468094, 0.15403404831886292, 0.012608285527676344], "scale_factor": [66.0653580504866, 66.07698931231873, 66.07638206968932], "rotation": [0.0, 0.0, 0.0, 0.9999538606699638], "z_rotation": 0.0, "size": [1.0, 10.2, 0.8], "position": [30.409210205078125, 39.69370651245117, 0.4027816951274872]}, {"name": "9_pen_4_1e305b5d90244f8ab23721d98150f425", "instance": "9_pen_4", "retrieved_uid": "1e305b5d90244f8ab23721d98150f425", "selected_uid": "1e305b5d90244f8ab23721d98150f425", "original_size": [0.4556609094142914, 4.475797653198242, 0.4294912815093994], "scale_factor": [2.1542363895083727, 2.15408144373862, 2.1539582385796376], "rotation": [0.0, -0.17669315492102416, 0.0, 0.9842397292964041], "z_rotation": 0.0, "size": [1.0, 9.6, 1.0], "position": [36.439659118652344, 40.795780181884766, 0.43445202708244324]}]}, "plan": {"object_uid": "06708e597c60482d92161fe3cf770cf6", "object_name": "10_pen_5_06708e597c60482d92161fe3cf770cf6", "object_instance": "10_pen_5", "position_delta": 39.5872171457725, "rotation_delta": 2.479733761626435, "grasp_width": 0.0088, "poses": [{"translation": [0.434, 0.397, 0.10500000000000001], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.434, 0.397, 0.005], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.434, 0.397, 0.10500000000000001], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.19827539443969727, 0.7150382232666016, 0.10438761979341507], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.19827539443969727, 0.7150382232666016, 0.0043876197934150695], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.19827539443969727, 0.7150382232666016, 0.10438761979341507], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}]}};
+const CM_TO_M = 0.01;
+const APPROACH_HEIGHT_M = 0.1;
+const GRIPPER_MAX_WIDTH_M = 0.08;
+
+const canvas = document.getElementById("scene");
+const ctx = canvas.getContext("2d");
+const taskSelect = document.getElementById("taskSelect");
+const playButton = document.getElementById("playButton");
+const resetButton = document.getElementById("resetButton");
+const timeline = document.getElementById("timeline");
+
+let tasks = [];
+let current = null;
+let progress = 0;
+let playing = false;
+let lastFrame = 0;
+
+init().catch((error) => {
+  console.error(error);
+  drawMessage(`Failed to load demo data: ${error.message}`);
+});
+
+async function init() {
+  if (window.DEMO_PAYLOAD) {
+    initStandalone(window.DEMO_PAYLOAD);
+    requestAnimationFrame(tick);
+    return;
+  }
+
+  const index = await fetchJson("../data/tasks/index.json");
+  tasks = index.tasks;
+  for (const task of tasks) {
+    const option = document.createElement("option");
+    option.value = task.task;
+    option.textContent = `${task.task}  ${task.variant}`;
+    taskSelect.appendChild(option);
+  }
+
+  taskSelect.addEventListener("change", () => loadTask(taskSelect.value));
+  playButton.addEventListener("click", togglePlay);
+  resetButton.addEventListener("click", reset);
+  timeline.addEventListener("input", () => {
+    progress = Number(timeline.value) / 1000;
+    playing = false;
+    playButton.textContent = "Play";
+    render();
+  });
+  window.addEventListener("resize", render);
+
+  await loadTask(tasks[0].task);
+  requestAnimationFrame(tick);
+}
+
+function initStandalone(payload) {
+  tasks = [{ task: payload.task, variant: "standalone" }];
+  const option = document.createElement("option");
+  option.value = payload.task;
+  option.textContent = payload.task;
+  taskSelect.appendChild(option);
+  taskSelect.disabled = true;
+
+  playButton.addEventListener("click", togglePlay);
+  resetButton.addEventListener("click", reset);
+  timeline.addEventListener("input", () => {
+    progress = Number(timeline.value) / 1000;
+    playing = false;
+    playButton.textContent = "Play";
+    render();
+  });
+  window.addEventListener("resize", render);
+
+  current = buildDemoState(tasks[0], payload.origin, payload.end);
+  reset();
+}
+
+async function loadTask(taskName) {
+  const meta = tasks.find((item) => item.task === taskName);
+  const [origin, end] = await Promise.all([
+    fetchJson(`../data/tasks/${taskName}/origin.json`),
+    fetchJson(`../data/tasks/${taskName}/end.json`),
+  ]);
+  current = buildDemoState(meta, origin, end);
+  reset();
+}
+
+function buildDemoState(meta, origin, end) {
+  const moved = findMovedObject(origin, end);
+  const originObj = moved.origin;
+  const endObj = moved.end;
+  const pick = cmToM(originObj.position);
+  const place = cmToM(endObj.position);
+  const poses = [
+    addZ(pick, APPROACH_HEIGHT_M),
+    pick,
+    addZ(pick, APPROACH_HEIGHT_M),
+    addZ(place, APPROACH_HEIGHT_M),
+    place,
+    addZ(place, APPROACH_HEIGHT_M),
+  ];
+  return {
+    meta,
+    origin,
+    end,
+    moved,
+    poses,
+    gripWidth: Math.min(Math.max(Math.min(originObj.size[0], originObj.size[1]) * CM_TO_M * 0.8, 0.005), GRIPPER_MAX_WIDTH_M),
+  };
+}
+
+function findMovedObject(origin, end) {
+  const endByUid = new Map(end.objects.map((object) => [uid(object), object]));
+  const diffs = [];
+  for (const object of origin.objects) {
+    const target = endByUid.get(uid(object));
+    if (!target) continue;
+    const positionDelta = distance(object.position, target.position);
+    const rotationDelta = quatAngle(object.rotation, target.rotation);
+    diffs.push({
+      score: positionDelta + rotationDelta * 10,
+      positionDelta,
+      rotationDelta,
+      origin: object,
+      end: target,
+    });
+  }
+  diffs.sort((a, b) => b.score - a.score);
+  return diffs[0];
+}
+
+function tick(timestamp) {
+  if (!lastFrame) lastFrame = timestamp;
+  const dt = Math.min(timestamp - lastFrame, 48);
+  lastFrame = timestamp;
+
+  if (playing) {
+    progress += dt / 6500;
+    if (progress >= 1) {
+      progress = 1;
+      playing = false;
+      playButton.textContent = "Play";
+    }
+    timeline.value = String(Math.round(progress * 1000));
+    render();
+  }
+  requestAnimationFrame(tick);
+}
+
+function togglePlay() {
+  if (!current) return;
+  if (progress >= 1) progress = 0;
+  playing = !playing;
+  playButton.textContent = playing ? "Pause" : "Play";
+}
+
+function reset() {
+  progress = 0;
+  playing = false;
+  timeline.value = "0";
+  playButton.textContent = "Play";
+  render();
+}
+
+function render() {
+  resizeCanvas();
+  if (!current) {
+    drawMessage("Loading...");
+    return;
+  }
+
+  const bounds = current.origin.item_placement_zone;
+  const view = tableView(bounds);
+  drawBackground(view);
+  drawObjects(current, view);
+  drawPath(current, view);
+  drawGripper(current, view);
+  updateStats(current);
+}
+
+function drawBackground(view) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#d7dde3";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.fillStyle = "#f4f0e7";
+  ctx.strokeStyle = "#596675";
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.rect(view.x, view.y, view.w, view.h);
+  ctx.fill();
+  ctx.stroke();
+
+  ctx.fillStyle = "#596675";
+  ctx.font = "14px system-ui, sans-serif";
+  ctx.fillText("table frame, cm", view.x, view.y - 12);
+}
+
+function drawObjects(state, view) {
+  const movedUid = uid(state.moved.origin);
+  const animated = animatedObjectPosition(state);
+
+  for (const object of state.origin.objects) {
+    if (uid(object) === movedUid) continue;
+    drawObject(object, object.position, view, "#9aa8b6", "#697887", 0.9);
+  }
+
+  for (const object of state.end.objects) {
+    if (uid(object) !== movedUid) continue;
+    drawObject(object, object.position, view, "rgba(47,111,237,0.08)", "#2f6fed", 1, true);
+  }
+
+  drawObject(state.moved.origin, animated, view, "#f2b84b", "#9a6400", 1);
+}
+
+function drawObject(object, position, view, fill, stroke, alpha = 1, dashed = false) {
+  const center = toCanvas(position, view);
+  const width = Math.max(object.size[0] * view.scale, 6);
+  const height = Math.max(object.size[1] * view.scale, 6);
+
+  ctx.save();
+  ctx.globalAlpha = alpha;
+  ctx.translate(center.x, center.y);
+  ctx.rotate(-(object.z_rotation || 0));
+  ctx.fillStyle = fill;
+  ctx.strokeStyle = stroke;
+  ctx.lineWidth = dashed ? 2 : 1.5;
+  ctx.setLineDash(dashed ? [7, 6] : []);
+  ctx.beginPath();
+  roundRect(-width / 2, -height / 2, width, height, 5);
+  ctx.fill();
+  ctx.stroke();
+  ctx.restore();
+}
+
+function drawPath(state, view) {
+  const points = state.poses.map((pose) => toCanvas(mToCm(pose), view));
+  ctx.save();
+  ctx.strokeStyle = "#2f6fed";
+  ctx.lineWidth = 3;
+  ctx.setLineDash([10, 8]);
+  ctx.beginPath();
+  for (let i = 0; i < points.length; i += 1) {
+    if (i === 0) ctx.moveTo(points[i].x, points[i].y);
+    else ctx.lineTo(points[i].x, points[i].y);
+  }
+  ctx.stroke();
+  ctx.restore();
+}
+
+function drawGripper(state, view) {
+  const position = gripperPosition(state);
+  const point = toCanvas(mToCm(position), view);
+  const zCm = position[2] * 100;
+  const open = progress < 0.18 || progress > 0.82;
+  const span = open ? 22 : 12;
+
+  ctx.save();
+  ctx.translate(point.x, point.y);
+  ctx.strokeStyle = "#16202b";
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.moveTo(0, -18);
+  ctx.lineTo(0, 18);
+  ctx.moveTo(-span, -12);
+  ctx.lineTo(0, -12);
+  ctx.moveTo(-span, 12);
+  ctx.lineTo(0, 12);
+  ctx.moveTo(span, -12);
+  ctx.lineTo(0, -12);
+  ctx.moveTo(span, 12);
+  ctx.lineTo(0, 12);
+  ctx.stroke();
+
+  ctx.fillStyle = "#16202b";
+  ctx.font = "12px system-ui, sans-serif";
+  ctx.fillText(`${zCm.toFixed(1)} cm`, 16, -18);
+  ctx.restore();
+}
+
+function animatedObjectPosition(state) {
+  if (progress < 0.22) return state.moved.origin.position;
+  if (progress > 0.82) return state.moved.end.position;
+  const gripper = gripperPosition(state);
+  return mToCm(gripper);
+}
+
+function gripperPosition(state) {
+  const segments = state.poses.length - 1;
+  const scaled = progress * segments;
+  const index = Math.min(Math.floor(scaled), segments - 1);
+  const local = scaled - index;
+  return lerpVec(state.poses[index], state.poses[index + 1], ease(local));
+}
+
+function updateStats(state) {
+  document.getElementById("objectName").textContent = state.moved.origin.instance;
+  document.getElementById("moveDelta").textContent = `${state.moved.positionDelta.toFixed(2)} cm`;
+  document.getElementById("gripWidth").textContent = `${state.gripWidth.toFixed(3)} m`;
+  document.getElementById("variantName").textContent = state.meta.variant;
+}
+
+function tableView(bounds) {
+  const margin = Math.max(36, Math.min(canvas.width, canvas.height) * 0.08);
+  const minX = bounds[0];
+  const maxX = bounds[1];
+  const minY = bounds[2];
+  const maxY = bounds[3];
+  const tableW = maxX - minX;
+  const tableH = maxY - minY;
+  const scale = Math.min((canvas.width - margin * 2) / tableW, (canvas.height - margin * 2) / tableH);
+  const w = tableW * scale;
+  const h = tableH * scale;
+  return {
+    minX,
+    maxY,
+    scale,
+    x: (canvas.width - w) / 2,
+    y: (canvas.height - h) / 2,
+    w,
+    h,
+  };
+}
+
+function toCanvas(positionCm, view) {
+  return {
+    x: view.x + (positionCm[0] - view.minX) * view.scale,
+    y: view.y + (view.maxY - positionCm[1]) * view.scale,
+  };
+}
+
+function resizeCanvas() {
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = Math.max(1, Math.round(rect.width));
+  canvas.height = Math.max(1, Math.round(rect.height));
+}
+
+function drawMessage(message) {
+  resizeCanvas();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#17202a";
+  ctx.font = "18px system-ui, sans-serif";
+  ctx.fillText(message, 32, 48);
+}
+
+async function fetchJson(path) {
+  const response = await fetch(path);
+  if (!response.ok) throw new Error(`${path}: ${response.status}`);
+  return response.json();
+}
+
+function uid(object) {
+  return object.selected_uid || object.retrieved_uid;
+}
+
+function cmToM(position) {
+  return position.map((value) => value * CM_TO_M);
+}
+
+function mToCm(position) {
+  return position.map((value) => value / CM_TO_M);
+}
+
+function addZ(position, dz) {
+  return [position[0], position[1], position[2] + dz];
+}
+
+function distance(a, b) {
+  return Math.hypot(a[0] - b[0], a[1] - b[1], a[2] - b[2]);
+}
+
+function quatAngle(a, b) {
+  const dot = Math.abs(a[0] * b[0] + a[1] * b[1] + a[2] * b[2] + a[3] * b[3]);
+  return 2 * Math.acos(Math.min(1, Math.max(-1, dot)));
+}
+
+function lerpVec(a, b, t) {
+  return [
+    a[0] + (b[0] - a[0]) * t,
+    a[1] + (b[1] - a[1]) * t,
+    a[2] + (b[2] - a[2]) * t,
+  ];
+}
+
+function ease(t) {
+  return t * t * (3 - 2 * t);
+}
+
+function roundRect(x, y, w, h, r) {
+  const radius = Math.min(r, Math.abs(w) / 2, Math.abs(h) / 2);
+  ctx.moveTo(x + radius, y);
+  ctx.lineTo(x + w - radius, y);
+  ctx.quadraticCurveTo(x + w, y, x + w, y + radius);
+  ctx.lineTo(x + w, y + h - radius);
+  ctx.quadraticCurveTo(x + w, y + h, x + w - radius, y + h);
+  ctx.lineTo(x + radius, y + h);
+  ctx.quadraticCurveTo(x, y + h, x, y + h - radius);
+  ctx.lineTo(x, y + radius);
+  ctx.quadraticCurveTo(x, y, x + radius, y);
+}
+
+</script>
+  </body>
+</html>

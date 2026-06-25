@@ -1,0 +1,90 @@
+{
+  "task": "level5_0047_0",
+  "status": "error",
+  "object": "22_candle_1",
+  "target": "22_candle_1",
+  "position_delta_cm": 17.784482153452156,
+  "max_speed_mps": 0.08892241076726079,
+  "events": [
+    {
+      "time": 7.467,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "22_candle_1 contacts 16_cookie_2",
+      "count": 33,
+      "first_time": 7.467,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.55,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "22_candle_1 contacts 21_plate_4",
+      "count": 28,
+      "first_time": 7.55,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.95,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 16_cookie_2",
+      "count": 4,
+      "first_time": 7.95,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.983,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 13_cookie_1",
+      "count": 2,
+      "first_time": 7.983,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 13_cookie_1",
+      "count": 1,
+      "first_time": 8.017,
+      "last_time": 8.017
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "22_candle_1 contacts 16_cookie_2",
+      "count": 32,
+      "first_time": 8.017,
+      "last_time": 8.533
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 16_cookie_2",
+      "count": 3,
+      "first_time": 8.017,
+      "last_time": 8.05
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "22_candle_1 contacts 21_plate_4",
+      "count": 27,
+      "first_time": 8.017,
+      "last_time": 8.45
+    }
+  ]
+}

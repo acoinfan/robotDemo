@@ -1,0 +1,90 @@
+{
+  "task": "level3_1939_0",
+  "status": "error",
+  "object": "6_cup_1",
+  "target": "6_cup_1",
+  "position_delta_cm": 30.392858955948313,
+  "max_speed_mps": 0.1519642947797416,
+  "events": [
+    {
+      "time": 1.5,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 12_pen_1",
+      "count": 31,
+      "first_time": 1.5,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 12_pen_1",
+      "count": 30,
+      "first_time": 2.017,
+      "last_time": 2.5
+    },
+    {
+      "time": 4.033,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_laptop_0",
+      "count": 119,
+      "first_time": 4.033,
+      "last_time": 6.0
+    },
+    {
+      "time": 4.05,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_cup_1 contacts 1_laptop_0",
+      "count": 118,
+      "first_time": 4.05,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_cup_1 contacts 1_laptop_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_laptop_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_cup_1 contacts 1_laptop_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_laptop_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    }
+  ]
+}

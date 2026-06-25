@@ -1,0 +1,80 @@
+{
+  "task": "level3_0390_0",
+  "status": "error",
+  "object": "3_water_bottle_0",
+  "target": "3_water_bottle_0",
+  "position_delta_cm": 11.113026222366194,
+  "max_speed_mps": 0.05556513111183095,
+  "events": [
+    {
+      "time": 0.633,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 14_calendar_1",
+      "count": 83,
+      "first_time": 0.633,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 14_calendar_1",
+      "count": 82,
+      "first_time": 2.017,
+      "last_time": 3.367
+    },
+    {
+      "time": 4.7,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "3_water_bottle_0 contacts 14_calendar_1",
+      "count": 79,
+      "first_time": 4.7,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "3_water_bottle_0 contacts 14_calendar_1",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.25,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 14_calendar_1",
+      "count": 106,
+      "first_time": 6.25,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "3_water_bottle_0 contacts 14_calendar_1",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 14_calendar_1",
+      "count": 105,
+      "first_time": 8.017,
+      "last_time": 9.75
+    }
+  ]
+}

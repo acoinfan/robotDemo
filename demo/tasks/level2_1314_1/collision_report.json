@@ -1,0 +1,50 @@
+{
+  "task": "level2_1314_1",
+  "status": "error",
+  "object": "3_headphones_0",
+  "target": "3_headphones_0",
+  "position_delta_cm": 48.467615425026466,
+  "max_speed_mps": 0.24233807712513233,
+  "events": [
+    {
+      "time": 4.083,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "3_headphones_0 contacts 7_mug_0",
+      "count": 96,
+      "first_time": 4.083,
+      "last_time": 5.667
+    },
+    {
+      "time": 4.3,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 7_mug_0",
+      "count": 64,
+      "first_time": 4.3,
+      "last_time": 5.35
+    },
+    {
+      "time": 5.033,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "3_headphones_0 contacts 1_laptop_0",
+      "count": 53,
+      "first_time": 5.033,
+      "last_time": 5.9
+    },
+    {
+      "time": 5.25,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_laptop_0",
+      "count": 20,
+      "first_time": 5.25,
+      "last_time": 5.567
+    }
+  ]
+}

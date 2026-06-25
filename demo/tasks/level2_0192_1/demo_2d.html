@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MesaSkill Pick Demo - level2_0192_1</title>
+    <style>
+:root {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #eef1f4;
+  color: #17202a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  height: 100vh;
+}
+
+.stage {
+  min-width: 0;
+  min-height: 0;
+  background: #d7dde3;
+}
+
+#scene {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 18px;
+  border-left: 1px solid #c4ccd4;
+  background: #f7f8fa;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+}
+
+label,
+dt {
+  color: #53606f;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+select,
+button,
+input {
+  font: inherit;
+}
+
+select {
+  width: 100%;
+  min-height: 36px;
+  padding: 6px 8px;
+  border: 1px solid #b5bfca;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #17202a;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+button {
+  min-height: 38px;
+  border: 1px solid #2f6fed;
+  border-radius: 6px;
+  background: #2f6fed;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button + button {
+  border-color: #a9b3bf;
+  background: #ffffff;
+  color: #17202a;
+}
+
+.timeline {
+  width: 100%;
+  accent-color: #2f6fed;
+}
+
+.stats {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.stats div {
+  display: grid;
+  gap: 3px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d6dce2;
+}
+
+dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+@media (max-width: 820px) {
+  body {
+    overflow: auto;
+  }
+
+  .shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(420px, 64vh) auto;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .panel {
+    border-left: 0;
+    border-top: 1px solid #c4ccd4;
+  }
+}
+
+</style>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="stage">
+        <canvas id="scene" width="1100" height="760"></canvas>
+      </section>
+      <aside class="panel">
+        <div class="field">
+          <label for="taskSelect">Task</label>
+          <select id="taskSelect"></select>
+        </div>
+        <div class="toolbar" aria-label="Playback controls">
+          <button id="playButton" type="button">Play</button>
+          <button id="resetButton" type="button">Reset</button>
+        </div>
+        <input id="timeline" class="timeline" type="range" min="0" max="1000" value="0">
+        <dl class="stats">
+          <div>
+            <dt>Object</dt>
+            <dd id="objectName">-</dd>
+          </div>
+          <div>
+            <dt>Move</dt>
+            <dd id="moveDelta">-</dd>
+          </div>
+          <div>
+            <dt>Grip</dt>
+            <dd id="gripWidth">-</dd>
+          </div>
+          <div>
+            <dt>Variant</dt>
+            <dd id="variantName">-</dd>
+          </div>
+        </dl>
+      </aside>
+    </main>
+    <script>
+window.DEMO_PAYLOAD = {"task": "level2_0192_1", "origin": {"scene_settings": {"units": "centimeters", "up_axis": "Z"}, "item_placement_zone": [0.0, 117.8, 0.0, 68.8], "objects": [{"name": "10_spiral_notebook_1_a820c3cc463a4ee49b87e1e9a4029abc", "instance": "10_spiral_notebook_1", "retrieved_uid": "a820c3cc463a4ee49b87e1e9a4029abc", "selected_uid": "a820c3cc463a4ee49b87e1e9a4029abc", "original_size": [0.2698706388473511, 0.30859437584877014, 0.0747000128030777], "scale_factor": [84.50853275859357, 84.50966185018892, 84.51483406688901], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [22.8, 26.0, 6.4], "position": [83.0, 16.3, 3.1]}, {"name": "13_notebook_1_0da2d6c0-a4ea-4724-b6fe-38a743925a51", "instance": "13_notebook_1", "retrieved_uid": "0da2d6c0-a4ea-4724-b6fe-38a743925a51", "selected_uid": "0da2d6c0-a4ea-4724-b6fe-38a743925a51", "original_size": [0.16878360509872437, 0.21117427945137024, 0.027983929961919785], "scale_factor": [125.61565665174284, 125.61865394843339, 125.61826574725715], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [21.2, 26.5, 3.5], "position": [60.2, 15.8, 1.8]}, {"name": "2_mug_0_20067975d06343489bd455c6c5821f33", "instance": "2_mug_0", "retrieved_uid": "20067975d06343489bd455c6c5821f33", "selected_uid": "20067975d06343489bd455c6c5821f33", "original_size": [14.151304244995117, 14.553284645080566, 6.949785232543945], "scale_factor": [0.8086954528676091, 0.8087198191162184, 0.8087664657197509], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [11.4, 11.8, 5.6], "position": [87.4, 43.9, 2.8]}, {"name": "3_clock_0_b01c06636ed24d55b39e8254ee3c4600", "instance": "3_clock_0", "retrieved_uid": "b01c06636ed24d55b39e8254ee3c4600", "selected_uid": "b01c06636ed24d55b39e8254ee3c4600", "original_size": [0.44595053791999817, 0.4459504187107086, 0.0494566410779953], "scale_factor": [37.39623099897917, 37.396240995557136, 37.39826166178003], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [16.7, 16.7, 1.8], "position": [25.6, 55.0, 1.0]}, {"name": "5_pen_1_06708e597c60482d92161fe3cf770cf6", "instance": "5_pen_1", "retrieved_uid": "06708e597c60482d92161fe3cf770cf6", "selected_uid": "06708e597c60482d92161fe3cf770cf6", "original_size": [0.0075081149116158485, 0.07324732840061188, 0.006820155307650566], "scale_factor": [193.88477101182926, 193.9213187492318, 193.86500114407855], "rotation": [0.0, 0.0, -0.5468463897705078, 0.8372329473495483], "z_rotation": -1.1571857929229736, "size": [1.4, 14.2, 1.3], "position": [43.0, 18.0, 2.2]}, {"name": "6_spiral_notebook_0_26e240e2-8949-4c4f-aa03-05710a6261d2", "instance": "6_spiral_notebook_0", "retrieved_uid": "26e240e2-8949-4c4f-aa03-05710a6261d2", "selected_uid": "26e240e2-8949-4c4f-aa03-05710a6261d2", "original_size": [0.16902542859315872, 0.22820541262626648, 0.01438859198242426], "scale_factor": [118.78728673338017, 118.79153489438231, 118.7954857119768], "rotation": [0.0, 0.0, -0.9999908804893494, 0.004274517297744751], "z_rotation": -3.1330435276031494, "size": [20.0, 27.1, 1.7], "position": [39.8, 15.6, 0.8]}, {"name": "7_tablet_0_da9bb99cebeb46de97e4a0765d142ff2", "instance": "7_tablet_0", "retrieved_uid": "da9bb99cebeb46de97e4a0765d142ff2", "selected_uid": "da9bb99cebeb46de97e4a0765d142ff2", "original_size": [4.233333110809326, 0.8106849193572998, 6.34999942779541], "scale_factor": [6.675740843263297, 6.677122703605855, 6.675741422415759], "rotation": [-0.49977385997772217, 0.4971267580986023, -0.5018094778060913, 0.5012767314910889], "z_rotation": -1.5686918497085571, "size": [28.3, 42.5, 5.8], "position": [55.2, 46.6, 2.8]}, {"name": "9_notebook_0_921ea963c74c4d71880d49a37eac19bc", "instance": "9_notebook_0", "retrieved_uid": "921ea963c74c4d71880d49a37eac19bc", "selected_uid": "921ea963c74c4d71880d49a37eac19bc", "original_size": [0.2440604865550995, 0.3228314518928528, 0.09548622369766235], "scale_factor": [91.0031924757467, 90.99983882611774, 91.00509389196307], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [22.2, 29.4, 8.6], "position": [17.2, 28.9, 4.3]}]}, "end": {"scene_settings": {"units": "centimeters", "up_axis": "Z"}, "item_placement_zone": [0.0, 117.8, 0.0, 68.8], "objects": [{"name": "10_spiral_notebook_1_a820c3cc463a4ee49b87e1e9a4029abc", "instance": "10_spiral_notebook_1", "retrieved_uid": "a820c3cc463a4ee49b87e1e9a4029abc", "selected_uid": "a820c3cc463a4ee49b87e1e9a4029abc", "original_size": [0.2698706388473511, 0.30859437584877014, 0.0747000128030777], "scale_factor": [84.50853275859357, 84.50966185018892, 84.51483406688901], "rotation": [0.0, 0.0, 0.0, 0.999563600458068], "z_rotation": 0.0, "size": [22.8, 26.0, 6.4], "position": [83.11286926269531, 16.302831649780273, 2.708362579345703]}, {"name": "13_notebook_1_0da2d6c0-a4ea-4724-b6fe-38a743925a51", "instance": "13_notebook_1", "retrieved_uid": "0da2d6c0-a4ea-4724-b6fe-38a743925a51", "selected_uid": "0da2d6c0-a4ea-4724-b6fe-38a743925a51", "original_size": [0.16878360509872437, 0.21117427945137024, 0.027983929961919785], "scale_factor": [125.61565665174284, 125.61865394843339, 125.61826574725715], "rotation": [0.0, 0.0, 0.0, 0.999733942617951], "z_rotation": 0.0, "size": [21.2, 26.5, 3.5], "position": [61.47930145263672, 15.419471740722656, 2.251082181930542]}, {"name": "2_mug_0_20067975d06343489bd455c6c5821f33", "instance": "2_mug_0", "retrieved_uid": "20067975d06343489bd455c6c5821f33", "selected_uid": "20067975d06343489bd455c6c5821f33", "original_size": [14.151304244995117, 14.553284645080566, 6.949785232543945], "scale_factor": [0.8086954528676091, 0.8087198191162184, 0.8087664657197509], "rotation": [0.0, 0.0, 0.0, 0.9999790358807095], "z_rotation": 0.0, "size": [11.4, 11.8, 5.6], "position": [87.36520385742188, 44.02046585083008, 2.7801365852355957]}, {"name": "3_clock_0_b01c06636ed24d55b39e8254ee3c4600", "instance": "3_clock_0", "retrieved_uid": "b01c06636ed24d55b39e8254ee3c4600", "selected_uid": "b01c06636ed24d55b39e8254ee3c4600", "original_size": [0.44595053791999817, 0.4459504187107086, 0.0494566410779953], "scale_factor": [37.39623099897917, 37.396240995557136, 37.39826166178003], "rotation": [0.0, 0.0, 0.0, 0.9999999999999986], "z_rotation": 0.0, "size": [16.7, 16.7, 1.8], "position": [25.600000381469727, 55.0, 0.8999998569488525]}, {"name": "5_pen_1_06708e597c60482d92161fe3cf770cf6", "instance": "5_pen_1", "retrieved_uid": "06708e597c60482d92161fe3cf770cf6", "selected_uid": "06708e597c60482d92161fe3cf770cf6", "original_size": [0.0075081149116158485, 0.07324732840061188, 0.006820155307650566], "scale_factor": [193.88477101182926, 193.9213187492318, 193.86500114407855], "rotation": [0.0, 0.0, -0.5470345242032141, 0.8357152518122526], "z_rotation": -1.1571857929229736, "size": [1.4, 14.2, 1.3], "position": [43.03666305541992, 17.944087982177734, 1.8677499294281006]}, {"name": "6_spiral_notebook_0_26e240e2-8949-4c4f-aa03-05710a6261d2", "instance": "6_spiral_notebook_0", "retrieved_uid": "26e240e2-8949-4c4f-aa03-05710a6261d2", "selected_uid": "26e240e2-8949-4c4f-aa03-05710a6261d2", "original_size": [0.16902542859315872, 0.22820541262626648, 0.01438859198242426], "scale_factor": [118.78728673338017, 118.79153489438231, 118.7954857119768], "rotation": [0.0, 0.0, 0.9944068265907757, 0.10538369903281421], "z_rotation": -3.1330435276031494, "size": [20.0, 27.1, 1.7], "position": [40.79924392700195, 16.149728775024414, 0.7626569271087646]}, {"name": "7_tablet_0_da9bb99cebeb46de97e4a0765d142ff2", "instance": "7_tablet_0", "retrieved_uid": "da9bb99cebeb46de97e4a0765d142ff2", "selected_uid": "da9bb99cebeb46de97e4a0765d142ff2", "original_size": [4.233333110809326, 0.8106849193572998, 6.34999942779541], "scale_factor": [6.675740843263297, 6.677122703605855, 6.675741422415759], "rotation": [-0.5006646524444305, 0.4993522212425732, -0.4993331561506616, 0.5006482438812951], "z_rotation": -1.5686918497085571, "size": [28.3, 42.5, 5.8], "position": [55.32597732543945, 46.4766845703125, 3.0]}, {"name": "9_notebook_0_921ea963c74c4d71880d49a37eac19bc", "instance": "9_notebook_0", "retrieved_uid": "921ea963c74c4d71880d49a37eac19bc", "selected_uid": "921ea963c74c4d71880d49a37eac19bc", "original_size": [0.2440604865550995, 0.3228314518928528, 0.09548622369766235], "scale_factor": [91.0031924757467, 90.99983882611774, 91.00509389196307], "rotation": [-0.6481854887362994, -0.28259705297021614, 0.29097848137894816, 0.644457912682151], "z_rotation": 0.0, "size": [22.2, 29.4, 8.6], "position": [22.831798553466797, 32.156925201416016, 14.582258224487305]}]}, "plan": {"object_uid": "921ea963c74c4d71880d49a37eac19bc", "object_name": "9_notebook_0_921ea963c74c4d71880d49a37eac19bc", "object_instance": "9_notebook_0", "position_delta": 12.16756142000057, "rotation_delta": 1.7409644005026816, "grasp_width": 0.08, "poses": [{"translation": [0.172, 0.289, 0.14300000000000002], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.172, 0.289, 0.043], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.172, 0.289, 0.14300000000000002], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.22831798553466798, 0.32156925201416015, 0.24582258224487305], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.22831798553466798, 0.32156925201416015, 0.14582258224487304], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.22831798553466798, 0.32156925201416015, 0.24582258224487305], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}]}};
+const CM_TO_M = 0.01;
+const APPROACH_HEIGHT_M = 0.1;
+const GRIPPER_MAX_WIDTH_M = 0.08;
+
+const canvas = document.getElementById("scene");
+const ctx = canvas.getContext("2d");
+const taskSelect = document.getElementById("taskSelect");
+const playButton = document.getElementById("playButton");
+const resetButton = document.getElementById("resetButton");
+const timeline = document.getElementById("timeline");
+
+let tasks = [];
+let current = null;
+let progress = 0;
+let playing = false;
+let lastFrame = 0;
+
+init().catch((error) => {
+  console.error(error);
+  drawMessage(`Failed to load demo data: ${error.message}`);
+});
+
+async function init() {
+  if (window.DEMO_PAYLOAD) {
+    initStandalone(window.DEMO_PAYLOAD);
+    requestAnimationFrame(tick);
+    return;
+  }
+
+  const index = await fetchJson("../data/tasks/index.json");
+  tasks = index.tasks;
+  for (const task of tasks) {
+    const option = document.createElement("option");
+    option.value = task.task;
+    option.textContent = `${task.task}  ${task.variant}`;
+    taskSelect.appendChild(option);
+  }
+
+  taskSelect.addEventListener("change", () => loadTask(taskSelect.value));
+  playButton.addEventListener("click", togglePlay);
+  resetButton.addEventListener("click", reset);
+  timeline.addEventListener("input", () => {
+    progress = Number(timeline.value) / 1000;
+    playing = false;
+    playButton.textContent = "Play";
+    render();
+  });
+  window.addEventListener("resize", render);
+
+  await loadTask(tasks[0].task);
+  requestAnimationFrame(tick);
+}
+
+function initStandalone(payload) {
+  tasks = [{ task: payload.task, variant: "standalone" }];
+  const option = document.createElement("option");
+  option.value = payload.task;
+  option.textContent = payload.task;
+  taskSelect.appendChild(option);
+  taskSelect.disabled = true;
+
+  playButton.addEventListener("click", togglePlay);
+  resetButton.addEventListener("click", reset);
+  timeline.addEventListener("input", () => {
+    progress = Number(timeline.value) / 1000;
+    playing = false;
+    playButton.textContent = "Play";
+    render();
+  });
+  window.addEventListener("resize", render);
+
+  current = buildDemoState(tasks[0], payload.origin, payload.end);
+  reset();
+}
+
+async function loadTask(taskName) {
+  const meta = tasks.find((item) => item.task === taskName);
+  const [origin, end] = await Promise.all([
+    fetchJson(`../data/tasks/${taskName}/origin.json`),
+    fetchJson(`../data/tasks/${taskName}/end.json`),
+  ]);
+  current = buildDemoState(meta, origin, end);
+  reset();
+}
+
+function buildDemoState(meta, origin, end) {
+  const moved = findMovedObject(origin, end);
+  const originObj = moved.origin;
+  const endObj = moved.end;
+  const pick = cmToM(originObj.position);
+  const place = cmToM(endObj.position);
+  const poses = [
+    addZ(pick, APPROACH_HEIGHT_M),
+    pick,
+    addZ(pick, APPROACH_HEIGHT_M),
+    addZ(place, APPROACH_HEIGHT_M),
+    place,
+    addZ(place, APPROACH_HEIGHT_M),
+  ];
+  return {
+    meta,
+    origin,
+    end,
+    moved,
+    poses,
+    gripWidth: Math.min(Math.max(Math.min(originObj.size[0], originObj.size[1]) * CM_TO_M * 0.8, 0.005), GRIPPER_MAX_WIDTH_M),
+  };
+}
+
+function findMovedObject(origin, end) {
+  const endByUid = new Map(end.objects.map((object) => [uid(object), object]));
+  const diffs = [];
+  for (const object of origin.objects) {
+    const target = endByUid.get(uid(object));
+    if (!target) continue;
+    const positionDelta = distance(object.position, target.position);
+    const rotationDelta = quatAngle(object.rotation, target.rotation);
+    diffs.push({
+      score: positionDelta + rotationDelta * 10,
+      positionDelta,
+      rotationDelta,
+      origin: object,
+      end: target,
+    });
+  }
+  diffs.sort((a, b) => b.score - a.score);
+  return diffs[0];
+}
+
+function tick(timestamp) {
+  if (!lastFrame) lastFrame = timestamp;
+  const dt = Math.min(timestamp - lastFrame, 48);
+  lastFrame = timestamp;
+
+  if (playing) {
+    progress += dt / 6500;
+    if (progress >= 1) {
+      progress = 1;
+      playing = false;
+      playButton.textContent = "Play";
+    }
+    timeline.value = String(Math.round(progress * 1000));
+    render();
+  }
+  requestAnimationFrame(tick);
+}
+
+function togglePlay() {
+  if (!current) return;
+  if (progress >= 1) progress = 0;
+  playing = !playing;
+  playButton.textContent = playing ? "Pause" : "Play";
+}
+
+function reset() {
+  progress = 0;
+  playing = false;
+  timeline.value = "0";
+  playButton.textContent = "Play";
+  render();
+}
+
+function render() {
+  resizeCanvas();
+  if (!current) {
+    drawMessage("Loading...");
+    return;
+  }
+
+  const bounds = current.origin.item_placement_zone;
+  const view = tableView(bounds);
+  drawBackground(view);
+  drawObjects(current, view);
+  drawPath(current, view);
+  drawGripper(current, view);
+  updateStats(current);
+}
+
+function drawBackground(view) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#d7dde3";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.fillStyle = "#f4f0e7";
+  ctx.strokeStyle = "#596675";
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.rect(view.x, view.y, view.w, view.h);
+  ctx.fill();
+  ctx.stroke();
+
+  ctx.fillStyle = "#596675";
+  ctx.font = "14px system-ui, sans-serif";
+  ctx.fillText("table frame, cm", view.x, view.y - 12);
+}
+
+function drawObjects(state, view) {
+  const movedUid = uid(state.moved.origin);
+  const animated = animatedObjectPosition(state);
+
+  for (const object of state.origin.objects) {
+    if (uid(object) === movedUid) continue;
+    drawObject(object, object.position, view, "#9aa8b6", "#697887", 0.9);
+  }
+
+  for (const object of state.end.objects) {
+    if (uid(object) !== movedUid) continue;
+    drawObject(object, object.position, view, "rgba(47,111,237,0.08)", "#2f6fed", 1, true);
+  }
+
+  drawObject(state.moved.origin, animated, view, "#f2b84b", "#9a6400", 1);
+}
+
+function drawObject(object, position, view, fill, stroke, alpha = 1, dashed = false) {
+  const center = toCanvas(position, view);
+  const width = Math.max(object.size[0] * view.scale, 6);
+  const height = Math.max(object.size[1] * view.scale, 6);
+
+  ctx.save();
+  ctx.globalAlpha = alpha;
+  ctx.translate(center.x, center.y);
+  ctx.rotate(-(object.z_rotation || 0));
+  ctx.fillStyle = fill;
+  ctx.strokeStyle = stroke;
+  ctx.lineWidth = dashed ? 2 : 1.5;
+  ctx.setLineDash(dashed ? [7, 6] : []);
+  ctx.beginPath();
+  roundRect(-width / 2, -height / 2, width, height, 5);
+  ctx.fill();
+  ctx.stroke();
+  ctx.restore();
+}
+
+function drawPath(state, view) {
+  const points = state.poses.map((pose) => toCanvas(mToCm(pose), view));
+  ctx.save();
+  ctx.strokeStyle = "#2f6fed";
+  ctx.lineWidth = 3;
+  ctx.setLineDash([10, 8]);
+  ctx.beginPath();
+  for (let i = 0; i < points.length; i += 1) {
+    if (i === 0) ctx.moveTo(points[i].x, points[i].y);
+    else ctx.lineTo(points[i].x, points[i].y);
+  }
+  ctx.stroke();
+  ctx.restore();
+}
+
+function drawGripper(state, view) {
+  const position = gripperPosition(state);
+  const point = toCanvas(mToCm(position), view);
+  const zCm = position[2] * 100;
+  const open = progress < 0.18 || progress > 0.82;
+  const span = open ? 22 : 12;
+
+  ctx.save();
+  ctx.translate(point.x, point.y);
+  ctx.strokeStyle = "#16202b";
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.moveTo(0, -18);
+  ctx.lineTo(0, 18);
+  ctx.moveTo(-span, -12);
+  ctx.lineTo(0, -12);
+  ctx.moveTo(-span, 12);
+  ctx.lineTo(0, 12);
+  ctx.moveTo(span, -12);
+  ctx.lineTo(0, -12);
+  ctx.moveTo(span, 12);
+  ctx.lineTo(0, 12);
+  ctx.stroke();
+
+  ctx.fillStyle = "#16202b";
+  ctx.font = "12px system-ui, sans-serif";
+  ctx.fillText(`${zCm.toFixed(1)} cm`, 16, -18);
+  ctx.restore();
+}
+
+function animatedObjectPosition(state) {
+  if (progress < 0.22) return state.moved.origin.position;
+  if (progress > 0.82) return state.moved.end.position;
+  const gripper = gripperPosition(state);
+  return mToCm(gripper);
+}
+
+function gripperPosition(state) {
+  const segments = state.poses.length - 1;
+  const scaled = progress * segments;
+  const index = Math.min(Math.floor(scaled), segments - 1);
+  const local = scaled - index;
+  return lerpVec(state.poses[index], state.poses[index + 1], ease(local));
+}
+
+function updateStats(state) {
+  document.getElementById("objectName").textContent = state.moved.origin.instance;
+  document.getElementById("moveDelta").textContent = `${state.moved.positionDelta.toFixed(2)} cm`;
+  document.getElementById("gripWidth").textContent = `${state.gripWidth.toFixed(3)} m`;
+  document.getElementById("variantName").textContent = state.meta.variant;
+}
+
+function tableView(bounds) {
+  const margin = Math.max(36, Math.min(canvas.width, canvas.height) * 0.08);
+  const minX = bounds[0];
+  const maxX = bounds[1];
+  const minY = bounds[2];
+  const maxY = bounds[3];
+  const tableW = maxX - minX;
+  const tableH = maxY - minY;
+  const scale = Math.min((canvas.width - margin * 2) / tableW, (canvas.height - margin * 2) / tableH);
+  const w = tableW * scale;
+  const h = tableH * scale;
+  return {
+    minX,
+    maxY,
+    scale,
+    x: (canvas.width - w) / 2,
+    y: (canvas.height - h) / 2,
+    w,
+    h,
+  };
+}
+
+function toCanvas(positionCm, view) {
+  return {
+    x: view.x + (positionCm[0] - view.minX) * view.scale,
+    y: view.y + (view.maxY - positionCm[1]) * view.scale,
+  };
+}
+
+function resizeCanvas() {
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = Math.max(1, Math.round(rect.width));
+  canvas.height = Math.max(1, Math.round(rect.height));
+}
+
+function drawMessage(message) {
+  resizeCanvas();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#17202a";
+  ctx.font = "18px system-ui, sans-serif";
+  ctx.fillText(message, 32, 48);
+}
+
+async function fetchJson(path) {
+  const response = await fetch(path);
+  if (!response.ok) throw new Error(`${path}: ${response.status}`);
+  return response.json();
+}
+
+function uid(object) {
+  return object.selected_uid || object.retrieved_uid;
+}
+
+function cmToM(position) {
+  return position.map((value) => value * CM_TO_M);
+}
+
+function mToCm(position) {
+  return position.map((value) => value / CM_TO_M);
+}
+
+function addZ(position, dz) {
+  return [position[0], position[1], position[2] + dz];
+}
+
+function distance(a, b) {
+  return Math.hypot(a[0] - b[0], a[1] - b[1], a[2] - b[2]);
+}
+
+function quatAngle(a, b) {
+  const dot = Math.abs(a[0] * b[0] + a[1] * b[1] + a[2] * b[2] + a[3] * b[3]);
+  return 2 * Math.acos(Math.min(1, Math.max(-1, dot)));
+}
+
+function lerpVec(a, b, t) {
+  return [
+    a[0] + (b[0] - a[0]) * t,
+    a[1] + (b[1] - a[1]) * t,
+    a[2] + (b[2] - a[2]) * t,
+  ];
+}
+
+function ease(t) {
+  return t * t * (3 - 2 * t);
+}
+
+function roundRect(x, y, w, h, r) {
+  const radius = Math.min(r, Math.abs(w) / 2, Math.abs(h) / 2);
+  ctx.moveTo(x + radius, y);
+  ctx.lineTo(x + w - radius, y);
+  ctx.quadraticCurveTo(x + w, y, x + w, y + radius);
+  ctx.lineTo(x + w, y + h - radius);
+  ctx.quadraticCurveTo(x + w, y + h, x + w - radius, y + h);
+  ctx.lineTo(x + radius, y + h);
+  ctx.quadraticCurveTo(x, y + h, x, y + h - radius);
+  ctx.lineTo(x, y + radius);
+  ctx.quadraticCurveTo(x, y, x + radius, y);
+}
+
+</script>
+  </body>
+</html>

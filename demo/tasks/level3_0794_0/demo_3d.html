@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MesaTask 3D Demo - level3_0794_0</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; font-family: Inter, system-ui, sans-serif; background: #dfe4e8; }
+    #info { position: fixed; top: 14px; left: 14px; z-index: 2; width: min(360px, calc(100vw - 28px)); padding: 12px; background: rgba(248, 250, 252, 0.92); border: 1px solid #c8d1dc; border-radius: 8px; color: #17202a; }
+    #info h1 { margin: 0 0 8px; font-size: 16px; }
+    #info p { margin: 5px 0; font-size: 13px; line-height: 1.35; }
+    #bar { position: fixed; left: 14px; right: 14px; bottom: 14px; z-index: 2; display: flex; gap: 10px; align-items: center; }
+    button { min-width: 84px; min-height: 36px; border: 0; border-radius: 6px; background: #2f6fed; color: white; font-weight: 700; cursor: pointer; }
+    input { flex: 1; accent-color: #2f6fed; }
+  </style>
+</head>
+<body>
+  <div id="info">
+    <h1>MesaTask 3D Pick Demo</h1>
+    <p><b>Task:</b> <span id="task"></span></p>
+    <p><b>Object:</b> <span id="object"></span></p>
+    <p><b>Move:</b> <span id="move"></span></p>
+    <p><b>Assets:</b> real GLB when available, size boxes otherwise.</p>
+  </div>
+  <div id="bar">
+    <button id="play">Play</button>
+    <input id="time" type="range" min="0" max="1000" value="0">
+  </div>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.165.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.165.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module">
+    import * as THREE from "three";
+    import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+    import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+
+    const data = {"task": "level3_0794_0", "boundary": [0.0, 98.9, 0.0, 68.0], "objects": [{"uid": "52f142c052564d85b6ef21413af34e25", "name": "10_remote_0_52f142c052564d85b6ef21413af34e25", "instance": "10_remote_0", "position": [40.6, 26.2, 1.6], "size": [7.2, 19.1, 3.2], "rotation": [-0.5047170519828796, 0.5019081234931946, -0.49804723262786865, 0.4952755868434906], "z_rotation": -1.570721983909607, "moved": false, "glb": null}, {"uid": "79bff744c1b74462af7d3c0b9b19267b", "name": "11_remote_1_79bff744c1b74462af7d3c0b9b19267b", "instance": "11_remote_1", "position": [16.3, 13.3, 0.6], "size": [4.3, 10.6, 1.3], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "moved": true, "glb": null}, {"uid": "617aa06ab1274fd78275a573c963e893", "name": "12_water_0_617aa06ab1274fd78275a573c963e893", "instance": "12_water_0", "position": [13.7, 42.4, 5.6], "size": [7.6, 7.6, 11.4], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "moved": false, "glb": null}, {"uid": "a1d3863e00b846f9ac7ea24551791e9e", "name": "13_computer_1_a1d3863e00b846f9ac7ea24551791e9e", "instance": "13_computer_1", "position": [82.2, 53.6, 7.4], "size": [10.2, 13.4, 14.8], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "moved": false, "glb": null}, {"uid": "0c0edb114d324eab9106f331244621c5", "name": "1_keyboard_0_0c0edb114d324eab9106f331244621c5", "instance": "1_keyboard_0", "position": [47.6, 12.5, 1.7], "size": [16.3, 45.2, 3.4], "rotation": [0.0, 0.0, -0.7057878971099854, 0.7084231376647949], "z_rotation": -1.56706964969635, "moved": false, "glb": null}, {"uid": "60c36e5b5c334098b823c9ae1838f745", "name": "3_mouse_0_60c36e5b5c334098b823c9ae1838f745", "instance": "3_mouse_0", "position": [84.8, 11.4, 3.5], "size": [6.0, 10.7, 3.8], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "moved": false, "glb": null}, {"uid": "7bfa596d1cfe44d298243636a0b611fc", "name": "4_notebook_0_7bfa596d1cfe44d298243636a0b611fc", "instance": "4_notebook_0", "position": [84.7, 12.5, 1.2], "size": [16.6, 21.2, 2.4], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "moved": false, "glb": null}, {"uid": "1f757df1-67a4-4eeb-b9df-865c36d57d7c", "name": "6_cables_0_1f757df1-67a4-4eeb-b9df-865c36d57d7c", "instance": "6_cables_0", "position": [56.8, 26.0, 1.0], "size": [6.1, 6.1, 1.8], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "moved": false, "glb": null}, {"uid": "c426d88ebc4d42ecac909063ded74e26", "name": "7_lamp_1_c426d88ebc4d42ecac909063ded74e26", "instance": "7_lamp_1", "position": [10.6, 55.4, 16.3], "size": [10.7, 10.2, 32.6], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "moved": false, "glb": null}, {"uid": "a86a3018defd44a28bceca44be216723", "name": "8_computer_0_a86a3018defd44a28bceca44be216723", "instance": "8_computer_0", "position": [46.9, 48.2, 16.6], "size": [47.6, 34.4, 33.1], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "moved": false, "glb": null}], "target": {"uid": "79bff744c1b74462af7d3c0b9b19267b", "name": "11_remote_1_79bff744c1b74462af7d3c0b9b19267b", "instance": "11_remote_1", "position": [-38.729698181152344, 39.729026794433594, -33.03897476196289], "size": [4.3, 10.6, 1.3], "rotation": [-0.20427869126443374, -0.6961599074695732, -0.14365894310159255, -0.6730480722758061], "z_rotation": 0.0, "moved": true, "glb": null}, "plan": {"object_uid": "79bff744c1b74462af7d3c0b9b19267b", "object_instance": "11_remote_1", "position_delta": 69.70180601853575, "rotation_delta": 1.6649479515921697, "grasp_width": 0.0344, "poses": [[0.163, 0.133, 0.10600000000000001], [0.163, 0.133, 0.006], [0.163, 0.133, 0.10600000000000001], [-0.38729698181152344, 0.397290267944336, -0.2303897476196289], [-0.38729698181152344, 0.397290267944336, -0.3303897476196289], [-0.38729698181152344, 0.397290267944336, -0.2303897476196289]]}};
+    const CM = 0.01;
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0xdfe4e8);
+
+    const camera = new THREE.PerspectiveCamera(48, innerWidth / innerHeight, 0.01, 20);
+    camera.position.set(0.65, -1.05, 0.72);
+    camera.lookAt(0.34, 0.32, 0.04);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setPixelRatio(devicePixelRatio);
+    renderer.setSize(innerWidth, innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.target.set(0.34, 0.32, 0.04);
+    controls.update();
+
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x8b8f96, 1.8));
+    const sun = new THREE.DirectionalLight(0xffffff, 2.0);
+    sun.position.set(1.8, -1.4, 2.2);
+    scene.add(sun);
+
+    const table = buildTable(data.boundary);
+    scene.add(table);
+    scene.add(new THREE.GridHelper(0.8, 16, 0x8090a0, 0xb7c0ca));
+
+    const loader = new GLTFLoader();
+    const objects = new Map();
+    const targetMarker = buildTargetMarker(data.target);
+    scene.add(targetMarker);
+
+    for (const obj of data.objects) {
+      const mesh = buildBoxObject(obj);
+      objects.set(obj.uid, mesh);
+      scene.add(mesh);
+      if (obj.glb) {
+        loader.load(obj.glb, (gltf) => {
+          fitLoadedAsset(gltf.scene, obj);
+          scene.remove(mesh);
+          objects.set(obj.uid, gltf.scene);
+          scene.add(gltf.scene);
+        });
+      }
+    }
+
+    const gripper = buildGripper();
+    scene.add(gripper);
+    const path = buildPath(data.plan.poses);
+    scene.add(path);
+
+    document.getElementById("task").textContent = data.task;
+    document.getElementById("object").textContent = data.plan.object_instance;
+    document.getElementById("move").textContent = data.plan.position_delta.toFixed(2) + " cm";
+
+    const play = document.getElementById("play");
+    const time = document.getElementById("time");
+    let playing = false;
+    let progress = 0;
+    let last = 0;
+
+    play.addEventListener("click", () => {
+      if (progress >= 1) progress = 0;
+      playing = !playing;
+      play.textContent = playing ? "Pause" : "Play";
+    });
+    time.addEventListener("input", () => {
+      progress = Number(time.value) / 1000;
+      playing = false;
+      play.textContent = "Play";
+      updateAnimation();
+    });
+
+    addEventListener("resize", () => {
+      camera.aspect = innerWidth / innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(innerWidth, innerHeight);
+    });
+
+    requestAnimationFrame(loop);
+
+    function loop(ts) {
+      const dt = Math.min(ts - last, 48);
+      last = ts;
+      if (playing) {
+        progress += dt / 6500;
+        if (progress >= 1) {
+          progress = 1;
+          playing = false;
+          play.textContent = "Play";
+        }
+        time.value = Math.round(progress * 1000);
+      }
+      updateAnimation();
+      renderer.render(scene, camera);
+      requestAnimationFrame(loop);
+    }
+
+    function updateAnimation() {
+      const p = gripperPosition(progress);
+      gripper.position.set(p[0], p[1], p[2]);
+      const moved = objects.get(data.plan.object_uid);
+      if (moved) {
+        if (progress < 0.22) setObjectPose(moved, data.objects.find(o => o.uid === data.plan.object_uid).position);
+        else if (progress > 0.82) setObjectPose(moved, data.target.position);
+        else moved.position.set(p[0], p[1], p[2]);
+      }
+    }
+
+    function buildTable(boundary) {
+      const w = (boundary[1] - boundary[0]) * CM;
+      const h = (boundary[3] - boundary[2]) * CM;
+      const geo = new THREE.BoxGeometry(w, h, 0.018);
+      const mat = new THREE.MeshStandardMaterial({ color: 0xf0e5d2, roughness: 0.82 });
+      const mesh = new THREE.Mesh(geo, mat);
+      mesh.position.set((boundary[0] + boundary[1]) * CM / 2, (boundary[2] + boundary[3]) * CM / 2, -0.009);
+      return mesh;
+    }
+
+    function buildBoxObject(obj) {
+      const color = obj.moved ? 0xf0aa35 : 0x8fa1b3;
+      const geo = new THREE.BoxGeometry(Math.max(obj.size[0] * CM, 0.006), Math.max(obj.size[1] * CM, 0.006), Math.max(obj.size[2] * CM, 0.006));
+      const mat = new THREE.MeshStandardMaterial({ color, roughness: 0.65, metalness: 0.05 });
+      const mesh = new THREE.Mesh(geo, mat);
+      mesh.userData.obj = obj;
+      setObjectPose(mesh, obj.position);
+      mesh.rotation.z = obj.z_rotation || 0;
+      return mesh;
+    }
+
+    function fitLoadedAsset(root, obj) {
+      const box = new THREE.Box3().setFromObject(root);
+      const size = new THREE.Vector3();
+      box.getSize(size);
+      const target = new THREE.Vector3(obj.size[0] * CM, obj.size[1] * CM, obj.size[2] * CM);
+      const scale = Math.min(target.x / Math.max(size.x, 1e-6), target.y / Math.max(size.y, 1e-6), target.z / Math.max(size.z, 1e-6));
+      root.scale.setScalar(scale);
+      setObjectPose(root, obj.position);
+      root.rotation.z = obj.z_rotation || 0;
+    }
+
+    function setObjectPose(mesh, positionCm) {
+      mesh.position.set(positionCm[0] * CM, positionCm[1] * CM, positionCm[2] * CM);
+    }
+
+    function buildTargetMarker(obj) {
+      const geo = new THREE.BoxGeometry(Math.max(obj.size[0] * CM, 0.006), Math.max(obj.size[1] * CM, 0.006), Math.max(obj.size[2] * CM, 0.006));
+      const mat = new THREE.MeshBasicMaterial({ color: 0x2f6fed, wireframe: true, transparent: true, opacity: 0.55 });
+      const mesh = new THREE.Mesh(geo, mat);
+      setObjectPose(mesh, obj.position);
+      mesh.rotation.z = obj.z_rotation || 0;
+      return mesh;
+    }
+
+    function buildGripper() {
+      const group = new THREE.Group();
+      const mat = new THREE.MeshStandardMaterial({ color: 0x1d2733, roughness: 0.45 });
+      const palm = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.012, 0.012), mat);
+      const left = new THREE.Mesh(new THREE.BoxGeometry(0.012, 0.055, 0.014), mat);
+      const right = left.clone();
+      left.position.x = -0.035;
+      right.position.x = 0.035;
+      group.add(palm, left, right);
+      return group;
+    }
+
+    function buildPath(poses) {
+      const points = poses.map(p => new THREE.Vector3(p[0], p[1], p[2]));
+      const curve = new THREE.CatmullRomCurve3(points);
+      const geo = new THREE.TubeGeometry(curve, 80, 0.002, 8, false);
+      const mat = new THREE.MeshBasicMaterial({ color: 0x2f6fed });
+      return new THREE.Mesh(geo, mat);
+    }
+
+    function gripperPosition(t) {
+      const poses = data.plan.poses;
+      const scaled = t * (poses.length - 1);
+      const i = Math.min(Math.floor(scaled), poses.length - 2);
+      const local = smooth(scaled - i);
+      return lerp(poses[i], poses[i + 1], local);
+    }
+
+    function lerp(a, b, t) {
+      return [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, a[2] + (b[2] - a[2]) * t];
+    }
+
+    function smooth(t) {
+      return t * t * (3 - 2 * t);
+    }
+  </script>
+</body>
+</html>

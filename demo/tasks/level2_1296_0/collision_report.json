@@ -1,0 +1,60 @@
+{
+  "task": "level2_1296_0",
+  "status": "error",
+  "object": "9_notebook_0",
+  "target": "9_notebook_0",
+  "position_delta_cm": 57.27421043171687,
+  "max_speed_mps": 0.2863710521585843,
+  "events": [
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 0.286 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    },
+    {
+      "time": 4.567,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "9_notebook_0 contacts 1_desk_lamp_0",
+      "count": 27,
+      "first_time": 4.567,
+      "last_time": 5.0
+    },
+    {
+      "time": 5.967,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "9_notebook_0 contacts 6_computer_monitor_0",
+      "count": 3,
+      "first_time": 5.967,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "9_notebook_0 contacts 6_computer_monitor_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "9_notebook_0 contacts 6_computer_monitor_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    }
+  ]
+}

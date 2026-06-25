@@ -1,0 +1,30 @@
+{
+  "task": "level3_1814_0",
+  "status": "error",
+  "object": "5_clock_0",
+  "target": "5_clock_0",
+  "position_delta_cm": 9.404553392967948,
+  "max_speed_mps": 0.05,
+  "events": [
+    {
+      "time": 6.767,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "5_clock_0 contacts 7_tablet_0",
+      "count": 75,
+      "first_time": 6.767,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "5_clock_0 contacts 7_tablet_0",
+      "count": 74,
+      "first_time": 8.017,
+      "last_time": 9.233
+    }
+  ]
+}

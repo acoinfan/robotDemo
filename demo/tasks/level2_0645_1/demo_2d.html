@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MesaSkill Pick Demo - level2_0645_1</title>
+    <style>
+:root {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #eef1f4;
+  color: #17202a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  height: 100vh;
+}
+
+.stage {
+  min-width: 0;
+  min-height: 0;
+  background: #d7dde3;
+}
+
+#scene {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 18px;
+  border-left: 1px solid #c4ccd4;
+  background: #f7f8fa;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+}
+
+label,
+dt {
+  color: #53606f;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+select,
+button,
+input {
+  font: inherit;
+}
+
+select {
+  width: 100%;
+  min-height: 36px;
+  padding: 6px 8px;
+  border: 1px solid #b5bfca;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #17202a;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+button {
+  min-height: 38px;
+  border: 1px solid #2f6fed;
+  border-radius: 6px;
+  background: #2f6fed;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button + button {
+  border-color: #a9b3bf;
+  background: #ffffff;
+  color: #17202a;
+}
+
+.timeline {
+  width: 100%;
+  accent-color: #2f6fed;
+}
+
+.stats {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.stats div {
+  display: grid;
+  gap: 3px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d6dce2;
+}
+
+dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+@media (max-width: 820px) {
+  body {
+    overflow: auto;
+  }
+
+  .shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(420px, 64vh) auto;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .panel {
+    border-left: 0;
+    border-top: 1px solid #c4ccd4;
+  }
+}
+
+</style>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="stage">
+        <canvas id="scene" width="1100" height="760"></canvas>
+      </section>
+      <aside class="panel">
+        <div class="field">
+          <label for="taskSelect">Task</label>
+          <select id="taskSelect"></select>
+        </div>
+        <div class="toolbar" aria-label="Playback controls">
+          <button id="playButton" type="button">Play</button>
+          <button id="resetButton" type="button">Reset</button>
+        </div>
+        <input id="timeline" class="timeline" type="range" min="0" max="1000" value="0">
+        <dl class="stats">
+          <div>
+            <dt>Object</dt>
+            <dd id="objectName">-</dd>
+          </div>
+          <div>
+            <dt>Move</dt>
+            <dd id="moveDelta">-</dd>
+          </div>
+          <div>
+            <dt>Grip</dt>
+            <dd id="gripWidth">-</dd>
+          </div>
+          <div>
+            <dt>Variant</dt>
+            <dd id="variantName">-</dd>
+          </div>
+        </dl>
+      </aside>
+    </main>
+    <script>
+window.DEMO_PAYLOAD = {"task": "level2_0645_1", "origin": {"scene_settings": {"units": "centimeters", "up_axis": "Z"}, "item_placement_zone": [0.0, 115.4, 0.0, 77.2], "objects": [{"name": "19_bind_0_gen_8b10a834-a777-4149-957d-4db0a3ab4d0d", "instance": "19_bind_0", "retrieved_uid": "gen_8b10a834-a777-4149-957d-4db0a3ab4d0d", "selected_uid": "gen_8b10a834-a777-4149-957d-4db0a3ab4d0d", "original_size": [1.8360021114349365, 0.4172109365463257, 1.9746732711791992], "scale_factor": [10.726957792182443, 6.392398151789714, 15.20182316325347], "rotation": [-0.4996751546859741, -0.5003248453140259, 0.5003244876861572, 0.4996751546859741], "z_rotation": 1.5720953941345215, "size": [19.7, 30.0, 2.6], "position": [96.4, 29.2, 1.3]}, {"name": "1_laptop_0_ef18ca96fff24272916d706db1f63d5a", "instance": "1_laptop_0", "retrieved_uid": "ef18ca96fff24272916d706db1f63d5a", "selected_uid": "ef18ca96fff24272916d706db1f63d5a", "original_size": [1.2606451511383057, 1.2387748956680298, 0.9915908575057983], "scale_factor": [40.113152967605934, 27.252376721112725, 34.38151766503117], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [50.5, 33.7, 34.1], "position": [53.4, 56.5, 17.0]}, {"name": "3_cup_0_1ffe87b871804859ae741ec97942649d", "instance": "3_cup_0", "retrieved_uid": "1ffe87b871804859ae741ec97942649d", "selected_uid": "1ffe87b871804859ae741ec97942649d", "original_size": [151.98321533203125, 93.73625183105469, 120.00000762939453], "scale_factor": [0.13168352203325506, 0.13167987113478927, 0.1316796231047779], "rotation": [0.0, 0.0, 0.9902878403663635, 0.1390325278043747], "z_rotation": 2.862623929977417, "size": [20.0, 12.4, 15.8], "position": [94.0, 48.0, 7.9]}, {"name": "4_smartphone_0_3923dbced4e64a479efcad63ba8e3e03", "instance": "4_smartphone_0", "retrieved_uid": "3923dbced4e64a479efcad63ba8e3e03", "selected_uid": "3923dbced4e64a479efcad63ba8e3e03", "original_size": [2.0171852111816406, 4.112580299377441, 0.19040831923484802], "scale_factor": [4.235148842609616, 4.235001652679568, 4.237702990598813], "rotation": [0.0, 0.0, -0.6929340958595276, 0.7210010290145874], "z_rotation": -1.531101107597351, "size": [8.5, 17.4, 0.8], "position": [97.6, 28.3, 3.0]}, {"name": "5_notebook_0_a820c3cc463a4ee49b87e1e9a4029abc", "instance": "5_notebook_0", "retrieved_uid": "a820c3cc463a4ee49b87e1e9a4029abc", "selected_uid": "a820c3cc463a4ee49b87e1e9a4029abc", "original_size": [0.2698706388473511, 0.30859437584877014, 0.0747000128030777], "scale_factor": [85.2034701111569, 85.20459837644259, 85.20982619947293], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [23.0, 26.3, 6.4], "position": [51.5, 23.5, 3.2]}, {"name": "7_pen_0_8d4857932fba4a65a286ec60751c5201", "instance": "7_pen_0", "retrieved_uid": "8d4857932fba4a65a286ec60751c5201", "selected_uid": "8d4857932fba4a65a286ec60751c5201", "original_size": [1.9506332874298096, 20.103500366210938, 1.9287000894546509], "scale_factor": [0.7641892211541934, 0.7640137454361086, 0.764130014874333], "rotation": [0.015163994394242764, -0.002032375195994973, 0.13282300531864166, 0.9910216927528381], "z_rotation": 0.2663457989692688, "size": [1.4, 15.4, 1.4], "position": [55.9, 23.3, 6.0]}, {"name": "8_pen_1_0e8155b9bf94494f9754901c53764942", "instance": "8_pen_1", "retrieved_uid": "0e8155b9bf94494f9754901c53764942", "selected_uid": "0e8155b9bf94494f9754901c53764942", "original_size": [3.838439702987671, 10.255468368530273, 2.014038562774658], "scale_factor": [1.311412099181099, 1.6157835255192234, 1.3112185373367213], "rotation": [-0.5354352593421936, 0.8412173390388489, 0.04664323478937149, 0.05904993787407875], "z_rotation": 1.1324962377548218, "size": [5.2, 16.6, 1.9], "position": [75.0, 16.3, 1.8]}]}, "end": {"scene_settings": {"units": "centimeters", "up_axis": "Z"}, "item_placement_zone": [0.0, 115.4, 0.0, 77.2], "objects": [{"name": "19_bind_0_gen_8b10a834-a777-4149-957d-4db0a3ab4d0d", "instance": "19_bind_0", "retrieved_uid": "gen_8b10a834-a777-4149-957d-4db0a3ab4d0d", "selected_uid": "gen_8b10a834-a777-4149-957d-4db0a3ab4d0d", "original_size": [1.8360021114349365, 0.4172109365463257, 1.9746732711791992], "scale_factor": [10.726957792182443, 6.392398151789714, 15.20182316325347], "rotation": [0.12526078343087368, 0.12797980288235764, 0.6891162884124803, 0.7021749406188491], "z_rotation": 1.5720953941345215, "size": [19.7, 30.0, 2.6], "position": [114.3880615234375, 29.17180633544922, 1.7750838994979858]}, {"name": "1_laptop_0_ef18ca96fff24272916d706db1f63d5a", "instance": "1_laptop_0", "retrieved_uid": "ef18ca96fff24272916d706db1f63d5a", "selected_uid": "ef18ca96fff24272916d706db1f63d5a", "original_size": [1.2606451511383057, 1.2387748956680298, 0.9915908575057983], "scale_factor": [40.113152967605934, 27.252376721112725, 34.38151766503117], "rotation": [0.0, 0.0, 0.0, 0.9999506298993499], "z_rotation": 0.0, "size": [50.5, 33.7, 34.1], "position": [53.4006233215332, 56.215084075927734, 16.81543731689453]}, {"name": "3_cup_0_1ffe87b871804859ae741ec97942649d", "instance": "3_cup_0", "retrieved_uid": "1ffe87b871804859ae741ec97942649d", "selected_uid": "1ffe87b871804859ae741ec97942649d", "original_size": [151.98321533203125, 93.73625183105469, 120.00000762939453], "scale_factor": [0.13168352203325506, 0.13167987113478927, 0.1316796231047779], "rotation": [0.0, 0.0, 0.9903186205250881, 0.13878169180186137], "z_rotation": 2.862623929977417, "size": [20.0, 12.4, 15.8], "position": [94.04093933105469, 48.02895736694336, 7.882705211639404]}, {"name": "4_smartphone_0_3923dbced4e64a479efcad63ba8e3e03", "instance": "4_smartphone_0", "retrieved_uid": "3923dbced4e64a479efcad63ba8e3e03", "selected_uid": "3923dbced4e64a479efcad63ba8e3e03", "original_size": [2.0171852111816406, 4.112580299377441, 0.19040831923484802], "scale_factor": [4.235148842609616, 4.235001652679568, 4.237702990598813], "rotation": [-0.5367741591185398, -0.4579494728684459, 0.4600723859784404, 0.5389704834795707], "z_rotation": -1.531101107597351, "size": [8.5, 17.4, 0.8], "position": [82.8051986694336, 60.66523742675781, 0.5]}, {"name": "5_notebook_0_a820c3cc463a4ee49b87e1e9a4029abc", "instance": "5_notebook_0", "retrieved_uid": "a820c3cc463a4ee49b87e1e9a4029abc", "selected_uid": "a820c3cc463a4ee49b87e1e9a4029abc", "original_size": [0.2698706388473511, 0.30859437584877014, 0.0747000128030777], "scale_factor": [85.2034701111569, 85.20459837644259, 85.20982619947293], "rotation": [0.0, 0.0, 0.0, 0.999583401129171], "z_rotation": 0.0, "size": [23.0, 26.3, 6.4], "position": [51.6133918762207, 23.50032615661621, 2.713143825531006]}, {"name": "7_pen_0_8d4857932fba4a65a286ec60751c5201", "instance": "7_pen_0", "retrieved_uid": "8d4857932fba4a65a286ec60751c5201", "selected_uid": "8d4857932fba4a65a286ec60751c5201", "original_size": [1.9506332874298096, 20.103500366210938, 1.9287000894546509], "scale_factor": [0.7641892211541934, 0.7640137454361086, 0.764130014874333], "rotation": [0.0, 0.47724664971518793, 0.10352995049512265, 0.8725101011399831], "z_rotation": 0.2663457989692688, "size": [1.4, 15.4, 1.4], "position": [56.65024948120117, 23.42909049987793, 5.2715301513671875]}, {"name": "8_pen_1_0e8155b9bf94494f9754901c53764942", "instance": "8_pen_1", "retrieved_uid": "0e8155b9bf94494f9754901c53764942", "selected_uid": "0e8155b9bf94494f9754901c53764942", "original_size": [3.838439702987671, 10.255468368530273, 2.014038562774658], "scale_factor": [1.311412099181099, 1.6157835255192234, 1.3112185373367213], "rotation": [-0.5344157215587895, 0.8440547205605659, 0.0, 0.0], "z_rotation": 1.1324962377548218, "size": [5.2, 16.6, 1.9], "position": [75.0800552368164, 16.392925262451172, 0.5931476354598999]}]}, "plan": {"object_uid": "3923dbced4e64a479efcad63ba8e3e03", "object_name": "4_smartphone_0_3923dbced4e64a479efcad63ba8e3e03", "object_instance": "4_smartphone_0", "position_delta": 35.6741466625529, "rotation_delta": 3.0018822052570098, "grasp_width": 0.068, "poses": [{"translation": [0.976, 0.28300000000000003, 0.13], "quaternion": [0.7210009692516707, -0.6929340533832579, -4.2429973524800394e-17, 4.414857645880988e-17]}, {"translation": [0.976, 0.28300000000000003, 0.03], "quaternion": [0.7210009692516707, -0.6929340533832579, -4.2429973524800394e-17, 4.414857645880988e-17]}, {"translation": [0.976, 0.28300000000000003, 0.13], "quaternion": [0.7210009692516707, -0.6929340533832579, -4.2429973524800394e-17, 4.414857645880988e-17]}, {"translation": [0.828051986694336, 0.6066523742675781, 0.10500000000000001], "quaternion": [0.7210009692516707, -0.6929340533832579, -4.2429973524800394e-17, 4.414857645880988e-17]}, {"translation": [0.828051986694336, 0.6066523742675781, 0.005], "quaternion": [0.7210009692516707, -0.6929340533832579, -4.2429973524800394e-17, 4.414857645880988e-17]}, {"translation": [0.828051986694336, 0.6066523742675781, 0.10500000000000001], "quaternion": [0.7210009692516707, -0.6929340533832579, -4.2429973524800394e-17, 4.414857645880988e-17]}]}};
+const CM_TO_M = 0.01;
+const APPROACH_HEIGHT_M = 0.1;
+const GRIPPER_MAX_WIDTH_M = 0.08;
+
+const canvas = document.getElementById("scene");
+const ctx = canvas.getContext("2d");
+const taskSelect = document.getElementById("taskSelect");
+const playButton = document.getElementById("playButton");
+const resetButton = document.getElementById("resetButton");
+const timeline = document.getElementById("timeline");
+
+let tasks = [];
+let current = null;
+let progress = 0;
+let playing = false;
+let lastFrame = 0;
+
+init().catch((error) => {
+  console.error(error);
+  drawMessage(`Failed to load demo data: ${error.message}`);
+});
+
+async function init() {
+  if (window.DEMO_PAYLOAD) {
+    initStandalone(window.DEMO_PAYLOAD);
+    requestAnimationFrame(tick);
+    return;
+  }
+
+  const index = await fetchJson("../data/tasks/index.json");
+  tasks = index.tasks;
+  for (const task of tasks) {
+    const option = document.createElement("option");
+    option.value = task.task;
+    option.textContent = `${task.task}  ${task.variant}`;
+    taskSelect.appendChild(option);
+  }
+
+  taskSelect.addEventListener("change", () => loadTask(taskSelect.value));
+  playButton.addEventListener("click", togglePlay);
+  resetButton.addEventListener("click", reset);
+  timeline.addEventListener("input", () => {
+    progress = Number(timeline.value) / 1000;
+    playing = false;
+    playButton.textContent = "Play";
+    render();
+  });
+  window.addEventListener("resize", render);
+
+  await loadTask(tasks[0].task);
+  requestAnimationFrame(tick);
+}
+
+function initStandalone(payload) {
+  tasks = [{ task: payload.task, variant: "standalone" }];
+  const option = document.createElement("option");
+  option.value = payload.task;
+  option.textContent = payload.task;
+  taskSelect.appendChild(option);
+  taskSelect.disabled = true;
+
+  playButton.addEventListener("click", togglePlay);
+  resetButton.addEventListener("click", reset);
+  timeline.addEventListener("input", () => {
+    progress = Number(timeline.value) / 1000;
+    playing = false;
+    playButton.textContent = "Play";
+    render();
+  });
+  window.addEventListener("resize", render);
+
+  current = buildDemoState(tasks[0], payload.origin, payload.end);
+  reset();
+}
+
+async function loadTask(taskName) {
+  const meta = tasks.find((item) => item.task === taskName);
+  const [origin, end] = await Promise.all([
+    fetchJson(`../data/tasks/${taskName}/origin.json`),
+    fetchJson(`../data/tasks/${taskName}/end.json`),
+  ]);
+  current = buildDemoState(meta, origin, end);
+  reset();
+}
+
+function buildDemoState(meta, origin, end) {
+  const moved = findMovedObject(origin, end);
+  const originObj = moved.origin;
+  const endObj = moved.end;
+  const pick = cmToM(originObj.position);
+  const place = cmToM(endObj.position);
+  const poses = [
+    addZ(pick, APPROACH_HEIGHT_M),
+    pick,
+    addZ(pick, APPROACH_HEIGHT_M),
+    addZ(place, APPROACH_HEIGHT_M),
+    place,
+    addZ(place, APPROACH_HEIGHT_M),
+  ];
+  return {
+    meta,
+    origin,
+    end,
+    moved,
+    poses,
+    gripWidth: Math.min(Math.max(Math.min(originObj.size[0], originObj.size[1]) * CM_TO_M * 0.8, 0.005), GRIPPER_MAX_WIDTH_M),
+  };
+}
+
+function findMovedObject(origin, end) {
+  const endByUid = new Map(end.objects.map((object) => [uid(object), object]));
+  const diffs = [];
+  for (const object of origin.objects) {
+    const target = endByUid.get(uid(object));
+    if (!target) continue;
+    const positionDelta = distance(object.position, target.position);
+    const rotationDelta = quatAngle(object.rotation, target.rotation);
+    diffs.push({
+      score: positionDelta + rotationDelta * 10,
+      positionDelta,
+      rotationDelta,
+      origin: object,
+      end: target,
+    });
+  }
+  diffs.sort((a, b) => b.score - a.score);
+  return diffs[0];
+}
+
+function tick(timestamp) {
+  if (!lastFrame) lastFrame = timestamp;
+  const dt = Math.min(timestamp - lastFrame, 48);
+  lastFrame = timestamp;
+
+  if (playing) {
+    progress += dt / 6500;
+    if (progress >= 1) {
+      progress = 1;
+      playing = false;
+      playButton.textContent = "Play";
+    }
+    timeline.value = String(Math.round(progress * 1000));
+    render();
+  }
+  requestAnimationFrame(tick);
+}
+
+function togglePlay() {
+  if (!current) return;
+  if (progress >= 1) progress = 0;
+  playing = !playing;
+  playButton.textContent = playing ? "Pause" : "Play";
+}
+
+function reset() {
+  progress = 0;
+  playing = false;
+  timeline.value = "0";
+  playButton.textContent = "Play";
+  render();
+}
+
+function render() {
+  resizeCanvas();
+  if (!current) {
+    drawMessage("Loading...");
+    return;
+  }
+
+  const bounds = current.origin.item_placement_zone;
+  const view = tableView(bounds);
+  drawBackground(view);
+  drawObjects(current, view);
+  drawPath(current, view);
+  drawGripper(current, view);
+  updateStats(current);
+}
+
+function drawBackground(view) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#d7dde3";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.fillStyle = "#f4f0e7";
+  ctx.strokeStyle = "#596675";
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.rect(view.x, view.y, view.w, view.h);
+  ctx.fill();
+  ctx.stroke();
+
+  ctx.fillStyle = "#596675";
+  ctx.font = "14px system-ui, sans-serif";
+  ctx.fillText("table frame, cm", view.x, view.y - 12);
+}
+
+function drawObjects(state, view) {
+  const movedUid = uid(state.moved.origin);
+  const animated = animatedObjectPosition(state);
+
+  for (const object of state.origin.objects) {
+    if (uid(object) === movedUid) continue;
+    drawObject(object, object.position, view, "#9aa8b6", "#697887", 0.9);
+  }
+
+  for (const object of state.end.objects) {
+    if (uid(object) !== movedUid) continue;
+    drawObject(object, object.position, view, "rgba(47,111,237,0.08)", "#2f6fed", 1, true);
+  }
+
+  drawObject(state.moved.origin, animated, view, "#f2b84b", "#9a6400", 1);
+}
+
+function drawObject(object, position, view, fill, stroke, alpha = 1, dashed = false) {
+  const center = toCanvas(position, view);
+  const width = Math.max(object.size[0] * view.scale, 6);
+  const height = Math.max(object.size[1] * view.scale, 6);
+
+  ctx.save();
+  ctx.globalAlpha = alpha;
+  ctx.translate(center.x, center.y);
+  ctx.rotate(-(object.z_rotation || 0));
+  ctx.fillStyle = fill;
+  ctx.strokeStyle = stroke;
+  ctx.lineWidth = dashed ? 2 : 1.5;
+  ctx.setLineDash(dashed ? [7, 6] : []);
+  ctx.beginPath();
+  roundRect(-width / 2, -height / 2, width, height, 5);
+  ctx.fill();
+  ctx.stroke();
+  ctx.restore();
+}
+
+function drawPath(state, view) {
+  const points = state.poses.map((pose) => toCanvas(mToCm(pose), view));
+  ctx.save();
+  ctx.strokeStyle = "#2f6fed";
+  ctx.lineWidth = 3;
+  ctx.setLineDash([10, 8]);
+  ctx.beginPath();
+  for (let i = 0; i < points.length; i += 1) {
+    if (i === 0) ctx.moveTo(points[i].x, points[i].y);
+    else ctx.lineTo(points[i].x, points[i].y);
+  }
+  ctx.stroke();
+  ctx.restore();
+}
+
+function drawGripper(state, view) {
+  const position = gripperPosition(state);
+  const point = toCanvas(mToCm(position), view);
+  const zCm = position[2] * 100;
+  const open = progress < 0.18 || progress > 0.82;
+  const span = open ? 22 : 12;
+
+  ctx.save();
+  ctx.translate(point.x, point.y);
+  ctx.strokeStyle = "#16202b";
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.moveTo(0, -18);
+  ctx.lineTo(0, 18);
+  ctx.moveTo(-span, -12);
+  ctx.lineTo(0, -12);
+  ctx.moveTo(-span, 12);
+  ctx.lineTo(0, 12);
+  ctx.moveTo(span, -12);
+  ctx.lineTo(0, -12);
+  ctx.moveTo(span, 12);
+  ctx.lineTo(0, 12);
+  ctx.stroke();
+
+  ctx.fillStyle = "#16202b";
+  ctx.font = "12px system-ui, sans-serif";
+  ctx.fillText(`${zCm.toFixed(1)} cm`, 16, -18);
+  ctx.restore();
+}
+
+function animatedObjectPosition(state) {
+  if (progress < 0.22) return state.moved.origin.position;
+  if (progress > 0.82) return state.moved.end.position;
+  const gripper = gripperPosition(state);
+  return mToCm(gripper);
+}
+
+function gripperPosition(state) {
+  const segments = state.poses.length - 1;
+  const scaled = progress * segments;
+  const index = Math.min(Math.floor(scaled), segments - 1);
+  const local = scaled - index;
+  return lerpVec(state.poses[index], state.poses[index + 1], ease(local));
+}
+
+function updateStats(state) {
+  document.getElementById("objectName").textContent = state.moved.origin.instance;
+  document.getElementById("moveDelta").textContent = `${state.moved.positionDelta.toFixed(2)} cm`;
+  document.getElementById("gripWidth").textContent = `${state.gripWidth.toFixed(3)} m`;
+  document.getElementById("variantName").textContent = state.meta.variant;
+}
+
+function tableView(bounds) {
+  const margin = Math.max(36, Math.min(canvas.width, canvas.height) * 0.08);
+  const minX = bounds[0];
+  const maxX = bounds[1];
+  const minY = bounds[2];
+  const maxY = bounds[3];
+  const tableW = maxX - minX;
+  const tableH = maxY - minY;
+  const scale = Math.min((canvas.width - margin * 2) / tableW, (canvas.height - margin * 2) / tableH);
+  const w = tableW * scale;
+  const h = tableH * scale;
+  return {
+    minX,
+    maxY,
+    scale,
+    x: (canvas.width - w) / 2,
+    y: (canvas.height - h) / 2,
+    w,
+    h,
+  };
+}
+
+function toCanvas(positionCm, view) {
+  return {
+    x: view.x + (positionCm[0] - view.minX) * view.scale,
+    y: view.y + (view.maxY - positionCm[1]) * view.scale,
+  };
+}
+
+function resizeCanvas() {
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = Math.max(1, Math.round(rect.width));
+  canvas.height = Math.max(1, Math.round(rect.height));
+}
+
+function drawMessage(message) {
+  resizeCanvas();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#17202a";
+  ctx.font = "18px system-ui, sans-serif";
+  ctx.fillText(message, 32, 48);
+}
+
+async function fetchJson(path) {
+  const response = await fetch(path);
+  if (!response.ok) throw new Error(`${path}: ${response.status}`);
+  return response.json();
+}
+
+function uid(object) {
+  return object.selected_uid || object.retrieved_uid;
+}
+
+function cmToM(position) {
+  return position.map((value) => value * CM_TO_M);
+}
+
+function mToCm(position) {
+  return position.map((value) => value / CM_TO_M);
+}
+
+function addZ(position, dz) {
+  return [position[0], position[1], position[2] + dz];
+}
+
+function distance(a, b) {
+  return Math.hypot(a[0] - b[0], a[1] - b[1], a[2] - b[2]);
+}
+
+function quatAngle(a, b) {
+  const dot = Math.abs(a[0] * b[0] + a[1] * b[1] + a[2] * b[2] + a[3] * b[3]);
+  return 2 * Math.acos(Math.min(1, Math.max(-1, dot)));
+}
+
+function lerpVec(a, b, t) {
+  return [
+    a[0] + (b[0] - a[0]) * t,
+    a[1] + (b[1] - a[1]) * t,
+    a[2] + (b[2] - a[2]) * t,
+  ];
+}
+
+function ease(t) {
+  return t * t * (3 - 2 * t);
+}
+
+function roundRect(x, y, w, h, r) {
+  const radius = Math.min(r, Math.abs(w) / 2, Math.abs(h) / 2);
+  ctx.moveTo(x + radius, y);
+  ctx.lineTo(x + w - radius, y);
+  ctx.quadraticCurveTo(x + w, y, x + w, y + radius);
+  ctx.lineTo(x + w, y + h - radius);
+  ctx.quadraticCurveTo(x + w, y + h, x + w - radius, y + h);
+  ctx.lineTo(x + radius, y + h);
+  ctx.quadraticCurveTo(x, y + h, x, y + h - radius);
+  ctx.lineTo(x, y + radius);
+  ctx.quadraticCurveTo(x, y, x + radius, y);
+}
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "task": "level2_0064_1",
+  "status": "error",
+  "object": "2_pencil_pen_1",
+  "target": "2_pencil_pen_1",
+  "position_delta_cm": 43.66644036142684,
+  "max_speed_mps": 0.2183322018071342,
+  "events": [
+    {
+      "time": 4.05,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_pencil_pen_1 contacts 18_tablet_1",
+      "count": 104,
+      "first_time": 4.05,
+      "last_time": 5.767
+    },
+    {
+      "time": 4.083,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 18_tablet_1",
+      "count": 97,
+      "first_time": 4.083,
+      "last_time": 5.683
+    },
+    {
+      "time": 4.133,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_pencil_pen_1 contacts 5_pencil_pen_2",
+      "count": 9,
+      "first_time": 4.133,
+      "last_time": 4.267
+    }
+  ]
+}

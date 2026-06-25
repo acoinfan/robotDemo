@@ -1,0 +1,30 @@
+{
+  "task": "level2_2088_1",
+  "status": "error",
+  "object": "12_pen_0",
+  "target": "12_pen_0",
+  "position_delta_cm": 20.929766320058395,
+  "max_speed_mps": 0.10464883160029198,
+  "events": [
+    {
+      "time": 1.483,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 7_notebook_0",
+      "count": 32,
+      "first_time": 1.483,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 7_notebook_0",
+      "count": 31,
+      "first_time": 2.017,
+      "last_time": 2.517
+    }
+  ]
+}

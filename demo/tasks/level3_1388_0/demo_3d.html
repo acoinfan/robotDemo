@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MesaTask 3D Demo - level3_1388_0</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; font-family: Inter, system-ui, sans-serif; background: #dfe4e8; }
+    #info { position: fixed; top: 14px; left: 14px; z-index: 2; width: min(360px, calc(100vw - 28px)); padding: 12px; background: rgba(248, 250, 252, 0.92); border: 1px solid #c8d1dc; border-radius: 8px; color: #17202a; }
+    #info h1 { margin: 0 0 8px; font-size: 16px; }
+    #info p { margin: 5px 0; font-size: 13px; line-height: 1.35; }
+    #bar { position: fixed; left: 14px; right: 14px; bottom: 14px; z-index: 2; display: flex; gap: 10px; align-items: center; }
+    button { min-width: 84px; min-height: 36px; border: 0; border-radius: 6px; background: #2f6fed; color: white; font-weight: 700; cursor: pointer; }
+    input { flex: 1; accent-color: #2f6fed; }
+  </style>
+</head>
+<body>
+  <div id="info">
+    <h1>MesaTask 3D Pick Demo</h1>
+    <p><b>Task:</b> <span id="task"></span></p>
+    <p><b>Object:</b> <span id="object"></span></p>
+    <p><b>Move:</b> <span id="move"></span></p>
+    <p><b>Assets:</b> real GLB when available, size boxes otherwise.</p>
+  </div>
+  <div id="bar">
+    <button id="play">Play</button>
+    <input id="time" type="range" min="0" max="1000" value="0">
+  </div>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.165.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.165.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module">
+    import * as THREE from "three";
+    import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+    import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+
+    const data = {"task": "level3_1388_0", "boundary": [0.0, 79.9, 0.0, 55.7], "objects": [{"uid": "d06536e9-010c-460c-9380-c50517d83bf0", "name": "10_highlighter_1_d06536e9-010c-460c-9380-c50517d83bf0", "instance": "10_highlighter_1", "position": [48.0, 18.8, 1.2], "size": [3.9, 15.2, 2.4], "rotation": [0.014301307499408722, -0.014398876577615738, 0.7138360738754272, 0.7000187635421753], "z_rotation": 1.590352177619934, "moved": false, "glb": null}, {"uid": "f6980f8fc24547348d15627d2af99c0c", "name": "11_highlighter_2_f6980f8fc24547348d15627d2af99c0c", "instance": "11_highlighter_2", "position": [48.7, 21.7, 0.4], "size": [14.0, 0.8, 0.8], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "moved": false, "glb": null}, {"uid": "a5cce410728140c492855a109f219ac1", "name": "12_books_3_a5cce410728140c492855a109f219ac1", "instance": "12_books_3", "position": [8.6, 39.6, 11.9], "size": [19.1, 6.6, 23.7], "rotation": [0.5013428330421448, -0.501338541507721, -0.49732035398483276, 0.49998757243156433], "z_rotation": -1.5681320428848267, "moved": false, "glb": null}, {"uid": "f6980f8fc24547348d15627d2af99c0c", "name": "13_highlighter_3_f6980f8fc24547348d15627d2af99c0c", "instance": "13_highlighter_3", "position": [48.4, 23.4, 0.4], "size": [13.4, 0.7, 0.7], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "moved": false, "glb": null}, {"uid": "0dd8be84d117499d9adfae347dc5a389", "name": "17_highlighter_4_0dd8be84d117499d9adfae347dc5a389", "instance": "17_highlighter_4", "position": [48.0, 25.4, 0.8], "size": [12.5, 1.2, 1.5], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "moved": false, "glb": null}, {"uid": "04eeeca688074aa19a9c94e596b04e33", "name": "2_plant_0_04eeeca688074aa19a9c94e596b04e33", "instance": "2_plant_0", "position": [32.4, 42.2, 10.7], "size": [8.6, 9.0, 21.3], "rotation": [0.0, 0.0, -0.24954773485660553, 0.9683625102043152], "z_rotation": -0.5044263601303101, "moved": true, "glb": null}, {"uid": "c91f9ac4de274b5aad362e0f19c3f16b", "name": "3_tablet_0_c91f9ac4de274b5aad362e0f19c3f16b", "instance": "3_tablet_0", "position": [59.9, 39.4, 0.5], "size": [28.7, 18.9, 1.1], "rotation": [-0.6969408988952637, 0.12877851724624634, -0.12818478047847748, 0.6937277317047119], "z_rotation": -0.36543190479278564, "moved": false, "glb": null}, {"uid": "gen_b0eda79a-42a2-4349-bb83-b6af7af38e1b", "name": "4_clipboard_0_gen_b0eda79a-42a2-4349-bb83-b6af7af38e1b", "instance": "4_clipboard_0", "position": [28.9, 19.9, 1.6], "size": [20.0, 27.8, 3.0], "rotation": [0.008314165286719799, -0.7140185236930847, -0.7000137567520142, 0.009440037421882153], "z_rotation": -3.1165006160736084, "moved": false, "glb": null}, {"uid": "da9bb99cebeb46de97e4a0765d142ff2", "name": "5_tablet_1_da9bb99cebeb46de97e4a0765d142ff2", "instance": "5_tablet_1", "position": [53.6, 9.1, 0.8], "size": [11.8, 17.7, 1.6], "rotation": [0.5884671211242676, -0.391116201877594, -0.3916912376880646, 0.5893322825431824], "z_rotation": -1.1731903553009033, "moved": false, "glb": null}, {"uid": "3f31ff8f9f9742558339d2476e49db19", "name": "6_books_0_3f31ff8f9f9742558339d2476e49db19", "instance": "6_books_0", "position": [13.9, 40.7, 12.8], "size": [18.8, 3.8, 25.7], "rotation": [-0.5016883015632629, -0.4982905983924866, 0.5032575130462646, 0.49673664569854736], "z_rotation": 1.5739197731018066, "moved": false, "glb": null}], "target": {"uid": "04eeeca688074aa19a9c94e596b04e33", "name": "2_plant_0_04eeeca688074aa19a9c94e596b04e33", "instance": "2_plant_0", "position": [23.177391052246094, 79.90428161621094, -37.28923034667969], "size": [8.6, 9.0, 21.3], "rotation": [-0.44611015922501845, 0.3089011128774982, 0.7123902599999364, 0.4450460040900207], "z_rotation": -0.5044263601303101, "moved": true, "glb": null}, "plan": {"object_uid": "04eeeca688074aa19a9c94e596b04e33", "object_instance": "2_plant_0", "position_delta": 61.72224556239359, "rotation_delta": 2.629639083819307, "grasp_width": 0.0688, "poses": [[0.324, 0.42200000000000004, 0.20700000000000002], [0.324, 0.42200000000000004, 0.107], [0.324, 0.42200000000000004, 0.20700000000000002], [0.23177391052246094, 0.7990428161621094, -0.2728923034667968], [0.23177391052246094, 0.7990428161621094, -0.37289230346679686], [0.23177391052246094, 0.7990428161621094, -0.2728923034667968]]}};
+    const CM = 0.01;
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0xdfe4e8);
+
+    const camera = new THREE.PerspectiveCamera(48, innerWidth / innerHeight, 0.01, 20);
+    camera.position.set(0.65, -1.05, 0.72);
+    camera.lookAt(0.34, 0.32, 0.04);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setPixelRatio(devicePixelRatio);
+    renderer.setSize(innerWidth, innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.target.set(0.34, 0.32, 0.04);
+    controls.update();
+
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x8b8f96, 1.8));
+    const sun = new THREE.DirectionalLight(0xffffff, 2.0);
+    sun.position.set(1.8, -1.4, 2.2);
+    scene.add(sun);
+
+    const table = buildTable(data.boundary);
+    scene.add(table);
+    scene.add(new THREE.GridHelper(0.8, 16, 0x8090a0, 0xb7c0ca));
+
+    const loader = new GLTFLoader();
+    const objects = new Map();
+    const targetMarker = buildTargetMarker(data.target);
+    scene.add(targetMarker);
+
+    for (const obj of data.objects) {
+      const mesh = buildBoxObject(obj);
+      objects.set(obj.uid, mesh);
+      scene.add(mesh);
+      if (obj.glb) {
+        loader.load(obj.glb, (gltf) => {
+          fitLoadedAsset(gltf.scene, obj);
+          scene.remove(mesh);
+          objects.set(obj.uid, gltf.scene);
+          scene.add(gltf.scene);
+        });
+      }
+    }
+
+    const gripper = buildGripper();
+    scene.add(gripper);
+    const path = buildPath(data.plan.poses);
+    scene.add(path);
+
+    document.getElementById("task").textContent = data.task;
+    document.getElementById("object").textContent = data.plan.object_instance;
+    document.getElementById("move").textContent = data.plan.position_delta.toFixed(2) + " cm";
+
+    const play = document.getElementById("play");
+    const time = document.getElementById("time");
+    let playing = false;
+    let progress = 0;
+    let last = 0;
+
+    play.addEventListener("click", () => {
+      if (progress >= 1) progress = 0;
+      playing = !playing;
+      play.textContent = playing ? "Pause" : "Play";
+    });
+    time.addEventListener("input", () => {
+      progress = Number(time.value) / 1000;
+      playing = false;
+      play.textContent = "Play";
+      updateAnimation();
+    });
+
+    addEventListener("resize", () => {
+      camera.aspect = innerWidth / innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(innerWidth, innerHeight);
+    });
+
+    requestAnimationFrame(loop);
+
+    function loop(ts) {
+      const dt = Math.min(ts - last, 48);
+      last = ts;
+      if (playing) {
+        progress += dt / 6500;
+        if (progress >= 1) {
+          progress = 1;
+          playing = false;
+          play.textContent = "Play";
+        }
+        time.value = Math.round(progress * 1000);
+      }
+      updateAnimation();
+      renderer.render(scene, camera);
+      requestAnimationFrame(loop);
+    }
+
+    function updateAnimation() {
+      const p = gripperPosition(progress);
+      gripper.position.set(p[0], p[1], p[2]);
+      const moved = objects.get(data.plan.object_uid);
+      if (moved) {
+        if (progress < 0.22) setObjectPose(moved, data.objects.find(o => o.uid === data.plan.object_uid).position);
+        else if (progress > 0.82) setObjectPose(moved, data.target.position);
+        else moved.position.set(p[0], p[1], p[2]);
+      }
+    }
+
+    function buildTable(boundary) {
+      const w = (boundary[1] - boundary[0]) * CM;
+      const h = (boundary[3] - boundary[2]) * CM;
+      const geo = new THREE.BoxGeometry(w, h, 0.018);
+      const mat = new THREE.MeshStandardMaterial({ color: 0xf0e5d2, roughness: 0.82 });
+      const mesh = new THREE.Mesh(geo, mat);
+      mesh.position.set((boundary[0] + boundary[1]) * CM / 2, (boundary[2] + boundary[3]) * CM / 2, -0.009);
+      return mesh;
+    }
+
+    function buildBoxObject(obj) {
+      const color = obj.moved ? 0xf0aa35 : 0x8fa1b3;
+      const geo = new THREE.BoxGeometry(Math.max(obj.size[0] * CM, 0.006), Math.max(obj.size[1] * CM, 0.006), Math.max(obj.size[2] * CM, 0.006));
+      const mat = new THREE.MeshStandardMaterial({ color, roughness: 0.65, metalness: 0.05 });
+      const mesh = new THREE.Mesh(geo, mat);
+      mesh.userData.obj = obj;
+      setObjectPose(mesh, obj.position);
+      mesh.rotation.z = obj.z_rotation || 0;
+      return mesh;
+    }
+
+    function fitLoadedAsset(root, obj) {
+      const box = new THREE.Box3().setFromObject(root);
+      const size = new THREE.Vector3();
+      box.getSize(size);
+      const target = new THREE.Vector3(obj.size[0] * CM, obj.size[1] * CM, obj.size[2] * CM);
+      const scale = Math.min(target.x / Math.max(size.x, 1e-6), target.y / Math.max(size.y, 1e-6), target.z / Math.max(size.z, 1e-6));
+      root.scale.setScalar(scale);
+      setObjectPose(root, obj.position);
+      root.rotation.z = obj.z_rotation || 0;
+    }
+
+    function setObjectPose(mesh, positionCm) {
+      mesh.position.set(positionCm[0] * CM, positionCm[1] * CM, positionCm[2] * CM);
+    }
+
+    function buildTargetMarker(obj) {
+      const geo = new THREE.BoxGeometry(Math.max(obj.size[0] * CM, 0.006), Math.max(obj.size[1] * CM, 0.006), Math.max(obj.size[2] * CM, 0.006));
+      const mat = new THREE.MeshBasicMaterial({ color: 0x2f6fed, wireframe: true, transparent: true, opacity: 0.55 });
+      const mesh = new THREE.Mesh(geo, mat);
+      setObjectPose(mesh, obj.position);
+      mesh.rotation.z = obj.z_rotation || 0;
+      return mesh;
+    }
+
+    function buildGripper() {
+      const group = new THREE.Group();
+      const mat = new THREE.MeshStandardMaterial({ color: 0x1d2733, roughness: 0.45 });
+      const palm = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.012, 0.012), mat);
+      const left = new THREE.Mesh(new THREE.BoxGeometry(0.012, 0.055, 0.014), mat);
+      const right = left.clone();
+      left.position.x = -0.035;
+      right.position.x = 0.035;
+      group.add(palm, left, right);
+      return group;
+    }
+
+    function buildPath(poses) {
+      const points = poses.map(p => new THREE.Vector3(p[0], p[1], p[2]));
+      const curve = new THREE.CatmullRomCurve3(points);
+      const geo = new THREE.TubeGeometry(curve, 80, 0.002, 8, false);
+      const mat = new THREE.MeshBasicMaterial({ color: 0x2f6fed });
+      return new THREE.Mesh(geo, mat);
+    }
+
+    function gripperPosition(t) {
+      const poses = data.plan.poses;
+      const scaled = t * (poses.length - 1);
+      const i = Math.min(Math.floor(scaled), poses.length - 2);
+      const local = smooth(scaled - i);
+      return lerp(poses[i], poses[i + 1], local);
+    }
+
+    function lerp(a, b, t) {
+      return [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, a[2] + (b[2] - a[2]) * t];
+    }
+
+    function smooth(t) {
+      return t * t * (3 - 2 * t);
+    }
+  </script>
+</body>
+</html>

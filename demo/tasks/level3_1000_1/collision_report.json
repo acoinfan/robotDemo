@@ -1,0 +1,90 @@
+{
+  "task": "level3_1000_1",
+  "status": "error",
+  "object": "2_keyboard_0",
+  "target": "2_keyboard_0",
+  "position_delta_cm": 21.241229064861393,
+  "max_speed_mps": 0.10620614532430697,
+  "events": [
+    {
+      "time": 7.05,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_keyboard_0 contacts 7_sticky_note_sticky_note_0",
+      "count": 58,
+      "first_time": 7.05,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.317,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_keyboard_0 contacts 1_mouse_0",
+      "count": 42,
+      "first_time": 7.317,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.45,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_keyboard_0 contacts 5_notebook_0",
+      "count": 34,
+      "first_time": 7.45,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.533,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 5_notebook_0",
+      "count": 29,
+      "first_time": 7.533,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_keyboard_0 contacts 1_mouse_0",
+      "count": 41,
+      "first_time": 8.017,
+      "last_time": 8.683
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_keyboard_0 contacts 5_notebook_0",
+      "count": 33,
+      "first_time": 8.017,
+      "last_time": 8.55
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 5_notebook_0",
+      "count": 28,
+      "first_time": 8.017,
+      "last_time": 8.467
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_keyboard_0 contacts 7_sticky_note_sticky_note_0",
+      "count": 57,
+      "first_time": 8.017,
+      "last_time": 8.95
+    }
+  ]
+}

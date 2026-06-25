@@ -1,0 +1,40 @@
+{
+  "task": "level3_1981_0",
+  "status": "error",
+  "object": "4_plant_1",
+  "target": "4_plant_1",
+  "position_delta_cm": 46.749124609965776,
+  "max_speed_mps": 0.23374562304982885,
+  "events": [
+    {
+      "time": 1.067,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_laptop_0",
+      "count": 57,
+      "first_time": 1.067,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_laptop_0",
+      "count": 56,
+      "first_time": 2.017,
+      "last_time": 2.933
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_plant_1 contacts 1_laptop_0",
+      "count": 8,
+      "first_time": 4.017,
+      "last_time": 4.133
+    }
+  ]
+}

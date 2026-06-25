@@ -1,0 +1,130 @@
+{
+  "task": "level3_0165_1",
+  "status": "error",
+  "object": "11_white_paper_1",
+  "target": "11_white_paper_1",
+  "position_delta_cm": 37.22255660790919,
+  "max_speed_mps": 0.18611278303954595,
+  "events": [
+    {
+      "time": 6.517,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "11_white_paper_1 contacts 6_clipboard_notebook_0",
+      "count": 90,
+      "first_time": 6.517,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.833,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 6_clipboard_notebook_0",
+      "count": 71,
+      "first_time": 6.833,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.067,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "11_white_paper_1 contacts 3_tablet_0",
+      "count": 57,
+      "first_time": 7.067,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.383,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_tablet_0",
+      "count": 38,
+      "first_time": 7.383,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.567,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "11_white_paper_1 contacts 7_clipboard_notebook_1",
+      "count": 25,
+      "first_time": 7.567,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.883,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 7_clipboard_notebook_1",
+      "count": 8,
+      "first_time": 7.883,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "11_white_paper_1 contacts 3_tablet_0",
+      "count": 56,
+      "first_time": 8.017,
+      "last_time": 8.933
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_tablet_0",
+      "count": 37,
+      "first_time": 8.017,
+      "last_time": 8.617
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "11_white_paper_1 contacts 6_clipboard_notebook_0",
+      "count": 89,
+      "first_time": 8.017,
+      "last_time": 9.483
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 6_clipboard_notebook_0",
+      "count": 70,
+      "first_time": 8.017,
+      "last_time": 9.167
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "11_white_paper_1 contacts 7_clipboard_notebook_1",
+      "count": 24,
+      "first_time": 8.017,
+      "last_time": 8.433
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 7_clipboard_notebook_1",
+      "count": 7,
+      "first_time": 8.017,
+      "last_time": 8.117
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "task": "level2_0919_0",
+  "status": "error",
+  "object": "6_paper_0",
+  "target": "6_paper_0",
+  "position_delta_cm": 1531.2488000335557,
+  "max_speed_mps": 7.656244000167779,
+  "events": [
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_paper_0 contacts 5_computer_0",
+      "count": 3,
+      "first_time": 4.017,
+      "last_time": 4.05
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 7.656 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    }
+  ]
+}

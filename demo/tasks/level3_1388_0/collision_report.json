@@ -1,0 +1,20 @@
+{
+  "task": "level3_1388_0",
+  "status": "warning",
+  "object": "2_plant_0",
+  "target": "2_plant_0",
+  "position_delta_cm": 61.72224556239359,
+  "max_speed_mps": 0.3086112278119679,
+  "events": [
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 0.309 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    }
+  ]
+}

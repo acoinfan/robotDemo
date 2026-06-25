@@ -1,0 +1,30 @@
+{
+  "task": "level3_1846_0",
+  "status": "error",
+  "object": "12_pencil_holder_0",
+  "target": "12_pencil_holder_0",
+  "position_delta_cm": 9.293978660857388,
+  "max_speed_mps": 0.05,
+  "events": [
+    {
+      "time": 7.133,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "12_pencil_holder_0 contacts 2_glasses_0",
+      "count": 53,
+      "first_time": 7.133,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "12_pencil_holder_0 contacts 2_glasses_0",
+      "count": 52,
+      "first_time": 8.017,
+      "last_time": 8.867
+    }
+  ]
+}

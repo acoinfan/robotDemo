@@ -1,0 +1,4778 @@
+[
+  {
+    "task": "level1_1181_0",
+    "output_dir": "demo/tasks/level1_1181_0",
+    "status": "ok",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_ipad_0",
+    "target": "5_ipad_0",
+    "collision_status": "ok"
+  },
+  {
+    "task": "level1_1181_1",
+    "output_dir": "demo/tasks/level1_1181_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_pen_0",
+    "target": "4_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0031_0",
+    "output_dir": "demo/tasks/level2_0031_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_calendar_0",
+    "target": "5_calendar_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0031_1",
+    "output_dir": "demo/tasks/level2_0031_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "1_laptop_0",
+    "target": "1_laptop_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0064_0",
+    "output_dir": "demo/tasks/level2_0064_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_pencil_pen_3",
+    "target": "7_pencil_pen_3",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0064_1",
+    "output_dir": "demo/tasks/level2_0064_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_pencil_pen_1",
+    "target": "2_pencil_pen_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0131_0",
+    "output_dir": "demo/tasks/level2_0131_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_cup_0",
+    "target": "5_cup_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0131_1",
+    "output_dir": "demo/tasks/level2_0131_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_mouse_0",
+    "target": "3_mouse_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0192_0",
+    "output_dir": "demo/tasks/level2_0192_0",
+    "status": "collision_warning",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_notebook_0",
+    "target": "9_notebook_0",
+    "collision_status": "warning"
+  },
+  {
+    "task": "level2_0192_1",
+    "output_dir": "demo/tasks/level2_0192_1",
+    "status": "ok",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_notebook_0",
+    "target": "9_notebook_0",
+    "collision_status": "ok"
+  },
+  {
+    "task": "level2_0230_0",
+    "output_dir": "demo/tasks/level2_0230_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_notebook_0",
+    "target": "3_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0230_1",
+    "output_dir": "demo/tasks/level2_0230_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_lamp_0",
+    "target": "5_lamp_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0234_0",
+    "output_dir": "demo/tasks/level2_0234_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "1_mouse_0",
+    "target": "1_mouse_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0234_1",
+    "output_dir": "demo/tasks/level2_0234_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_alarm_clock_0",
+    "target": "2_alarm_clock_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0272_0",
+    "output_dir": "demo/tasks/level2_0272_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "18_tablet_file_0",
+    "target": "18_tablet_file_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0272_1",
+    "output_dir": "demo/tasks/level2_0272_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "18_tablet_file_0",
+    "target": "18_tablet_file_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0313_0",
+    "output_dir": "demo/tasks/level2_0313_0",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 0.339 cm for 9_pen_1_a51ba478-3a52-4f69-a08b-80032e52345f."
+    ]
+  },
+  {
+    "task": "level2_0313_1",
+    "output_dir": "demo/tasks/level2_0313_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_document_holder_0",
+    "target": "4_document_holder_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0363_0",
+    "output_dir": "demo/tasks/level2_0363_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_notebook_0",
+    "target": "7_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0363_1",
+    "output_dir": "demo/tasks/level2_0363_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_pen_0",
+    "target": "4_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0392_0",
+    "output_dir": "demo/tasks/level2_0392_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_clip_1",
+    "target": "9_clip_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0392_1",
+    "output_dir": "demo/tasks/level2_0392_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_clip_1",
+    "target": "9_clip_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0412_0",
+    "output_dir": "demo/tasks/level2_0412_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_bowl_0",
+    "target": "4_bowl_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0412_1",
+    "output_dir": "demo/tasks/level2_0412_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_magazine_notebook_0",
+    "target": "5_magazine_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0469_0",
+    "output_dir": "demo/tasks/level2_0469_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_notebook_1",
+    "target": "9_notebook_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0469_1",
+    "output_dir": "demo/tasks/level2_0469_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "1_mouse_0",
+    "target": "1_mouse_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0497_0",
+    "output_dir": "demo/tasks/level2_0497_0",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 0.955 cm for 3_sticky_note_0_7cd5c7e5be624ca48e072326ed6a1da2."
+    ]
+  },
+  {
+    "task": "level2_0497_1",
+    "output_dir": "demo/tasks/level2_0497_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_mouse_0",
+    "target": "2_mouse_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0505_0",
+    "output_dir": "demo/tasks/level2_0505_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_scissors_0",
+    "target": "5_scissors_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0505_1",
+    "output_dir": "demo/tasks/level2_0505_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_notebook_1",
+    "target": "9_notebook_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0532_0",
+    "output_dir": "demo/tasks/level2_0532_0",
+    "status": "collision_warning",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_notebook_0",
+    "target": "5_notebook_0",
+    "collision_status": "warning"
+  },
+  {
+    "task": "level2_0532_1",
+    "output_dir": "demo/tasks/level2_0532_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_notebook_0",
+    "target": "5_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0542_0",
+    "output_dir": "demo/tasks/level2_0542_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_plate_0",
+    "target": "2_plate_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0542_1",
+    "output_dir": "demo/tasks/level2_0542_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_plate_0",
+    "target": "2_plate_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0565_0",
+    "output_dir": "demo/tasks/level2_0565_0",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 0.667 cm for 9_sticky_notes_0_0c89c545d39d43b28c9ce60cedfc0fb8."
+    ]
+  },
+  {
+    "task": "level2_0565_1",
+    "output_dir": "demo/tasks/level2_0565_1",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 0.663 cm for 9_sticky_notes_0_0c89c545d39d43b28c9ce60cedfc0fb8."
+    ]
+  },
+  {
+    "task": "level2_0645_0",
+    "output_dir": "demo/tasks/level2_0645_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_cup_0",
+    "target": "3_cup_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0645_1",
+    "output_dir": "demo/tasks/level2_0645_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_smartphone_0",
+    "target": "4_smartphone_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0712_0",
+    "output_dir": "demo/tasks/level2_0712_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_notepad_0",
+    "target": "6_notepad_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0712_1",
+    "output_dir": "demo/tasks/level2_0712_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_notepad_0",
+    "target": "6_notepad_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0832_0",
+    "output_dir": "demo/tasks/level2_0832_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_pen_0",
+    "target": "7_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0832_1",
+    "output_dir": "demo/tasks/level2_0832_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_clock_0",
+    "target": "2_clock_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0835_0",
+    "output_dir": "demo/tasks/level2_0835_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_clipboard_1",
+    "target": "4_clipboard_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0835_1",
+    "output_dir": "demo/tasks/level2_0835_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_clipboard_1",
+    "target": "4_clipboard_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0883_0",
+    "output_dir": "demo/tasks/level2_0883_0",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 0.181 cm for 8_book_notebook_0_a820c3cc463a4ee49b87e1e9a4029abc."
+    ]
+  },
+  {
+    "task": "level2_0883_1",
+    "output_dir": "demo/tasks/level2_0883_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "11_paper_book_notebook_0",
+    "target": "11_paper_book_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0919_0",
+    "output_dir": "demo/tasks/level2_0919_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_paper_0",
+    "target": "6_paper_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0919_1",
+    "output_dir": "demo/tasks/level2_0919_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_paper_0",
+    "target": "6_paper_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0989_0",
+    "output_dir": "demo/tasks/level2_0989_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_pen_0",
+    "target": "3_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_0989_1",
+    "output_dir": "demo/tasks/level2_0989_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "11_notebooks_1",
+    "target": "11_notebooks_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1012_0",
+    "output_dir": "demo/tasks/level2_1012_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_scissors_0",
+    "target": "2_scissors_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1012_1",
+    "output_dir": "demo/tasks/level2_1012_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_scissors_0",
+    "target": "2_scissors_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1019_0",
+    "output_dir": "demo/tasks/level2_1019_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "10_folder_0",
+    "target": "10_folder_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1019_1",
+    "output_dir": "demo/tasks/level2_1019_1",
+    "status": "ok",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_computer_0",
+    "target": "3_computer_0",
+    "collision_status": "ok"
+  },
+  {
+    "task": "level2_1040_0",
+    "output_dir": "demo/tasks/level2_1040_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_paperclip_0",
+    "target": "6_paperclip_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1040_1",
+    "output_dir": "demo/tasks/level2_1040_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_notebook_0",
+    "target": "4_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1048_0",
+    "output_dir": "demo/tasks/level2_1048_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_pen_0",
+    "target": "6_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1048_1",
+    "output_dir": "demo/tasks/level2_1048_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_tablet_0",
+    "target": "7_tablet_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1147_0",
+    "output_dir": "demo/tasks/level2_1147_0",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 0.628 cm for 14_pen_3_1e305b5d90244f8ab23721d98150f425."
+    ]
+  },
+  {
+    "task": "level2_1147_1",
+    "output_dir": "demo/tasks/level2_1147_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_plant_0",
+    "target": "3_plant_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1178_0",
+    "output_dir": "demo/tasks/level2_1178_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_notebook_0",
+    "target": "5_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1178_1",
+    "output_dir": "demo/tasks/level2_1178_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_notebook_0",
+    "target": "5_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1280_0",
+    "output_dir": "demo/tasks/level2_1280_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_holder_mug_0",
+    "target": "8_holder_mug_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1280_1",
+    "output_dir": "demo/tasks/level2_1280_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_holder_mug_0",
+    "target": "8_holder_mug_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1296_0",
+    "output_dir": "demo/tasks/level2_1296_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_notebook_0",
+    "target": "9_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1296_1",
+    "output_dir": "demo/tasks/level2_1296_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_calendar_0",
+    "target": "8_calendar_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1314_0",
+    "output_dir": "demo/tasks/level2_1314_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "16_pen_4",
+    "target": "16_pen_4",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1314_1",
+    "output_dir": "demo/tasks/level2_1314_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_headphones_0",
+    "target": "3_headphones_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1332_0",
+    "output_dir": "demo/tasks/level2_1332_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_cup_0",
+    "target": "2_cup_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1332_1",
+    "output_dir": "demo/tasks/level2_1332_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "1_clock_0",
+    "target": "1_clock_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1351_0",
+    "output_dir": "demo/tasks/level2_1351_0",
+    "status": "collision_warning",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_book_1",
+    "target": "9_book_1",
+    "collision_status": "warning"
+  },
+  {
+    "task": "level2_1351_1",
+    "output_dir": "demo/tasks/level2_1351_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "12_folder_book_0",
+    "target": "12_folder_book_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1360_0",
+    "output_dir": "demo/tasks/level2_1360_0",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 1.979 cm for 9_pen_3_0e8155b9bf94494f9754901c53764942."
+    ]
+  },
+  {
+    "task": "level2_1360_1",
+    "output_dir": "demo/tasks/level2_1360_1",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 1.993 cm for 9_pen_3_0e8155b9bf94494f9754901c53764942."
+    ]
+  },
+  {
+    "task": "level2_1375_0",
+    "output_dir": "demo/tasks/level2_1375_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "14_pen_4",
+    "target": "14_pen_4",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1375_1",
+    "output_dir": "demo/tasks/level2_1375_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_notebook_0",
+    "target": "4_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1421_0",
+    "output_dir": "demo/tasks/level2_1421_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_notebook_1",
+    "target": "9_notebook_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1421_1",
+    "output_dir": "demo/tasks/level2_1421_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_glass_0",
+    "target": "2_glass_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1469_0",
+    "output_dir": "demo/tasks/level2_1469_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_pen_0",
+    "target": "5_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1469_1",
+    "output_dir": "demo/tasks/level2_1469_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_pen_0",
+    "target": "5_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1483_0",
+    "output_dir": "demo/tasks/level2_1483_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_notepad_notebook_0",
+    "target": "8_notepad_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1483_1",
+    "output_dir": "demo/tasks/level2_1483_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "11_storage_box_0",
+    "target": "11_storage_box_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1490_0",
+    "output_dir": "demo/tasks/level2_1490_0",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 0.794 cm for 5_pen_0_0e8155b9bf94494f9754901c53764942."
+    ]
+  },
+  {
+    "task": "level2_1490_1",
+    "output_dir": "demo/tasks/level2_1490_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_tablet_0",
+    "target": "4_tablet_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1511_0",
+    "output_dir": "demo/tasks/level2_1511_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "11_clipboard_1",
+    "target": "11_clipboard_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1511_1",
+    "output_dir": "demo/tasks/level2_1511_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_cup_0",
+    "target": "2_cup_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1513_0",
+    "output_dir": "demo/tasks/level2_1513_0",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 4.618 cm for 2_mug_0_1ffe87b871804859ae741ec97942649d."
+    ]
+  },
+  {
+    "task": "level2_1513_1",
+    "output_dir": "demo/tasks/level2_1513_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_stapler_0",
+    "target": "5_stapler_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1516_0",
+    "output_dir": "demo/tasks/level2_1516_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_notebook_0",
+    "target": "7_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1516_1",
+    "output_dir": "demo/tasks/level2_1516_1",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 3.914 cm for 8_pen_0_acbd811c2a8b4581ba3c7716aa316878."
+    ]
+  },
+  {
+    "task": "level2_1602_0",
+    "output_dir": "demo/tasks/level2_1602_0",
+    "status": "ok",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_headphones_0",
+    "target": "4_headphones_0",
+    "collision_status": "ok"
+  },
+  {
+    "task": "level2_1602_1",
+    "output_dir": "demo/tasks/level2_1602_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_tablet_0",
+    "target": "8_tablet_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1631_0",
+    "output_dir": "demo/tasks/level2_1631_0",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 3.817 cm for 11_notebook_1_26e240e2-8949-4c4f-aa03-05710a6261d2."
+    ]
+  },
+  {
+    "task": "level2_1631_1",
+    "output_dir": "demo/tasks/level2_1631_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_pen_0",
+    "target": "5_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1649_0",
+    "output_dir": "demo/tasks/level2_1649_0",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 0.335 cm for 5_pen_0_8d4857932fba4a65a286ec60751c5201."
+    ]
+  },
+  {
+    "task": "level2_1649_1",
+    "output_dir": "demo/tasks/level2_1649_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_notepad_notebook_0",
+    "target": "6_notepad_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1687_0",
+    "output_dir": "demo/tasks/level2_1687_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_ruler_0",
+    "target": "7_ruler_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1687_1",
+    "output_dir": "demo/tasks/level2_1687_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_notepad_0",
+    "target": "9_notepad_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1718_0",
+    "output_dir": "demo/tasks/level2_1718_0",
+    "status": "ok",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "12_computer_1",
+    "target": "12_computer_1",
+    "collision_status": "ok"
+  },
+  {
+    "task": "level2_1718_1",
+    "output_dir": "demo/tasks/level2_1718_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "12_computer_1",
+    "target": "12_computer_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1741_0",
+    "output_dir": "demo/tasks/level2_1741_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_pen_0",
+    "target": "6_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1741_1",
+    "output_dir": "demo/tasks/level2_1741_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_printer_1",
+    "target": "4_printer_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1742_0",
+    "output_dir": "demo/tasks/level2_1742_0",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 2.576 cm for 7_pen_0_8d4857932fba4a65a286ec60751c5201."
+    ]
+  },
+  {
+    "task": "level2_1742_1",
+    "output_dir": "demo/tasks/level2_1742_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_mouse_0",
+    "target": "2_mouse_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1822_0",
+    "output_dir": "demo/tasks/level2_1822_0",
+    "status": "collision_warning",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_notebook_clipboard_1",
+    "target": "8_notebook_clipboard_1",
+    "collision_status": "warning"
+  },
+  {
+    "task": "level2_1822_1",
+    "output_dir": "demo/tasks/level2_1822_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_notebook_clipboard_1",
+    "target": "8_notebook_clipboard_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1824_0",
+    "output_dir": "demo/tasks/level2_1824_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_mug_0",
+    "target": "9_mug_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1824_1",
+    "output_dir": "demo/tasks/level2_1824_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_keyboard_0",
+    "target": "2_keyboard_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1867_0",
+    "output_dir": "demo/tasks/level2_1867_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_sticky_note_0",
+    "target": "4_sticky_note_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1867_1",
+    "output_dir": "demo/tasks/level2_1867_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "1_mouse_0",
+    "target": "1_mouse_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1905_0",
+    "output_dir": "demo/tasks/level2_1905_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_calculator_0",
+    "target": "3_calculator_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1905_1",
+    "output_dir": "demo/tasks/level2_1905_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_pen_0",
+    "target": "6_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1944_0",
+    "output_dir": "demo/tasks/level2_1944_0",
+    "status": "ok",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "11_folder_3",
+    "target": "11_folder_3",
+    "collision_status": "ok"
+  },
+  {
+    "task": "level2_1944_1",
+    "output_dir": "demo/tasks/level2_1944_1",
+    "status": "ok",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "11_folder_3",
+    "target": "11_folder_3",
+    "collision_status": "ok"
+  },
+  {
+    "task": "level2_1980_0",
+    "output_dir": "demo/tasks/level2_1980_0",
+    "status": "collision_warning",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_notebook_0",
+    "target": "4_notebook_0",
+    "collision_status": "warning"
+  },
+  {
+    "task": "level2_1980_1",
+    "output_dir": "demo/tasks/level2_1980_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_notebook_0",
+    "target": "4_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_1997_0",
+    "output_dir": "demo/tasks/level2_1997_0",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 2.134 cm for 5_pot_plant_0_ac265d6dd72f483e9377a1da57c3038a."
+    ]
+  },
+  {
+    "task": "level2_1997_1",
+    "output_dir": "demo/tasks/level2_1997_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_notebook_0",
+    "target": "8_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_2034_0",
+    "output_dir": "demo/tasks/level2_2034_0",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 4.166 cm for 6_smartphone_0_663d66bb8cf94964959a7b8323193bf9."
+    ]
+  },
+  {
+    "task": "level2_2034_1",
+    "output_dir": "demo/tasks/level2_2034_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_cup_0",
+    "target": "2_cup_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_2036_0",
+    "output_dir": "demo/tasks/level2_2036_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_stack_notebook_0",
+    "target": "7_stack_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_2036_1",
+    "output_dir": "demo/tasks/level2_2036_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_stack_notebook_0",
+    "target": "7_stack_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_2088_0",
+    "output_dir": "demo/tasks/level2_2088_0",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 0.667 cm for 12_pen_0_8d4857932fba4a65a286ec60751c5201."
+    ]
+  },
+  {
+    "task": "level2_2088_1",
+    "output_dir": "demo/tasks/level2_2088_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "12_pen_0",
+    "target": "12_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_2091_0",
+    "output_dir": "demo/tasks/level2_2091_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_usb_drive_1",
+    "target": "9_usb_drive_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_2091_1",
+    "output_dir": "demo/tasks/level2_2091_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_pen_1",
+    "target": "7_pen_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_2102_0",
+    "output_dir": "demo/tasks/level2_2102_0",
+    "status": "ok",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "10_pen_0",
+    "target": "10_pen_0",
+    "collision_status": "ok"
+  },
+  {
+    "task": "level2_2102_1",
+    "output_dir": "demo/tasks/level2_2102_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_headphones_0",
+    "target": "2_headphones_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_2174_0",
+    "output_dir": "demo/tasks/level2_2174_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_keyboard_0",
+    "target": "2_keyboard_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level2_2174_1",
+    "output_dir": "demo/tasks/level2_2174_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_notepad_1",
+    "target": "9_notepad_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0043_0",
+    "output_dir": "demo/tasks/level3_0043_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_coffee_cup_1",
+    "target": "3_coffee_cup_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0043_1",
+    "output_dir": "demo/tasks/level3_0043_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "10_book_notebook_0",
+    "target": "10_book_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0110_0",
+    "output_dir": "demo/tasks/level3_0110_0",
+    "status": "collision_warning",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_cup_0",
+    "target": "3_cup_0",
+    "collision_status": "warning"
+  },
+  {
+    "task": "level3_0110_1",
+    "output_dir": "demo/tasks/level3_0110_1",
+    "status": "collision_warning",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_cup_0",
+    "target": "3_cup_0",
+    "collision_status": "warning"
+  },
+  {
+    "task": "level3_0141_0",
+    "output_dir": "demo/tasks/level3_0141_0",
+    "status": "collision_warning",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "13_notebook_1",
+    "target": "13_notebook_1",
+    "collision_status": "warning"
+  },
+  {
+    "task": "level3_0141_1",
+    "output_dir": "demo/tasks/level3_0141_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "13_notebook_1",
+    "target": "13_notebook_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0165_0",
+    "output_dir": "demo/tasks/level3_0165_0",
+    "status": "ok",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_clipboard_notebook_1",
+    "target": "7_clipboard_notebook_1",
+    "collision_status": "ok"
+  },
+  {
+    "task": "level3_0165_1",
+    "output_dir": "demo/tasks/level3_0165_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "11_white_paper_1",
+    "target": "11_white_paper_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0166_0",
+    "output_dir": "demo/tasks/level3_0166_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "12_pen_0",
+    "target": "12_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0166_1",
+    "output_dir": "demo/tasks/level3_0166_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "12_pen_0",
+    "target": "12_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0173_0",
+    "output_dir": "demo/tasks/level3_0173_0",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 4.292 cm for 6_pen_0_8d4857932fba4a65a286ec60751c5201."
+    ]
+  },
+  {
+    "task": "level3_0173_1",
+    "output_dir": "demo/tasks/level3_0173_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "10_planner_notebook_1",
+    "target": "10_planner_notebook_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0266_0",
+    "output_dir": "demo/tasks/level3_0266_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_tablet_1",
+    "target": "9_tablet_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0266_1",
+    "output_dir": "demo/tasks/level3_0266_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "10_notebook_0",
+    "target": "10_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0310_0",
+    "output_dir": "demo/tasks/level3_0310_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "10_pen_1",
+    "target": "10_pen_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0310_1",
+    "output_dir": "demo/tasks/level3_0310_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_notebook_0",
+    "target": "7_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0350_0",
+    "output_dir": "demo/tasks/level3_0350_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_paper_clip_holder_0",
+    "target": "8_paper_clip_holder_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0350_1",
+    "output_dir": "demo/tasks/level3_0350_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_notebook_0",
+    "target": "6_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0365_0",
+    "output_dir": "demo/tasks/level3_0365_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_pen_0",
+    "target": "3_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0365_1",
+    "output_dir": "demo/tasks/level3_0365_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_laptop_0",
+    "target": "2_laptop_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0377_0",
+    "output_dir": "demo/tasks/level3_0377_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_mouse_0",
+    "target": "2_mouse_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0377_1",
+    "output_dir": "demo/tasks/level3_0377_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "10_calendar_0",
+    "target": "10_calendar_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0390_0",
+    "output_dir": "demo/tasks/level3_0390_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_water_bottle_0",
+    "target": "3_water_bottle_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0390_1",
+    "output_dir": "demo/tasks/level3_0390_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "12_notepad_1",
+    "target": "12_notepad_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0492_0",
+    "output_dir": "demo/tasks/level3_0492_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_calculator_0",
+    "target": "2_calculator_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0492_1",
+    "output_dir": "demo/tasks/level3_0492_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_calculator_0",
+    "target": "2_calculator_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0703_0",
+    "output_dir": "demo/tasks/level3_0703_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_post_-_it_notes_0",
+    "target": "7_post_-_it_notes_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0703_1",
+    "output_dir": "demo/tasks/level3_0703_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_notebook_0",
+    "target": "9_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0716_0",
+    "output_dir": "demo/tasks/level3_0716_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_notebook_0",
+    "target": "8_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0716_1",
+    "output_dir": "demo/tasks/level3_0716_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_notebook_0",
+    "target": "8_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0770_0",
+    "output_dir": "demo/tasks/level3_0770_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_pencil_holder_1",
+    "target": "8_pencil_holder_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0770_1",
+    "output_dir": "demo/tasks/level3_0770_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "10_bottle_0",
+    "target": "10_bottle_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0782_0",
+    "output_dir": "demo/tasks/level3_0782_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_desk_organizer_0",
+    "target": "6_desk_organizer_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0782_1",
+    "output_dir": "demo/tasks/level3_0782_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_pen_0",
+    "target": "7_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0794_0",
+    "output_dir": "demo/tasks/level3_0794_0",
+    "status": "collision_warning",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "11_remote_1",
+    "target": "11_remote_1",
+    "collision_status": "warning"
+  },
+  {
+    "task": "level3_0794_1",
+    "output_dir": "demo/tasks/level3_0794_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_mouse_0",
+    "target": "3_mouse_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0884_0",
+    "output_dir": "demo/tasks/level3_0884_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_tablet_0",
+    "target": "2_tablet_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0884_1",
+    "output_dir": "demo/tasks/level3_0884_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_pen_0",
+    "target": "3_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0958_0",
+    "output_dir": "demo/tasks/level3_0958_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_notebook_0",
+    "target": "7_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0958_1",
+    "output_dir": "demo/tasks/level3_0958_1",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 0.744 cm for 5_clock_0_489266e9e2c44b5fbba13b2d933956f8."
+    ]
+  },
+  {
+    "task": "level3_0984_0",
+    "output_dir": "demo/tasks/level3_0984_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_pen_0",
+    "target": "6_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_0984_1",
+    "output_dir": "demo/tasks/level3_0984_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_smartphone_0",
+    "target": "7_smartphone_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1000_0",
+    "output_dir": "demo/tasks/level3_1000_0",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 4.402 cm for 3_stapler_0_0adcf1771a3c4b5c922c47dd09d149b0."
+    ]
+  },
+  {
+    "task": "level3_1000_1",
+    "output_dir": "demo/tasks/level3_1000_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_keyboard_0",
+    "target": "2_keyboard_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1003_0",
+    "output_dir": "demo/tasks/level3_1003_0",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 1.758 cm for 8_marker_pen_highlighter_0_0dd8be84d117499d9adfae347dc5a389."
+    ]
+  },
+  {
+    "task": "level3_1003_1",
+    "output_dir": "demo/tasks/level3_1003_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_marker_pen_highlighter_0",
+    "target": "8_marker_pen_highlighter_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1043_0",
+    "output_dir": "demo/tasks/level3_1043_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_mouse_pad_0",
+    "target": "4_mouse_pad_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1043_1",
+    "output_dir": "demo/tasks/level3_1043_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_calculator_0",
+    "target": "8_calculator_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1059_0",
+    "output_dir": "demo/tasks/level3_1059_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_pen_0",
+    "target": "2_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1059_1",
+    "output_dir": "demo/tasks/level3_1059_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_tablet_0",
+    "target": "6_tablet_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1151_0",
+    "output_dir": "demo/tasks/level3_1151_0",
+    "status": "collision_warning",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_keyboard_0",
+    "target": "8_keyboard_0",
+    "collision_status": "warning"
+  },
+  {
+    "task": "level3_1151_1",
+    "output_dir": "demo/tasks/level3_1151_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_keyboard_1",
+    "target": "9_keyboard_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1161_0",
+    "output_dir": "demo/tasks/level3_1161_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_magnifying_glass_0",
+    "target": "5_magnifying_glass_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1161_1",
+    "output_dir": "demo/tasks/level3_1161_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "1_pen_0",
+    "target": "1_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1170_0",
+    "output_dir": "demo/tasks/level3_1170_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "10_coaster_0",
+    "target": "10_coaster_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1170_1",
+    "output_dir": "demo/tasks/level3_1170_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "10_coaster_0",
+    "target": "10_coaster_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1180_0",
+    "output_dir": "demo/tasks/level3_1180_0",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 1.091 cm for 5_game_controller_0_0949edc313e14f7c8984249291ead708."
+    ]
+  },
+  {
+    "task": "level3_1180_1",
+    "output_dir": "demo/tasks/level3_1180_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_bowl_0",
+    "target": "9_bowl_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1196_0",
+    "output_dir": "demo/tasks/level3_1196_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "12_pen_1",
+    "target": "12_pen_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1196_1",
+    "output_dir": "demo/tasks/level3_1196_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_sticky_note_0",
+    "target": "5_sticky_note_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1232_0",
+    "output_dir": "demo/tasks/level3_1232_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "10_computer_1",
+    "target": "10_computer_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1232_1",
+    "output_dir": "demo/tasks/level3_1232_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_notebook_0",
+    "target": "7_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1328_0",
+    "output_dir": "demo/tasks/level3_1328_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "11_list_0",
+    "target": "11_list_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1328_1",
+    "output_dir": "demo/tasks/level3_1328_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_stapler_1",
+    "target": "9_stapler_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1368_0",
+    "output_dir": "demo/tasks/level3_1368_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_glass_0",
+    "target": "6_glass_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1368_1",
+    "output_dir": "demo/tasks/level3_1368_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "14_plant_2",
+    "target": "14_plant_2",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1388_0",
+    "output_dir": "demo/tasks/level3_1388_0",
+    "status": "collision_warning",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_plant_0",
+    "target": "2_plant_0",
+    "collision_status": "warning"
+  },
+  {
+    "task": "level3_1388_1",
+    "output_dir": "demo/tasks/level3_1388_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "13_highlighter_3",
+    "target": "13_highlighter_3",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1400_0",
+    "output_dir": "demo/tasks/level3_1400_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_clipboard_notebook_0",
+    "target": "4_clipboard_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1400_1",
+    "output_dir": "demo/tasks/level3_1400_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_telephone_0",
+    "target": "9_telephone_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1408_0",
+    "output_dir": "demo/tasks/level3_1408_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "18_agenda_2",
+    "target": "18_agenda_2",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1408_1",
+    "output_dir": "demo/tasks/level3_1408_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "16_agenda_0",
+    "target": "16_agenda_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1455_0",
+    "output_dir": "demo/tasks/level3_1455_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_notebook_0",
+    "target": "6_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1455_1",
+    "output_dir": "demo/tasks/level3_1455_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_calculator_0",
+    "target": "3_calculator_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1464_0",
+    "output_dir": "demo/tasks/level3_1464_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_bind_notebook_0",
+    "target": "5_bind_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1464_1",
+    "output_dir": "demo/tasks/level3_1464_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_bind_notebook_0",
+    "target": "5_bind_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1480_0",
+    "output_dir": "demo/tasks/level3_1480_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "1_laptop_0",
+    "target": "1_laptop_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1480_1",
+    "output_dir": "demo/tasks/level3_1480_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_glasses_0",
+    "target": "3_glasses_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1484_0",
+    "output_dir": "demo/tasks/level3_1484_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_pen_0",
+    "target": "7_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1484_1",
+    "output_dir": "demo/tasks/level3_1484_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "12_succulent_0",
+    "target": "12_succulent_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1492_0",
+    "output_dir": "demo/tasks/level3_1492_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_clipboard_notebook_0",
+    "target": "8_clipboard_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1492_1",
+    "output_dir": "demo/tasks/level3_1492_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "1_clock_0",
+    "target": "1_clock_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1522_0",
+    "output_dir": "demo/tasks/level3_1522_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_notebook_0",
+    "target": "6_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1522_1",
+    "output_dir": "demo/tasks/level3_1522_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_clock_0",
+    "target": "3_clock_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1538_0",
+    "output_dir": "demo/tasks/level3_1538_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "11_notebook_1",
+    "target": "11_notebook_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1538_1",
+    "output_dir": "demo/tasks/level3_1538_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "12_keyrings_0",
+    "target": "12_keyrings_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1579_0",
+    "output_dir": "demo/tasks/level3_1579_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "14_block_2",
+    "target": "14_block_2",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1579_1",
+    "output_dir": "demo/tasks/level3_1579_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "11_block_0",
+    "target": "11_block_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1593_0",
+    "output_dir": "demo/tasks/level3_1593_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_calculator_0",
+    "target": "9_calculator_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1593_1",
+    "output_dir": "demo/tasks/level3_1593_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "1_coffee_cup_0",
+    "target": "1_coffee_cup_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1605_0",
+    "output_dir": "demo/tasks/level3_1605_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_pencil_holder_0",
+    "target": "8_pencil_holder_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1605_1",
+    "output_dir": "demo/tasks/level3_1605_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_clock_0",
+    "target": "7_clock_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1647_0",
+    "output_dir": "demo/tasks/level3_1647_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_whiteboard_0",
+    "target": "5_whiteboard_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1647_1",
+    "output_dir": "demo/tasks/level3_1647_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_pen_pencil_0",
+    "target": "6_pen_pencil_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1683_0",
+    "output_dir": "demo/tasks/level3_1683_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_clock_0",
+    "target": "5_clock_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1683_1",
+    "output_dir": "demo/tasks/level3_1683_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "1_laptop_0",
+    "target": "1_laptop_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1698_0",
+    "output_dir": "demo/tasks/level3_1698_0",
+    "status": "ok",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "1_keyboard_0",
+    "target": "1_keyboard_0",
+    "collision_status": "ok"
+  },
+  {
+    "task": "level3_1698_1",
+    "output_dir": "demo/tasks/level3_1698_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_desk_lamp_0",
+    "target": "4_desk_lamp_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1792_0",
+    "output_dir": "demo/tasks/level3_1792_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_notebook_0",
+    "target": "6_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1792_1",
+    "output_dir": "demo/tasks/level3_1792_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_notebook_0",
+    "target": "6_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1810_0",
+    "output_dir": "demo/tasks/level3_1810_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_clock_0",
+    "target": "6_clock_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1810_1",
+    "output_dir": "demo/tasks/level3_1810_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_pen_0",
+    "target": "8_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1814_0",
+    "output_dir": "demo/tasks/level3_1814_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_clock_0",
+    "target": "5_clock_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1814_1",
+    "output_dir": "demo/tasks/level3_1814_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_coffee_mug_0",
+    "target": "2_coffee_mug_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1846_0",
+    "output_dir": "demo/tasks/level3_1846_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "12_pencil_holder_0",
+    "target": "12_pencil_holder_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1846_1",
+    "output_dir": "demo/tasks/level3_1846_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "12_pencil_holder_0",
+    "target": "12_pencil_holder_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1884_0",
+    "output_dir": "demo/tasks/level3_1884_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "12_notebook_2",
+    "target": "12_notebook_2",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1884_1",
+    "output_dir": "demo/tasks/level3_1884_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "12_notebook_2",
+    "target": "12_notebook_2",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1937_0",
+    "output_dir": "demo/tasks/level3_1937_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_papers_0",
+    "target": "8_papers_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1937_1",
+    "output_dir": "demo/tasks/level3_1937_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_stack_0",
+    "target": "4_stack_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1939_0",
+    "output_dir": "demo/tasks/level3_1939_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_cup_1",
+    "target": "6_cup_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1939_1",
+    "output_dir": "demo/tasks/level3_1939_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_cup_0",
+    "target": "5_cup_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1964_0",
+    "output_dir": "demo/tasks/level3_1964_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_sticky_note_0",
+    "target": "7_sticky_note_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1964_1",
+    "output_dir": "demo/tasks/level3_1964_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_sticky_note_2",
+    "target": "9_sticky_note_2",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1981_0",
+    "output_dir": "demo/tasks/level3_1981_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_plant_1",
+    "target": "4_plant_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_1981_1",
+    "output_dir": "demo/tasks/level3_1981_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_notebook_0",
+    "target": "9_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_2074_0",
+    "output_dir": "demo/tasks/level3_2074_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_notepad_notebook_0",
+    "target": "7_notepad_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_2074_1",
+    "output_dir": "demo/tasks/level3_2074_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_pen_0",
+    "target": "4_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_2087_0",
+    "output_dir": "demo/tasks/level3_2087_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_scissors_0",
+    "target": "6_scissors_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_2087_1",
+    "output_dir": "demo/tasks/level3_2087_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "13_pen_1",
+    "target": "13_pen_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_2155_0",
+    "output_dir": "demo/tasks/level3_2155_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_mouse_0",
+    "target": "2_mouse_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_2155_1",
+    "output_dir": "demo/tasks/level3_2155_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "18_pen_4",
+    "target": "18_pen_4",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_2164_0",
+    "output_dir": "demo/tasks/level3_2164_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_mug_0",
+    "target": "6_mug_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level3_2164_1",
+    "output_dir": "demo/tasks/level3_2164_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_lamp_0",
+    "target": "3_lamp_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0041_0",
+    "output_dir": "demo/tasks/level4_0041_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "18_books_0",
+    "target": "18_books_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0041_1",
+    "output_dir": "demo/tasks/level4_0041_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_smartphone_0",
+    "target": "3_smartphone_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0111_0",
+    "output_dir": "demo/tasks/level4_0111_0",
+    "status": "collision_warning",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_calculator_0",
+    "target": "5_calculator_0",
+    "collision_status": "warning"
+  },
+  {
+    "task": "level4_0111_1",
+    "output_dir": "demo/tasks/level4_0111_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_notebook_0",
+    "target": "4_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0189_0",
+    "output_dir": "demo/tasks/level4_0189_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "1_mouse_0",
+    "target": "1_mouse_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0189_1",
+    "output_dir": "demo/tasks/level4_0189_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "1_mouse_0",
+    "target": "1_mouse_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0221_0",
+    "output_dir": "demo/tasks/level4_0221_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_pen_0",
+    "target": "5_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0221_1",
+    "output_dir": "demo/tasks/level4_0221_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "22_notebook_0",
+    "target": "22_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0386_0",
+    "output_dir": "demo/tasks/level4_0386_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_figurine_0",
+    "target": "7_figurine_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0386_1",
+    "output_dir": "demo/tasks/level4_0386_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_book_0",
+    "target": "9_book_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0475_0",
+    "output_dir": "demo/tasks/level4_0475_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "26_notebook_2",
+    "target": "26_notebook_2",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0475_1",
+    "output_dir": "demo/tasks/level4_0475_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_scissors_1",
+    "target": "6_scissors_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0673_0",
+    "output_dir": "demo/tasks/level4_0673_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_pen_0",
+    "target": "9_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0673_1",
+    "output_dir": "demo/tasks/level4_0673_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_printer_0",
+    "target": "6_printer_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0798_0",
+    "output_dir": "demo/tasks/level4_0798_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_pen_1",
+    "target": "8_pen_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0798_1",
+    "output_dir": "demo/tasks/level4_0798_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_plant_0",
+    "target": "2_plant_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0881_0",
+    "output_dir": "demo/tasks/level4_0881_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_pen_0",
+    "target": "2_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0881_1",
+    "output_dir": "demo/tasks/level4_0881_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "14_plant_2",
+    "target": "14_plant_2",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0924_0",
+    "output_dir": "demo/tasks/level4_0924_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_wallet_0",
+    "target": "7_wallet_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0924_1",
+    "output_dir": "demo/tasks/level4_0924_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "14_notebook_0",
+    "target": "14_notebook_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0952_0",
+    "output_dir": "demo/tasks/level4_0952_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "21_pen_4",
+    "target": "21_pen_4",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0952_1",
+    "output_dir": "demo/tasks/level4_0952_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_smartphone_0",
+    "target": "2_smartphone_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_0978_0",
+    "output_dir": "demo/tasks/level4_0978_0",
+    "status": "ok",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "1_mouse_0",
+    "target": "1_mouse_0",
+    "collision_status": "ok"
+  },
+  {
+    "task": "level4_0978_1",
+    "output_dir": "demo/tasks/level4_0978_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "13_globe_1",
+    "target": "13_globe_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1016_0",
+    "output_dir": "demo/tasks/level4_1016_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "2_desk_lamp_0",
+    "target": "2_desk_lamp_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1016_1",
+    "output_dir": "demo/tasks/level4_1016_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "17_pen_3",
+    "target": "17_pen_3",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1075_0",
+    "output_dir": "demo/tasks/level4_1075_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "10_pen_3",
+    "target": "10_pen_3",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1075_1",
+    "output_dir": "demo/tasks/level4_1075_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_binder_clipboard_notebook_1",
+    "target": "8_binder_clipboard_notebook_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1144_0",
+    "output_dir": "demo/tasks/level4_1144_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_monitor_0",
+    "target": "4_monitor_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1144_1",
+    "output_dir": "demo/tasks/level4_1144_1",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 4.736 cm for 10_pen_0_0e8155b9bf94494f9754901c53764942."
+    ]
+  },
+  {
+    "task": "level4_1192_0",
+    "output_dir": "demo/tasks/level4_1192_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_mouse_0",
+    "target": "5_mouse_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1192_1",
+    "output_dir": "demo/tasks/level4_1192_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_sticky_notes_0",
+    "target": "9_sticky_notes_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1245_0",
+    "output_dir": "demo/tasks/level4_1245_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_smartphone_0",
+    "target": "4_smartphone_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1245_1",
+    "output_dir": "demo/tasks/level4_1245_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_smartphone_0",
+    "target": "4_smartphone_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1297_0",
+    "output_dir": "demo/tasks/level4_1297_0",
+    "status": "skipped",
+    "files": {},
+    "errors": [
+      "No object moved more than 5.0 cm; largest move was 0.707 cm for 9_pen_0_0e8155b9bf94494f9754901c53764942."
+    ]
+  },
+  {
+    "task": "level4_1297_1",
+    "output_dir": "demo/tasks/level4_1297_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_clock_0",
+    "target": "5_clock_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1510_0",
+    "output_dir": "demo/tasks/level4_1510_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "18_book_7",
+    "target": "18_book_7",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1510_1",
+    "output_dir": "demo/tasks/level4_1510_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_pen_0",
+    "target": "6_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1834_0",
+    "output_dir": "demo/tasks/level4_1834_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "16_pen_1",
+    "target": "16_pen_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1834_1",
+    "output_dir": "demo/tasks/level4_1834_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_keyboard_0",
+    "target": "3_keyboard_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1861_0",
+    "output_dir": "demo/tasks/level4_1861_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "18_paper_clips_0",
+    "target": "18_paper_clips_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1861_1",
+    "output_dir": "demo/tasks/level4_1861_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_stapler_0",
+    "target": "3_stapler_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1954_0",
+    "output_dir": "demo/tasks/level4_1954_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "18_file_folder_2",
+    "target": "18_file_folder_2",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1954_1",
+    "output_dir": "demo/tasks/level4_1954_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_plate_0",
+    "target": "5_plate_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1961_0",
+    "output_dir": "demo/tasks/level4_1961_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_mug_0",
+    "target": "5_mug_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_1961_1",
+    "output_dir": "demo/tasks/level4_1961_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_pen_0",
+    "target": "8_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_2022_0",
+    "output_dir": "demo/tasks/level4_2022_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_mouse_1",
+    "target": "8_mouse_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_2022_1",
+    "output_dir": "demo/tasks/level4_2022_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "8_mouse_1",
+    "target": "8_mouse_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_2080_0",
+    "output_dir": "demo/tasks/level4_2080_0",
+    "status": "ok",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_tablet_0",
+    "target": "7_tablet_0",
+    "collision_status": "ok"
+  },
+  {
+    "task": "level4_2080_1",
+    "output_dir": "demo/tasks/level4_2080_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_plant_0",
+    "target": "5_plant_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_2119_0",
+    "output_dir": "demo/tasks/level4_2119_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_speaker_1",
+    "target": "9_speaker_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level4_2119_1",
+    "output_dir": "demo/tasks/level4_2119_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "15_pen_0",
+    "target": "15_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_0047_0",
+    "output_dir": "demo/tasks/level5_0047_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "22_candle_1",
+    "target": "22_candle_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_0047_1",
+    "output_dir": "demo/tasks/level5_0047_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "17_plates_0",
+    "target": "17_plates_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_0181_0",
+    "output_dir": "demo/tasks/level5_0181_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "10_pen_5",
+    "target": "10_pen_5",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_0181_1",
+    "output_dir": "demo/tasks/level5_0181_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "13_pen_7",
+    "target": "13_pen_7",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_0215_0",
+    "output_dir": "demo/tasks/level5_0215_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "7_pen_1",
+    "target": "7_pen_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_0215_1",
+    "output_dir": "demo/tasks/level5_0215_1",
+    "status": "collision_warning",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "1_mouse_0",
+    "target": "1_mouse_0",
+    "collision_status": "warning"
+  },
+  {
+    "task": "level5_0625_0",
+    "output_dir": "demo/tasks/level5_0625_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "1_plant_0",
+    "target": "1_plant_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_0625_1",
+    "output_dir": "demo/tasks/level5_0625_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "1_plant_0",
+    "target": "1_plant_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_0656_0",
+    "output_dir": "demo/tasks/level5_0656_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "18_book_notebook_2",
+    "target": "18_book_notebook_2",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_0656_1",
+    "output_dir": "demo/tasks/level5_0656_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "9_book_notebook_1",
+    "target": "9_book_notebook_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_0765_0",
+    "output_dir": "demo/tasks/level5_0765_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_calculator_0",
+    "target": "5_calculator_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_0765_1",
+    "output_dir": "demo/tasks/level5_0765_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "25_books_3",
+    "target": "25_books_3",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_0783_0",
+    "output_dir": "demo/tasks/level5_0783_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "20_pen_5",
+    "target": "20_pen_5",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_0783_1",
+    "output_dir": "demo/tasks/level5_0783_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "3_mug_0",
+    "target": "3_mug_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_0975_0",
+    "output_dir": "demo/tasks/level5_0975_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "17_paperclip_1",
+    "target": "17_paperclip_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_0975_1",
+    "output_dir": "demo/tasks/level5_0975_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "21_notebook_3",
+    "target": "21_notebook_3",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_1068_0",
+    "output_dir": "demo/tasks/level5_1068_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "6_scissors_0",
+    "target": "6_scissors_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_1068_1",
+    "output_dir": "demo/tasks/level5_1068_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "1_alarm_clock_0",
+    "target": "1_alarm_clock_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_1412_0",
+    "output_dir": "demo/tasks/level5_1412_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "5_pencil_pen_0",
+    "target": "5_pencil_pen_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_1412_1",
+    "output_dir": "demo/tasks/level5_1412_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "19_desk_organizer_1",
+    "target": "19_desk_organizer_1",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_1994_0",
+    "output_dir": "demo/tasks/level5_1994_0",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "4_calculator_0",
+    "target": "4_calculator_0",
+    "collision_status": "error"
+  },
+  {
+    "task": "level5_1994_1",
+    "output_dir": "demo/tasks/level5_1994_1",
+    "status": "collision_error",
+    "files": {
+      "trajectory": "trajectory.json",
+      "demo_2d": "demo_2d.html",
+      "demo_3d": "demo_3d.html",
+      "collision_report": "collision_report.json"
+    },
+    "errors": [],
+    "object": "19_pen_5",
+    "target": "19_pen_5",
+    "collision_status": "error"
+  }
+]

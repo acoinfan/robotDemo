@@ -1,0 +1,40 @@
+{
+  "task": "level2_1483_0",
+  "status": "error",
+  "object": "8_notepad_notebook_0",
+  "target": "8_notepad_notebook_0",
+  "position_delta_cm": 13.317150618694999,
+  "max_speed_mps": 0.066585753093475,
+  "events": [
+    {
+      "time": 5.6,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "8_notepad_notebook_0 contacts 1_laptop_0",
+      "count": 25,
+      "first_time": 5.6,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "8_notepad_notebook_0 contacts 1_laptop_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "8_notepad_notebook_0 contacts 1_laptop_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    }
+  ]
+}

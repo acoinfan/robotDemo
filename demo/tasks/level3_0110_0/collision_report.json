@@ -1,0 +1,20 @@
+{
+  "task": "level3_0110_0",
+  "status": "warning",
+  "object": "3_cup_0",
+  "target": "3_cup_0",
+  "position_delta_cm": 187.5450403362392,
+  "max_speed_mps": 0.9377252016811959,
+  "events": [
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 0.938 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    }
+  ]
+}

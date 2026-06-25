@@ -1,0 +1,60 @@
+{
+  "task": "level3_0782_0",
+  "status": "error",
+  "object": "6_desk_organizer_0",
+  "target": "6_desk_organizer_0",
+  "position_delta_cm": 667.4301712643877,
+  "max_speed_mps": 3.3371508563219385,
+  "events": [
+    {
+      "time": 0.0,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 12_notepad_0",
+      "count": 62,
+      "first_time": 0.0,
+      "last_time": 1.017
+    },
+    {
+      "time": 2.983,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 12_notepad_0",
+      "count": 62,
+      "first_time": 2.983,
+      "last_time": 4.0
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_desk_organizer_0 contacts 12_notepad_0",
+      "count": 4,
+      "first_time": 4.017,
+      "last_time": 4.067
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 12_notepad_0",
+      "count": 2,
+      "first_time": 4.017,
+      "last_time": 4.033
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 3.337 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "task": "level2_0412_1",
+  "status": "error",
+  "object": "5_magazine_notebook_0",
+  "target": "5_magazine_notebook_0",
+  "position_delta_cm": 21.167191616352888,
+  "max_speed_mps": 0.10583595808176442,
+  "events": [
+    {
+      "time": 7.333,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "5_magazine_notebook_0 contacts 3_ipad_0",
+      "count": 41,
+      "first_time": 7.333,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "5_magazine_notebook_0 contacts 3_ipad_0",
+      "count": 40,
+      "first_time": 8.017,
+      "last_time": 8.667
+    }
+  ]
+}

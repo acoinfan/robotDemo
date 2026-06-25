@@ -1,0 +1,60 @@
+{
+  "task": "level2_1314_0",
+  "status": "error",
+  "object": "16_pen_4",
+  "target": "16_pen_4",
+  "position_delta_cm": 982.5585745765724,
+  "max_speed_mps": 4.9127928728828625,
+  "events": [
+    {
+      "time": 0.0,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_laptop_0",
+      "count": 121,
+      "first_time": 0.0,
+      "last_time": 2.0
+    },
+    {
+      "time": 1.383,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 6_calendar_0",
+      "count": 38,
+      "first_time": 1.383,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_laptop_0",
+      "count": 120,
+      "first_time": 2.017,
+      "last_time": 4.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 6_calendar_0",
+      "count": 37,
+      "first_time": 2.017,
+      "last_time": 2.617
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 4.913 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    }
+  ]
+}

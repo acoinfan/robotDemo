@@ -1,0 +1,110 @@
+{
+  "task": "level2_1296_1",
+  "status": "error",
+  "object": "8_calendar_0",
+  "target": "8_calendar_0",
+  "position_delta_cm": 35.34157049298167,
+  "max_speed_mps": 0.1767078524649083,
+  "events": [
+    {
+      "time": 0.0,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_desk_lamp_0",
+      "count": 121,
+      "first_time": 0.0,
+      "last_time": 2.0
+    },
+    {
+      "time": 0.0,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 6_computer_monitor_0",
+      "count": 121,
+      "first_time": 0.0,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_desk_lamp_0",
+      "count": 120,
+      "first_time": 2.017,
+      "last_time": 4.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 6_computer_monitor_0",
+      "count": 120,
+      "first_time": 2.017,
+      "last_time": 4.0
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "8_calendar_0 contacts 1_desk_lamp_0",
+      "count": 83,
+      "first_time": 4.017,
+      "last_time": 5.383
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_desk_lamp_0",
+      "count": 93,
+      "first_time": 4.017,
+      "last_time": 5.55
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "8_calendar_0 contacts 6_computer_monitor_0",
+      "count": 54,
+      "first_time": 4.017,
+      "last_time": 4.9
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 6_computer_monitor_0",
+      "count": 42,
+      "first_time": 4.017,
+      "last_time": 4.7
+    },
+    {
+      "time": 7.267,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "8_calendar_0 contacts 9_notebook_0",
+      "count": 45,
+      "first_time": 7.267,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "8_calendar_0 contacts 9_notebook_0",
+      "count": 44,
+      "first_time": 8.017,
+      "last_time": 8.733
+    }
+  ]
+}

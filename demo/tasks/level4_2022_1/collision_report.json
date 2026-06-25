@@ -1,0 +1,50 @@
+{
+  "task": "level4_2022_1",
+  "status": "error",
+  "object": "8_mouse_1",
+  "target": "8_mouse_1",
+  "position_delta_cm": 32.844594219563646,
+  "max_speed_mps": 0.16422297109781822,
+  "events": [
+    {
+      "time": 1.033,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 14_notebook_1",
+      "count": 59,
+      "first_time": 1.033,
+      "last_time": 2.0
+    },
+    {
+      "time": 1.167,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 9_keyboard_1",
+      "count": 51,
+      "first_time": 1.167,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 14_notebook_1",
+      "count": 58,
+      "first_time": 2.017,
+      "last_time": 2.967
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 9_keyboard_1",
+      "count": 50,
+      "first_time": 2.017,
+      "last_time": 2.833
+    }
+  ]
+}

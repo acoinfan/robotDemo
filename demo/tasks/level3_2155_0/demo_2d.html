@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MesaSkill Pick Demo - level3_2155_0</title>
+    <style>
+:root {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #eef1f4;
+  color: #17202a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  height: 100vh;
+}
+
+.stage {
+  min-width: 0;
+  min-height: 0;
+  background: #d7dde3;
+}
+
+#scene {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 18px;
+  border-left: 1px solid #c4ccd4;
+  background: #f7f8fa;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+}
+
+label,
+dt {
+  color: #53606f;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+select,
+button,
+input {
+  font: inherit;
+}
+
+select {
+  width: 100%;
+  min-height: 36px;
+  padding: 6px 8px;
+  border: 1px solid #b5bfca;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #17202a;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+button {
+  min-height: 38px;
+  border: 1px solid #2f6fed;
+  border-radius: 6px;
+  background: #2f6fed;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button + button {
+  border-color: #a9b3bf;
+  background: #ffffff;
+  color: #17202a;
+}
+
+.timeline {
+  width: 100%;
+  accent-color: #2f6fed;
+}
+
+.stats {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.stats div {
+  display: grid;
+  gap: 3px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d6dce2;
+}
+
+dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+@media (max-width: 820px) {
+  body {
+    overflow: auto;
+  }
+
+  .shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(420px, 64vh) auto;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .panel {
+    border-left: 0;
+    border-top: 1px solid #c4ccd4;
+  }
+}
+
+</style>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="stage">
+        <canvas id="scene" width="1100" height="760"></canvas>
+      </section>
+      <aside class="panel">
+        <div class="field">
+          <label for="taskSelect">Task</label>
+          <select id="taskSelect"></select>
+        </div>
+        <div class="toolbar" aria-label="Playback controls">
+          <button id="playButton" type="button">Play</button>
+          <button id="resetButton" type="button">Reset</button>
+        </div>
+        <input id="timeline" class="timeline" type="range" min="0" max="1000" value="0">
+        <dl class="stats">
+          <div>
+            <dt>Object</dt>
+            <dd id="objectName">-</dd>
+          </div>
+          <div>
+            <dt>Move</dt>
+            <dd id="moveDelta">-</dd>
+          </div>
+          <div>
+            <dt>Grip</dt>
+            <dd id="gripWidth">-</dd>
+          </div>
+          <div>
+            <dt>Variant</dt>
+            <dd id="variantName">-</dd>
+          </div>
+        </dl>
+      </aside>
+    </main>
+    <script>
+window.DEMO_PAYLOAD = {"task": "level3_2155_0", "origin": {"scene_settings": {"units": "centimeters", "up_axis": "Z"}, "item_placement_zone": [0.0, 113.9, 0.0, 66.6], "objects": [{"name": "10_coffee_cup_0_20067975d06343489bd455c6c5821f33", "instance": "10_coffee_cup_0", "retrieved_uid": "20067975d06343489bd455c6c5821f33", "selected_uid": "20067975d06343489bd455c6c5821f33", "original_size": [14.151304244995117, 14.553284645080566, 6.949785232543945], "scale_factor": [0.6935145973391049, 0.6935355600107972, 0.6935755105371196], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [9.8, 10.1, 4.8], "position": [100.3, 55.1, 2.5]}, {"name": "11_sticky_note_0_0c89c545d39d43b28c9ce60cedfc0fb8", "instance": "11_sticky_note_0", "retrieved_uid": "0c89c545d39d43b28c9ce60cedfc0fb8", "selected_uid": "0c89c545d39d43b28c9ce60cedfc0fb8", "original_size": [39.15961837768555, 39.943748474121094, 9.878900527954102], "scale_factor": [0.2293211423774294, 0.2124613894579214, 0.2124684198167332], "rotation": [0.05971568450331688, -0.05928480252623558, 0.7020428776741028, 0.7071457505226135], "z_rotation": 1.5634499788284302, "size": [9.1, 8.5, 1.1], "position": [83.3, 14.9, 0.6]}, {"name": "13_pencil_holder_0_gen_335ab012-6c35-413c-882b-425a7975d7a6", "instance": "13_pencil_holder_0", "retrieved_uid": "gen_335ab012-6c35-413c-882b-425a7975d7a6", "selected_uid": "gen_335ab012-6c35-413c-882b-425a7975d7a6", "original_size": [1.0518672466278076, 1.0576155185699463, 1.9939658641815186], "scale_factor": [8.731342551105124, 8.732119775523655, 8.731793022028675], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [9.2, 9.2, 17.4], "position": [27.0, 53.3, 8.8]}, {"name": "18_pen_4_8d4857932fba4a65a286ec60751c5201", "instance": "18_pen_4", "retrieved_uid": "8d4857932fba4a65a286ec60751c5201", "selected_uid": "8d4857932fba4a65a286ec60751c5201", "original_size": [1.9506332874298096, 20.103500366210938, 1.9287000894546509], "scale_factor": [0.837855806375816, 0.8376633827902417, 0.8377909080239595], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [1.7, 16.8, 1.6], "position": [34.4, 22.3, 0.7]}, {"name": "2_mouse_0_212f2713f3704907a2ca16c1546cb8f7", "instance": "2_mouse_0", "retrieved_uid": "212f2713f3704907a2ca16c1546cb8f7", "selected_uid": "212f2713f3704907a2ca16c1546cb8f7", "original_size": [2.5432043075561523, 3.8199782371520996, 1.5826719999313354], "scale_factor": [3.437627024388652, 3.4376939910044015, 2.804135712753554], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [8.8, 13.1, 4.4], "position": [97.1, 18.1, 2.3]}, {"name": "3_keyboard_0_0c0edb114d324eab9106f331244621c5", "instance": "3_keyboard_0", "retrieved_uid": "0c0edb114d324eab9106f331244621c5", "selected_uid": "0c0edb114d324eab9106f331244621c5", "original_size": [17.828330993652344, 46.02759552001953, 3.4151110649108887], "scale_factor": [0.6664900225192306, 0.6664680773717692, 0.6667035535605917], "rotation": [0.0, 0.0, -0.7073346376419067, 0.7068789601325989], "z_rotation": -1.5714408159255981, "size": [11.9, 30.7, 2.3], "position": [59.9, 13.3, 1.1]}, {"name": "4_stapler_0_0adcf1771a3c4b5c922c47dd09d149b0", "instance": "4_stapler_0", "retrieved_uid": "0adcf1771a3c4b5c922c47dd09d149b0", "selected_uid": "0adcf1771a3c4b5c922c47dd09d149b0", "original_size": [0.001732956850901246, 0.010165935382246971, 0.003746474627405405], "scale_factor": [1301.7432227415584, 1301.6309173741354, 1301.7045030713273], "rotation": [-0.0031624401453882456, -0.0031723801512271166, 0.7068964838981628, 0.7073028087615967], "z_rotation": 1.5702217817306519, "size": [2.3, 13.2, 4.9], "position": [92.8, 41.2, 2.5]}, {"name": "5_headset_0_a168f82493e54feda127d0361d8f0936", "instance": "5_headset_0", "retrieved_uid": "a168f82493e54feda127d0361d8f0936", "selected_uid": "a168f82493e54feda127d0361d8f0936", "original_size": [2.8743605613708496, 3.0558176040649414, 1.514866828918457], "scale_factor": [5.182566870128425, 5.182622081419479, 5.182890659695715], "rotation": [0.020338010042905807, -0.09721384197473526, -0.9557907581329346, 0.2767668664455414], "z_rotation": -2.5793604850769043, "size": [14.9, 15.6, 7.9], "position": [15.6, 41.0, 4.0]}, {"name": "7_plant_0_04eeeca688074aa19a9c94e596b04e33", "instance": "7_plant_0", "retrieved_uid": "04eeeca688074aa19a9c94e596b04e33", "selected_uid": "04eeeca688074aa19a9c94e596b04e33", "original_size": [0.22136259078979492, 0.2248401641845703, 0.2693798542022705], "scale_factor": [39.504486177799016, 38.535452414063975, 84.96794699696606], "rotation": [0.0, 0.0, -0.2526118755340576, 0.9675676822662354], "z_rotation": -0.5107574462890625, "size": [8.8, 8.6, 22.9], "position": [12.4, 55.1, 11.5]}, {"name": "8_phone_0_3923dbced4e64a479efcad63ba8e3e03", "instance": "8_phone_0", "retrieved_uid": "3923dbced4e64a479efcad63ba8e3e03", "selected_uid": "3923dbced4e64a479efcad63ba8e3e03", "original_size": [2.0171852111816406, 4.112580299377441, 0.19040831923484802], "scale_factor": [2.7343211818671778, 2.7342261637306535, 2.735969429368188], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [5.5, 11.3, 0.5], "position": [87.8, 55.2, 0.2]}, {"name": "9_notebook_0_a525a7ee829c486288c5e4881624801a", "instance": "9_notebook_0", "retrieved_uid": "a525a7ee829c486288c5e4881624801a", "selected_uid": "a525a7ee829c486288c5e4881624801a", "original_size": [1.2105809450149536, 1.0590615272521973, 0.8548988103866577], "scale_factor": [33.28629381044117, 33.28522181609527, 33.28487596921441], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [40.3, 35.3, 28.4], "position": [59.8, 43.7, 14.2]}]}, "end": {"scene_settings": {"units": "centimeters", "up_axis": "Z"}, "item_placement_zone": [0.0, 113.9, 0.0, 66.6], "objects": [{"name": "10_coffee_cup_0_20067975d06343489bd455c6c5821f33", "instance": "10_coffee_cup_0", "retrieved_uid": "20067975d06343489bd455c6c5821f33", "selected_uid": "20067975d06343489bd455c6c5821f33", "original_size": [14.151304244995117, 14.553284645080566, 6.949785232543945], "scale_factor": [0.6935145973391049, 0.6935355600107972, 0.6935755105371196], "rotation": [0.0, 0.0, 0.0, 0.9999747537226639], "z_rotation": 0.0, "size": [9.8, 10.1, 4.8], "position": [100.30225372314453, 55.205787658691406, 2.3835034370422363]}, {"name": "11_sticky_note_0_0c89c545d39d43b28c9ce60cedfc0fb8", "instance": "11_sticky_note_0", "retrieved_uid": "0c89c545d39d43b28c9ce60cedfc0fb8", "selected_uid": "0c89c545d39d43b28c9ce60cedfc0fb8", "original_size": [39.15961837768555, 39.943748474121094, 9.878900527954102], "scale_factor": [0.2293211423774294, 0.2124613894579214, 0.2124684198167332], "rotation": [0.0, 0.0, 0.7862563889077625, 0.6165171267388189], "z_rotation": 1.5634499788284302, "size": [9.1, 8.5, 1.1], "position": [97.43315124511719, 21.81209945678711, 0.38143643736839294]}, {"name": "13_pencil_holder_0_gen_335ab012-6c35-413c-882b-425a7975d7a6", "instance": "13_pencil_holder_0", "retrieved_uid": "gen_335ab012-6c35-413c-882b-425a7975d7a6", "selected_uid": "gen_335ab012-6c35-413c-882b-425a7975d7a6", "original_size": [1.0518672466278076, 1.0576155185699463, 1.9939658641815186], "scale_factor": [8.731342551105124, 8.732119775523655, 8.731793022028675], "rotation": [0.0, 0.0, 0.0, 0.9999967801771965], "z_rotation": 0.0, "size": [9.2, 9.2, 17.4], "position": [26.984617233276367, 53.259159088134766, 8.689264297485352]}, {"name": "18_pen_4_8d4857932fba4a65a286ec60751c5201", "instance": "18_pen_4", "retrieved_uid": "8d4857932fba4a65a286ec60751c5201", "selected_uid": "8d4857932fba4a65a286ec60751c5201", "original_size": [1.9506332874298096, 20.103500366210938, 1.9287000894546509], "scale_factor": [0.837855806375816, 0.8376633827902417, 0.8377909080239595], "rotation": [0.0, 0.07427508009169358, 0.0, 0.997058649427897], "z_rotation": 0.0, "size": [1.7, 16.8, 1.6], "position": [34.47989273071289, 22.2840576171875, 0.5455984473228455]}, {"name": "2_mouse_0_212f2713f3704907a2ca16c1546cb8f7", "instance": "2_mouse_0", "retrieved_uid": "212f2713f3704907a2ca16c1546cb8f7", "selected_uid": "212f2713f3704907a2ca16c1546cb8f7", "original_size": [2.5432043075561523, 3.8199782371520996, 1.5826719999313354], "scale_factor": [3.437627024388652, 3.4376939910044015, 2.804135712753554], "rotation": [0.0, 0.0, -0.22589274507162702, 0.9735677493606415], "z_rotation": 0.0, "size": [8.8, 13.1, 4.4], "position": [59.98397445678711, 15.554125785827637, 4.338311195373535]}, {"name": "3_keyboard_0_0c0edb114d324eab9106f331244621c5", "instance": "3_keyboard_0", "retrieved_uid": "0c0edb114d324eab9106f331244621c5", "selected_uid": "0c0edb114d324eab9106f331244621c5", "original_size": [17.828330993652344, 46.02759552001953, 3.4151110649108887], "scale_factor": [0.6664900225192306, 0.6664680773717692, 0.6667035535605917], "rotation": [0.0, 0.0, -0.7073343699816643, 0.7068785728911411], "z_rotation": -1.5714408159255981, "size": [11.9, 30.7, 2.3], "position": [59.90001678466797, 13.298028945922852, 1.1416988372802734]}, {"name": "4_stapler_0_0adcf1771a3c4b5c922c47dd09d149b0", "instance": "4_stapler_0", "retrieved_uid": "0adcf1771a3c4b5c922c47dd09d149b0", "selected_uid": "0adcf1771a3c4b5c922c47dd09d149b0", "original_size": [0.001732956850901246, 0.010165935382246971, 0.003746474627405405], "scale_factor": [1301.7432227415584, 1301.6309173741354, 1301.7045030713273], "rotation": [0.0, 0.0, 0.7069959849779797, 0.7072160336633821], "z_rotation": 1.5702217817306519, "size": [2.3, 13.2, 4.9], "position": [92.81525421142578, 41.22026824951172, 2.4325575828552246]}, {"name": "5_headset_0_a168f82493e54feda127d0361d8f0936", "instance": "5_headset_0", "retrieved_uid": "a168f82493e54feda127d0361d8f0936", "selected_uid": "a168f82493e54feda127d0361d8f0936", "original_size": [2.8743605613708496, 3.0558176040649414, 1.514866828918457], "scale_factor": [5.182566870128425, 5.182622081419479, 5.182890659695715], "rotation": [0.0, -0.1278120423509917, -0.9535072181915, 0.2706839224096292], "z_rotation": -2.5793604850769043, "size": [14.9, 15.6, 7.9], "position": [15.46658706665039, 41.1038932800293, 4.050000190734863]}, {"name": "7_plant_0_04eeeca688074aa19a9c94e596b04e33", "instance": "7_plant_0", "retrieved_uid": "04eeeca688074aa19a9c94e596b04e33", "selected_uid": "04eeeca688074aa19a9c94e596b04e33", "original_size": [0.22136259078979492, 0.2248401641845703, 0.2693798542022705], "scale_factor": [39.504486177799016, 38.535452414063975, 84.96794699696606], "rotation": [0.0, 0.0, -0.2525923900356918, 0.9675691782007537], "z_rotation": -0.5107574462890625, "size": [8.8, 8.6, 22.9], "position": [12.357415199279785, 55.14256286621094, 11.431156158447266]}, {"name": "8_phone_0_3923dbced4e64a479efcad63ba8e3e03", "instance": "8_phone_0", "retrieved_uid": "3923dbced4e64a479efcad63ba8e3e03", "selected_uid": "3923dbced4e64a479efcad63ba8e3e03", "original_size": [2.0171852111816406, 4.112580299377441, 0.19040831923484802], "scale_factor": [2.7343211818671778, 2.7342261637306535, 2.735969429368188], "rotation": [0.0, 0.0, 0.0, 0.9999898874287801], "z_rotation": 0.0, "size": [5.5, 11.3, 0.5], "position": [87.800048828125, 55.19812774658203, 0.21472449600696564]}, {"name": "9_notebook_0_a525a7ee829c486288c5e4881624801a", "instance": "9_notebook_0", "retrieved_uid": "a525a7ee829c486288c5e4881624801a", "selected_uid": "a525a7ee829c486288c5e4881624801a", "original_size": [1.2105809450149536, 1.0590615272521973, 0.8548988103866577], "scale_factor": [33.28629381044117, 33.28522181609527, 33.28487596921441], "rotation": [0.0, 0.0, 0.0, 0.9999956825789662], "z_rotation": 0.0, "size": [40.3, 35.3, 28.4], "position": [59.74451446533203, 43.768741607666016, 14.19217586517334]}]}, "plan": {"object_uid": "212f2713f3704907a2ca16c1546cb8f7", "object_name": "2_mouse_0_212f2713f3704907a2ca16c1546cb8f7", "object_instance": "2_mouse_0", "position_delta": 37.25903300097849, "rotation_delta": 0.45598293084195646, "grasp_width": 0.0704, "poses": [{"translation": [0.971, 0.18100000000000002, 0.123], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.971, 0.18100000000000002, 0.023], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.971, 0.18100000000000002, 0.123], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.5998397445678711, 0.15554125785827638, 0.14338311195373535], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.5998397445678711, 0.15554125785827638, 0.04338311195373535], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.5998397445678711, 0.15554125785827638, 0.14338311195373535], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}]}};
+const CM_TO_M = 0.01;
+const APPROACH_HEIGHT_M = 0.1;
+const GRIPPER_MAX_WIDTH_M = 0.08;
+
+const canvas = document.getElementById("scene");
+const ctx = canvas.getContext("2d");
+const taskSelect = document.getElementById("taskSelect");
+const playButton = document.getElementById("playButton");
+const resetButton = document.getElementById("resetButton");
+const timeline = document.getElementById("timeline");
+
+let tasks = [];
+let current = null;
+let progress = 0;
+let playing = false;
+let lastFrame = 0;
+
+init().catch((error) => {
+  console.error(error);
+  drawMessage(`Failed to load demo data: ${error.message}`);
+});
+
+async function init() {
+  if (window.DEMO_PAYLOAD) {
+    initStandalone(window.DEMO_PAYLOAD);
+    requestAnimationFrame(tick);
+    return;
+  }
+
+  const index = await fetchJson("../data/tasks/index.json");
+  tasks = index.tasks;
+  for (const task of tasks) {
+    const option = document.createElement("option");
+    option.value = task.task;
+    option.textContent = `${task.task}  ${task.variant}`;
+    taskSelect.appendChild(option);
+  }
+
+  taskSelect.addEventListener("change", () => loadTask(taskSelect.value));
+  playButton.addEventListener("click", togglePlay);
+  resetButton.addEventListener("click", reset);
+  timeline.addEventListener("input", () => {
+    progress = Number(timeline.value) / 1000;
+    playing = false;
+    playButton.textContent = "Play";
+    render();
+  });
+  window.addEventListener("resize", render);
+
+  await loadTask(tasks[0].task);
+  requestAnimationFrame(tick);
+}
+
+function initStandalone(payload) {
+  tasks = [{ task: payload.task, variant: "standalone" }];
+  const option = document.createElement("option");
+  option.value = payload.task;
+  option.textContent = payload.task;
+  taskSelect.appendChild(option);
+  taskSelect.disabled = true;
+
+  playButton.addEventListener("click", togglePlay);
+  resetButton.addEventListener("click", reset);
+  timeline.addEventListener("input", () => {
+    progress = Number(timeline.value) / 1000;
+    playing = false;
+    playButton.textContent = "Play";
+    render();
+  });
+  window.addEventListener("resize", render);
+
+  current = buildDemoState(tasks[0], payload.origin, payload.end);
+  reset();
+}
+
+async function loadTask(taskName) {
+  const meta = tasks.find((item) => item.task === taskName);
+  const [origin, end] = await Promise.all([
+    fetchJson(`../data/tasks/${taskName}/origin.json`),
+    fetchJson(`../data/tasks/${taskName}/end.json`),
+  ]);
+  current = buildDemoState(meta, origin, end);
+  reset();
+}
+
+function buildDemoState(meta, origin, end) {
+  const moved = findMovedObject(origin, end);
+  const originObj = moved.origin;
+  const endObj = moved.end;
+  const pick = cmToM(originObj.position);
+  const place = cmToM(endObj.position);
+  const poses = [
+    addZ(pick, APPROACH_HEIGHT_M),
+    pick,
+    addZ(pick, APPROACH_HEIGHT_M),
+    addZ(place, APPROACH_HEIGHT_M),
+    place,
+    addZ(place, APPROACH_HEIGHT_M),
+  ];
+  return {
+    meta,
+    origin,
+    end,
+    moved,
+    poses,
+    gripWidth: Math.min(Math.max(Math.min(originObj.size[0], originObj.size[1]) * CM_TO_M * 0.8, 0.005), GRIPPER_MAX_WIDTH_M),
+  };
+}
+
+function findMovedObject(origin, end) {
+  const endByUid = new Map(end.objects.map((object) => [uid(object), object]));
+  const diffs = [];
+  for (const object of origin.objects) {
+    const target = endByUid.get(uid(object));
+    if (!target) continue;
+    const positionDelta = distance(object.position, target.position);
+    const rotationDelta = quatAngle(object.rotation, target.rotation);
+    diffs.push({
+      score: positionDelta + rotationDelta * 10,
+      positionDelta,
+      rotationDelta,
+      origin: object,
+      end: target,
+    });
+  }
+  diffs.sort((a, b) => b.score - a.score);
+  return diffs[0];
+}
+
+function tick(timestamp) {
+  if (!lastFrame) lastFrame = timestamp;
+  const dt = Math.min(timestamp - lastFrame, 48);
+  lastFrame = timestamp;
+
+  if (playing) {
+    progress += dt / 6500;
+    if (progress >= 1) {
+      progress = 1;
+      playing = false;
+      playButton.textContent = "Play";
+    }
+    timeline.value = String(Math.round(progress * 1000));
+    render();
+  }
+  requestAnimationFrame(tick);
+}
+
+function togglePlay() {
+  if (!current) return;
+  if (progress >= 1) progress = 0;
+  playing = !playing;
+  playButton.textContent = playing ? "Pause" : "Play";
+}
+
+function reset() {
+  progress = 0;
+  playing = false;
+  timeline.value = "0";
+  playButton.textContent = "Play";
+  render();
+}
+
+function render() {
+  resizeCanvas();
+  if (!current) {
+    drawMessage("Loading...");
+    return;
+  }
+
+  const bounds = current.origin.item_placement_zone;
+  const view = tableView(bounds);
+  drawBackground(view);
+  drawObjects(current, view);
+  drawPath(current, view);
+  drawGripper(current, view);
+  updateStats(current);
+}
+
+function drawBackground(view) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#d7dde3";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.fillStyle = "#f4f0e7";
+  ctx.strokeStyle = "#596675";
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.rect(view.x, view.y, view.w, view.h);
+  ctx.fill();
+  ctx.stroke();
+
+  ctx.fillStyle = "#596675";
+  ctx.font = "14px system-ui, sans-serif";
+  ctx.fillText("table frame, cm", view.x, view.y - 12);
+}
+
+function drawObjects(state, view) {
+  const movedUid = uid(state.moved.origin);
+  const animated = animatedObjectPosition(state);
+
+  for (const object of state.origin.objects) {
+    if (uid(object) === movedUid) continue;
+    drawObject(object, object.position, view, "#9aa8b6", "#697887", 0.9);
+  }
+
+  for (const object of state.end.objects) {
+    if (uid(object) !== movedUid) continue;
+    drawObject(object, object.position, view, "rgba(47,111,237,0.08)", "#2f6fed", 1, true);
+  }
+
+  drawObject(state.moved.origin, animated, view, "#f2b84b", "#9a6400", 1);
+}
+
+function drawObject(object, position, view, fill, stroke, alpha = 1, dashed = false) {
+  const center = toCanvas(position, view);
+  const width = Math.max(object.size[0] * view.scale, 6);
+  const height = Math.max(object.size[1] * view.scale, 6);
+
+  ctx.save();
+  ctx.globalAlpha = alpha;
+  ctx.translate(center.x, center.y);
+  ctx.rotate(-(object.z_rotation || 0));
+  ctx.fillStyle = fill;
+  ctx.strokeStyle = stroke;
+  ctx.lineWidth = dashed ? 2 : 1.5;
+  ctx.setLineDash(dashed ? [7, 6] : []);
+  ctx.beginPath();
+  roundRect(-width / 2, -height / 2, width, height, 5);
+  ctx.fill();
+  ctx.stroke();
+  ctx.restore();
+}
+
+function drawPath(state, view) {
+  const points = state.poses.map((pose) => toCanvas(mToCm(pose), view));
+  ctx.save();
+  ctx.strokeStyle = "#2f6fed";
+  ctx.lineWidth = 3;
+  ctx.setLineDash([10, 8]);
+  ctx.beginPath();
+  for (let i = 0; i < points.length; i += 1) {
+    if (i === 0) ctx.moveTo(points[i].x, points[i].y);
+    else ctx.lineTo(points[i].x, points[i].y);
+  }
+  ctx.stroke();
+  ctx.restore();
+}
+
+function drawGripper(state, view) {
+  const position = gripperPosition(state);
+  const point = toCanvas(mToCm(position), view);
+  const zCm = position[2] * 100;
+  const open = progress < 0.18 || progress > 0.82;
+  const span = open ? 22 : 12;
+
+  ctx.save();
+  ctx.translate(point.x, point.y);
+  ctx.strokeStyle = "#16202b";
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.moveTo(0, -18);
+  ctx.lineTo(0, 18);
+  ctx.moveTo(-span, -12);
+  ctx.lineTo(0, -12);
+  ctx.moveTo(-span, 12);
+  ctx.lineTo(0, 12);
+  ctx.moveTo(span, -12);
+  ctx.lineTo(0, -12);
+  ctx.moveTo(span, 12);
+  ctx.lineTo(0, 12);
+  ctx.stroke();
+
+  ctx.fillStyle = "#16202b";
+  ctx.font = "12px system-ui, sans-serif";
+  ctx.fillText(`${zCm.toFixed(1)} cm`, 16, -18);
+  ctx.restore();
+}
+
+function animatedObjectPosition(state) {
+  if (progress < 0.22) return state.moved.origin.position;
+  if (progress > 0.82) return state.moved.end.position;
+  const gripper = gripperPosition(state);
+  return mToCm(gripper);
+}
+
+function gripperPosition(state) {
+  const segments = state.poses.length - 1;
+  const scaled = progress * segments;
+  const index = Math.min(Math.floor(scaled), segments - 1);
+  const local = scaled - index;
+  return lerpVec(state.poses[index], state.poses[index + 1], ease(local));
+}
+
+function updateStats(state) {
+  document.getElementById("objectName").textContent = state.moved.origin.instance;
+  document.getElementById("moveDelta").textContent = `${state.moved.positionDelta.toFixed(2)} cm`;
+  document.getElementById("gripWidth").textContent = `${state.gripWidth.toFixed(3)} m`;
+  document.getElementById("variantName").textContent = state.meta.variant;
+}
+
+function tableView(bounds) {
+  const margin = Math.max(36, Math.min(canvas.width, canvas.height) * 0.08);
+  const minX = bounds[0];
+  const maxX = bounds[1];
+  const minY = bounds[2];
+  const maxY = bounds[3];
+  const tableW = maxX - minX;
+  const tableH = maxY - minY;
+  const scale = Math.min((canvas.width - margin * 2) / tableW, (canvas.height - margin * 2) / tableH);
+  const w = tableW * scale;
+  const h = tableH * scale;
+  return {
+    minX,
+    maxY,
+    scale,
+    x: (canvas.width - w) / 2,
+    y: (canvas.height - h) / 2,
+    w,
+    h,
+  };
+}
+
+function toCanvas(positionCm, view) {
+  return {
+    x: view.x + (positionCm[0] - view.minX) * view.scale,
+    y: view.y + (view.maxY - positionCm[1]) * view.scale,
+  };
+}
+
+function resizeCanvas() {
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = Math.max(1, Math.round(rect.width));
+  canvas.height = Math.max(1, Math.round(rect.height));
+}
+
+function drawMessage(message) {
+  resizeCanvas();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#17202a";
+  ctx.font = "18px system-ui, sans-serif";
+  ctx.fillText(message, 32, 48);
+}
+
+async function fetchJson(path) {
+  const response = await fetch(path);
+  if (!response.ok) throw new Error(`${path}: ${response.status}`);
+  return response.json();
+}
+
+function uid(object) {
+  return object.selected_uid || object.retrieved_uid;
+}
+
+function cmToM(position) {
+  return position.map((value) => value * CM_TO_M);
+}
+
+function mToCm(position) {
+  return position.map((value) => value / CM_TO_M);
+}
+
+function addZ(position, dz) {
+  return [position[0], position[1], position[2] + dz];
+}
+
+function distance(a, b) {
+  return Math.hypot(a[0] - b[0], a[1] - b[1], a[2] - b[2]);
+}
+
+function quatAngle(a, b) {
+  const dot = Math.abs(a[0] * b[0] + a[1] * b[1] + a[2] * b[2] + a[3] * b[3]);
+  return 2 * Math.acos(Math.min(1, Math.max(-1, dot)));
+}
+
+function lerpVec(a, b, t) {
+  return [
+    a[0] + (b[0] - a[0]) * t,
+    a[1] + (b[1] - a[1]) * t,
+    a[2] + (b[2] - a[2]) * t,
+  ];
+}
+
+function ease(t) {
+  return t * t * (3 - 2 * t);
+}
+
+function roundRect(x, y, w, h, r) {
+  const radius = Math.min(r, Math.abs(w) / 2, Math.abs(h) / 2);
+  ctx.moveTo(x + radius, y);
+  ctx.lineTo(x + w - radius, y);
+  ctx.quadraticCurveTo(x + w, y, x + w, y + radius);
+  ctx.lineTo(x + w, y + h - radius);
+  ctx.quadraticCurveTo(x + w, y + h, x + w - radius, y + h);
+  ctx.lineTo(x + radius, y + h);
+  ctx.quadraticCurveTo(x, y + h, x, y + h - radius);
+  ctx.lineTo(x, y + radius);
+  ctx.quadraticCurveTo(x, y, x + radius, y);
+}
+
+</script>
+  </body>
+</html>

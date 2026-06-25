@@ -1,0 +1,210 @@
+{
+  "task": "level4_0881_1",
+  "status": "error",
+  "object": "14_plant_2",
+  "target": "14_plant_2",
+  "position_delta_cm": 43.20659569202681,
+  "max_speed_mps": 0.21603297846013408,
+  "events": [
+    {
+      "time": 0.433,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 2_pen_0",
+      "count": 95,
+      "first_time": 0.433,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 2_pen_0",
+      "count": 94,
+      "first_time": 2.017,
+      "last_time": 3.567
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "14_plant_2 contacts 11_laptop_1",
+      "count": 73,
+      "first_time": 4.017,
+      "last_time": 5.217
+    },
+    {
+      "time": 4.6,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "14_plant_2 contacts 13_books_1",
+      "count": 85,
+      "first_time": 4.6,
+      "last_time": 6.0
+    },
+    {
+      "time": 4.633,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "14_plant_2 contacts 1_stack_0",
+      "count": 10,
+      "first_time": 4.633,
+      "last_time": 4.783
+    },
+    {
+      "time": 5.817,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "14_plant_2 contacts 4_laptop_0",
+      "count": 12,
+      "first_time": 5.817,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "14_plant_2 contacts 13_books_1",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "14_plant_2 contacts 4_laptop_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.15,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "14_plant_2 contacts 1_stack_0",
+      "count": 112,
+      "first_time": 6.15,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.967,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "14_plant_2 contacts 6_books_0",
+      "count": 63,
+      "first_time": 6.967,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.583,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "14_plant_2 contacts 5_sticky_note_0",
+      "count": 26,
+      "first_time": 7.583,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.6,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "14_plant_2 contacts 10_notebook_1",
+      "count": 25,
+      "first_time": 7.6,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.983,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 10_notebook_1",
+      "count": 2,
+      "first_time": 7.983,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "14_plant_2 contacts 10_notebook_1",
+      "count": 24,
+      "first_time": 8.017,
+      "last_time": 8.4
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 10_notebook_1",
+      "count": 1,
+      "first_time": 8.017,
+      "last_time": 8.017
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "14_plant_2 contacts 13_books_1",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "14_plant_2 contacts 1_stack_0",
+      "count": 111,
+      "first_time": 8.017,
+      "last_time": 9.85
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "14_plant_2 contacts 4_laptop_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "14_plant_2 contacts 5_sticky_note_0",
+      "count": 25,
+      "first_time": 8.017,
+      "last_time": 8.417
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "14_plant_2 contacts 6_books_0",
+      "count": 62,
+      "first_time": 8.017,
+      "last_time": 9.033
+    }
+  ]
+}

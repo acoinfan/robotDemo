@@ -1,0 +1,140 @@
+{
+  "task": "level2_1483_1",
+  "status": "error",
+  "object": "11_storage_box_0",
+  "target": "11_storage_box_0",
+  "position_delta_cm": 66.66630601000897,
+  "max_speed_mps": 0.33333153005004484,
+  "events": [
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 0.333 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    },
+    {
+      "time": 4.667,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "11_storage_box_0 contacts 1_laptop_0",
+      "count": 81,
+      "first_time": 4.667,
+      "last_time": 6.0
+    },
+    {
+      "time": 4.8,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_laptop_0",
+      "count": 73,
+      "first_time": 4.8,
+      "last_time": 6.0
+    },
+    {
+      "time": 5.633,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "11_storage_box_0 contacts 9_pencil_holder_0",
+      "count": 23,
+      "first_time": 5.633,
+      "last_time": 6.0
+    },
+    {
+      "time": 5.817,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "11_storage_box_0 contacts 2_water_bottle_0",
+      "count": 8,
+      "first_time": 5.817,
+      "last_time": 5.933
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "11_storage_box_0 contacts 1_laptop_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_laptop_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "11_storage_box_0 contacts 9_pencil_holder_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.55,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 9_pencil_holder_0",
+      "count": 88,
+      "first_time": 6.55,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "11_storage_box_0 contacts 1_laptop_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_laptop_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "11_storage_box_0 contacts 9_pencil_holder_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 9_pencil_holder_0",
+      "count": 87,
+      "first_time": 8.017,
+      "last_time": 9.45
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "task": "level5_0765_0",
+  "status": "error",
+  "object": "5_calculator_0",
+  "target": "5_calculator_0",
+  "position_delta_cm": 146.23043827087022,
+  "max_speed_mps": 0.731152191354351,
+  "events": [
+    {
+      "time": 1.433,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 24_notebook_1",
+      "count": 35,
+      "first_time": 1.433,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 24_notebook_1",
+      "count": 34,
+      "first_time": 2.017,
+      "last_time": 2.567
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 0.731 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    }
+  ]
+}

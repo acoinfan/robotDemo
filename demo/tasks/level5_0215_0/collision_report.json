@@ -1,0 +1,110 @@
+{
+  "task": "level5_0215_0",
+  "status": "error",
+  "object": "7_pen_1",
+  "target": "7_pen_1",
+  "position_delta_cm": 34.71084193777321,
+  "max_speed_mps": 0.17355420968886603,
+  "events": [
+    {
+      "time": 1.25,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 26_book_5",
+      "count": 46,
+      "first_time": 1.25,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 26_book_5",
+      "count": 45,
+      "first_time": 2.017,
+      "last_time": 2.75
+    },
+    {
+      "time": 5.333,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 9_book_0",
+      "count": 15,
+      "first_time": 5.333,
+      "last_time": 5.567
+    },
+    {
+      "time": 5.567,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "7_pen_1 contacts 9_book_0",
+      "count": 25,
+      "first_time": 5.567,
+      "last_time": 5.967
+    },
+    {
+      "time": 6.517,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "7_pen_1 contacts 11_book_2",
+      "count": 90,
+      "first_time": 6.517,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.117,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 18_book_4",
+      "count": 54,
+      "first_time": 7.117,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.333,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "7_pen_1 contacts 18_book_4",
+      "count": 41,
+      "first_time": 7.333,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "7_pen_1 contacts 11_book_2",
+      "count": 89,
+      "first_time": 8.017,
+      "last_time": 9.483
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "7_pen_1 contacts 18_book_4",
+      "count": 40,
+      "first_time": 8.017,
+      "last_time": 8.667
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 18_book_4",
+      "count": 53,
+      "first_time": 8.017,
+      "last_time": 8.883
+    }
+  ]
+}

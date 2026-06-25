@@ -1,0 +1,180 @@
+{
+  "task": "level5_0783_0",
+  "status": "error",
+  "object": "20_pen_5",
+  "target": "20_pen_5",
+  "position_delta_cm": 22.728080854139613,
+  "max_speed_mps": 0.11364040427069812,
+  "events": [
+    {
+      "time": 1.133,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 18_pen_4",
+      "count": 53,
+      "first_time": 1.133,
+      "last_time": 2.0
+    },
+    {
+      "time": 1.25,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 16_pen_3",
+      "count": 46,
+      "first_time": 1.25,
+      "last_time": 2.0
+    },
+    {
+      "time": 1.4,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 12_pen_1",
+      "count": 37,
+      "first_time": 1.4,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 12_pen_1",
+      "count": 36,
+      "first_time": 2.017,
+      "last_time": 2.6
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 16_pen_3",
+      "count": 45,
+      "first_time": 2.017,
+      "last_time": 2.75
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 18_pen_4",
+      "count": 52,
+      "first_time": 2.017,
+      "last_time": 2.867
+    },
+    {
+      "time": 5.533,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 17_flower_pot_1",
+      "count": 8,
+      "first_time": 5.533,
+      "last_time": 5.65
+    },
+    {
+      "time": 5.867,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "20_pen_5 contacts 10_notes_0",
+      "count": 9,
+      "first_time": 5.867,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.0,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_laptop_0",
+      "count": 1,
+      "first_time": 6.0,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "20_pen_5 contacts 10_notes_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_laptop_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.2,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 4_mug_1",
+      "count": 109,
+      "first_time": 6.2,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.067,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "20_pen_5 contacts 2_mouse_0",
+      "count": 57,
+      "first_time": 7.067,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "20_pen_5 contacts 10_notes_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_laptop_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "20_pen_5 contacts 2_mouse_0",
+      "count": 56,
+      "first_time": 8.017,
+      "last_time": 8.933
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 4_mug_1",
+      "count": 108,
+      "first_time": 8.017,
+      "last_time": 9.8
+    }
+  ]
+}

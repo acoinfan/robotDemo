@@ -1,0 +1,40 @@
+{
+  "task": "level3_1464_0",
+  "status": "error",
+  "object": "5_bind_notebook_0",
+  "target": "5_bind_notebook_0",
+  "position_delta_cm": 571.6131238591151,
+  "max_speed_mps": 2.858065619295576,
+  "events": [
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "5_bind_notebook_0 contacts 1_laptop_0",
+      "count": 8,
+      "first_time": 4.017,
+      "last_time": 4.133
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 2.858 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    },
+    {
+      "time": 4.183,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "5_bind_notebook_0 contacts 4_smartphone_calendar_0",
+      "count": 1,
+      "first_time": 4.183,
+      "last_time": 4.183
+    }
+  ]
+}

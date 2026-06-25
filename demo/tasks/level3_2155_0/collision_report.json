@@ -1,0 +1,50 @@
+{
+  "task": "level3_2155_0",
+  "status": "error",
+  "object": "2_mouse_0",
+  "target": "2_mouse_0",
+  "position_delta_cm": 37.25903300097849,
+  "max_speed_mps": 0.18629516500489243,
+  "events": [
+    {
+      "time": 7.583,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_mouse_0 contacts 3_keyboard_0",
+      "count": 26,
+      "first_time": 7.583,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.783,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_keyboard_0",
+      "count": 14,
+      "first_time": 7.783,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_mouse_0 contacts 3_keyboard_0",
+      "count": 25,
+      "first_time": 8.017,
+      "last_time": 8.417
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_keyboard_0",
+      "count": 13,
+      "first_time": 8.017,
+      "last_time": 8.217
+    }
+  ]
+}

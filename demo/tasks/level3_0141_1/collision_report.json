@@ -1,0 +1,140 @@
+{
+  "task": "level3_0141_1",
+  "status": "error",
+  "object": "13_notebook_1",
+  "target": "13_notebook_1",
+  "position_delta_cm": 27.653970458336733,
+  "max_speed_mps": 0.1382698522916837,
+  "events": [
+    {
+      "time": 4.083,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "13_notebook_1 contacts 9_headphone_0",
+      "count": 22,
+      "first_time": 4.083,
+      "last_time": 4.433
+    },
+    {
+      "time": 4.55,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 9_headphone_0",
+      "count": 2,
+      "first_time": 4.55,
+      "last_time": 4.567
+    },
+    {
+      "time": 5.3,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "13_notebook_1 contacts 4_computer_0",
+      "count": 43,
+      "first_time": 5.3,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "13_notebook_1 contacts 4_computer_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.5,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 9_headphone_0",
+      "count": 91,
+      "first_time": 6.5,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.55,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "13_notebook_1 contacts 9_headphone_0",
+      "count": 88,
+      "first_time": 6.55,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "13_notebook_1 contacts 10_cup_0",
+      "count": 60,
+      "first_time": 7.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.333,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 10_cup_0",
+      "count": 41,
+      "first_time": 7.333,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "13_notebook_1 contacts 10_cup_0",
+      "count": 59,
+      "first_time": 8.017,
+      "last_time": 8.983
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 10_cup_0",
+      "count": 40,
+      "first_time": 8.017,
+      "last_time": 8.667
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "13_notebook_1 contacts 4_computer_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "13_notebook_1 contacts 9_headphone_0",
+      "count": 87,
+      "first_time": 8.017,
+      "last_time": 9.45
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 9_headphone_0",
+      "count": 90,
+      "first_time": 8.017,
+      "last_time": 9.5
+    }
+  ]
+}

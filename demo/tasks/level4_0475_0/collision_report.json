@@ -1,0 +1,40 @@
+{
+  "task": "level4_0475_0",
+  "status": "error",
+  "object": "26_notebook_2",
+  "target": "26_notebook_2",
+  "position_delta_cm": 250.02470135530245,
+  "max_speed_mps": 1.2501235067765124,
+  "events": [
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 1.250 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    },
+    {
+      "time": 4.133,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "26_notebook_2 contacts 15_pencil_holder_1",
+      "count": 1,
+      "first_time": 4.133,
+      "last_time": 4.133
+    },
+    {
+      "time": 4.233,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "26_notebook_2 contacts 14_pencil_holder_0",
+      "count": 2,
+      "first_time": 4.233,
+      "last_time": 4.25
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "task": "level5_0625_0",
+  "status": "error",
+  "object": "1_plant_0",
+  "target": "1_plant_0",
+  "position_delta_cm": 32.65952757911943,
+  "max_speed_mps": 0.16329763789559718,
+  "events": [
+    {
+      "time": 4.15,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "1_plant_0 contacts 2_mug_0",
+      "count": 31,
+      "first_time": 4.15,
+      "last_time": 4.65
+    },
+    {
+      "time": 4.183,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "1_plant_0 contacts 4_mug_glass_0",
+      "count": 58,
+      "first_time": 4.183,
+      "last_time": 5.133
+    },
+    {
+      "time": 6.083,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "1_plant_0 contacts 4_mug_glass_0",
+      "count": 116,
+      "first_time": 6.083,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.383,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "1_plant_0 contacts 3_mug_1",
+      "count": 98,
+      "first_time": 6.383,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.65,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "1_plant_0 contacts 5_notebook_0",
+      "count": 82,
+      "first_time": 6.65,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.183,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "1_plant_0 contacts 10_notebook_snack_box_0",
+      "count": 50,
+      "first_time": 7.183,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.217,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "1_plant_0 contacts 22_cookies_8",
+      "count": 48,
+      "first_time": 7.217,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.367,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "1_plant_0 contacts 17_cookies_4",
+      "count": 39,
+      "first_time": 7.367,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.55,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "1_plant_0 contacts 12_cookies_0",
+      "count": 28,
+      "first_time": 7.55,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.65,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "1_plant_0 contacts 9_coaster_plate_0",
+      "count": 22,
+      "first_time": 7.65,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "1_plant_0 contacts 3_mug_1",
+      "count": 97,
+      "first_time": 8.017,
+      "last_time": 9.617
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "1_plant_0 contacts 4_mug_glass_0",
+      "count": 115,
+      "first_time": 8.017,
+      "last_time": 9.917
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "1_plant_0 contacts 5_notebook_0",
+      "count": 81,
+      "first_time": 8.017,
+      "last_time": 9.35
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "1_plant_0 contacts 9_coaster_plate_0",
+      "count": 21,
+      "first_time": 8.017,
+      "last_time": 8.35
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "1_plant_0 contacts 10_notebook_snack_box_0",
+      "count": 49,
+      "first_time": 8.017,
+      "last_time": 8.817
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "1_plant_0 contacts 12_cookies_0",
+      "count": 27,
+      "first_time": 8.017,
+      "last_time": 8.45
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "1_plant_0 contacts 17_cookies_4",
+      "count": 38,
+      "first_time": 8.017,
+      "last_time": 8.633
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "1_plant_0 contacts 22_cookies_8",
+      "count": 47,
+      "first_time": 8.017,
+      "last_time": 8.783
+    }
+  ]
+}

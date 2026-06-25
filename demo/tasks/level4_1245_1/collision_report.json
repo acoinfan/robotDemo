@@ -1,0 +1,110 @@
+{
+  "task": "level4_1245_1",
+  "status": "error",
+  "object": "4_smartphone_0",
+  "target": "4_smartphone_0",
+  "position_delta_cm": 53.49680538957214,
+  "max_speed_mps": 0.2674840269478607,
+  "events": [
+    {
+      "time": 1.317,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 10_pen_pencil_0",
+      "count": 42,
+      "first_time": 1.317,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 10_pen_pencil_0",
+      "count": 41,
+      "first_time": 2.017,
+      "last_time": 2.683
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 0.267 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    },
+    {
+      "time": 4.8,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 2_coffee_cup_0",
+      "count": 43,
+      "first_time": 4.8,
+      "last_time": 5.5
+    },
+    {
+      "time": 4.85,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_lamp_0",
+      "count": 70,
+      "first_time": 4.85,
+      "last_time": 6.0
+    },
+    {
+      "time": 4.867,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_smartphone_0 contacts 3_lamp_0",
+      "count": 69,
+      "first_time": 4.867,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_smartphone_0 contacts 3_lamp_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_lamp_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_smartphone_0 contacts 3_lamp_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_lamp_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    }
+  ]
+}

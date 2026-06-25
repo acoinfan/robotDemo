@@ -1,0 +1,120 @@
+{
+  "task": "level3_1538_1",
+  "status": "error",
+  "object": "12_keyrings_0",
+  "target": "12_keyrings_0",
+  "position_delta_cm": 101.06468384419921,
+  "max_speed_mps": 0.5053234192209961,
+  "events": [
+    {
+      "time": 1.467,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 11_notebook_1",
+      "count": 33,
+      "first_time": 1.467,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 11_notebook_1",
+      "count": 32,
+      "first_time": 2.017,
+      "last_time": 2.533
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 0.505 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    },
+    {
+      "time": 5.533,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_coffee_cup_0",
+      "count": 29,
+      "first_time": 5.533,
+      "last_time": 6.0
+    },
+    {
+      "time": 5.567,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "12_keyrings_0 contacts 3_coffee_cup_0",
+      "count": 26,
+      "first_time": 5.567,
+      "last_time": 5.983
+    },
+    {
+      "time": 5.783,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "12_keyrings_0 contacts 9_computer_0",
+      "count": 4,
+      "first_time": 5.783,
+      "last_time": 5.833
+    },
+    {
+      "time": 5.95,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "12_keyrings_0 contacts 2_alarm_clock_0",
+      "count": 4,
+      "first_time": 5.95,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "12_keyrings_0 contacts 2_alarm_clock_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_coffee_cup_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "12_keyrings_0 contacts 2_alarm_clock_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_coffee_cup_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    }
+  ]
+}

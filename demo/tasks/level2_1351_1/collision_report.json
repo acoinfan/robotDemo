@@ -1,0 +1,40 @@
+{
+  "task": "level2_1351_1",
+  "status": "error",
+  "object": "12_folder_book_0",
+  "target": "12_folder_book_0",
+  "position_delta_cm": 17.829739928239626,
+  "max_speed_mps": 0.08914869964119813,
+  "events": [
+    {
+      "time": 5.267,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "12_folder_book_0 contacts 1_projector_0",
+      "count": 45,
+      "first_time": 5.267,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "12_folder_book_0 contacts 1_projector_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "12_folder_book_0 contacts 1_projector_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "task": "level3_2087_0",
+  "status": "error",
+  "object": "6_scissors_0",
+  "target": "6_scissors_0",
+  "position_delta_cm": 8.060038475476038,
+  "max_speed_mps": 0.05,
+  "events": [
+    {
+      "time": 1.167,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 13_pen_1",
+      "count": 51,
+      "first_time": 1.167,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 13_pen_1",
+      "count": 50,
+      "first_time": 2.017,
+      "last_time": 2.833
+    }
+  ]
+}

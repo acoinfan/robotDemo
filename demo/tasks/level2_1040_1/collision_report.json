@@ -1,0 +1,160 @@
+{
+  "task": "level2_1040_1",
+  "status": "error",
+  "object": "4_notebook_0",
+  "target": "4_notebook_0",
+  "position_delta_cm": 30.909784274214044,
+  "max_speed_mps": 0.1545489213710702,
+  "events": [
+    {
+      "time": 5.233,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_notebook_0 contacts 7_computer_0",
+      "count": 47,
+      "first_time": 5.233,
+      "last_time": 6.0
+    },
+    {
+      "time": 5.5,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_notebook_0 contacts 3_plant_0",
+      "count": 31,
+      "first_time": 5.5,
+      "last_time": 6.0
+    },
+    {
+      "time": 5.817,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_plant_0",
+      "count": 12,
+      "first_time": 5.817,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_notebook_0 contacts 3_plant_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_plant_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_notebook_0 contacts 7_computer_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.217,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_notebook_0 contacts 1_printer_0",
+      "count": 48,
+      "first_time": 7.217,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.9,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_notebook_0 contacts 5_watch_0",
+      "count": 7,
+      "first_time": 7.9,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.933,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 5_watch_0",
+      "count": 5,
+      "first_time": 7.933,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_notebook_0 contacts 1_printer_0",
+      "count": 47,
+      "first_time": 8.017,
+      "last_time": 8.783
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_notebook_0 contacts 3_plant_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_plant_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_notebook_0 contacts 5_watch_0",
+      "count": 6,
+      "first_time": 8.017,
+      "last_time": 8.1
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 5_watch_0",
+      "count": 4,
+      "first_time": 8.017,
+      "last_time": 8.067
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_notebook_0 contacts 7_computer_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    }
+  ]
+}

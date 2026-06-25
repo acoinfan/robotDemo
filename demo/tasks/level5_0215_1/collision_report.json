@@ -1,0 +1,20 @@
+{
+  "task": "level5_0215_1",
+  "status": "warning",
+  "object": "1_mouse_0",
+  "target": "1_mouse_0",
+  "position_delta_cm": 64.25847331327145,
+  "max_speed_mps": 0.3212923665663573,
+  "events": [
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 0.321 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "task": "level2_1351_0",
+  "status": "warning",
+  "object": "9_book_1",
+  "target": "9_book_1",
+  "position_delta_cm": 97.67317773010546,
+  "max_speed_mps": 0.4883658886505274,
+  "events": [
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 0.488 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    }
+  ]
+}

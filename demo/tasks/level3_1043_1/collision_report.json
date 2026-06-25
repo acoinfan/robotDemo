@@ -1,0 +1,160 @@
+{
+  "task": "level3_1043_1",
+  "status": "error",
+  "object": "8_calculator_0",
+  "target": "8_calculator_0",
+  "position_delta_cm": 57.37159962053728,
+  "max_speed_mps": 0.28685799810268636,
+  "events": [
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "8_calculator_0 contacts 2_laptop_0",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "8_calculator_0 contacts 9_pen_holder_0",
+      "count": 1,
+      "first_time": 4.017,
+      "last_time": 4.017
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 0.287 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    },
+    {
+      "time": 4.083,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 2_laptop_0",
+      "count": 114,
+      "first_time": 4.083,
+      "last_time": 5.967
+    },
+    {
+      "time": 5.567,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "8_calculator_0 contacts 3_globe_0",
+      "count": 21,
+      "first_time": 5.567,
+      "last_time": 5.9
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "8_calculator_0 contacts 2_laptop_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.483,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "8_calculator_0 contacts 10_pen_1",
+      "count": 32,
+      "first_time": 7.483,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.633,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "8_calculator_0 contacts 11_sticky_note_pad_1",
+      "count": 23,
+      "first_time": 7.633,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.667,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 10_pen_1",
+      "count": 21,
+      "first_time": 7.667,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.817,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 11_sticky_note_pad_1",
+      "count": 12,
+      "first_time": 7.817,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "8_calculator_0 contacts 10_pen_1",
+      "count": 31,
+      "first_time": 8.017,
+      "last_time": 8.517
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 10_pen_1",
+      "count": 20,
+      "first_time": 8.017,
+      "last_time": 8.333
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "8_calculator_0 contacts 11_sticky_note_pad_1",
+      "count": 22,
+      "first_time": 8.017,
+      "last_time": 8.367
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 11_sticky_note_pad_1",
+      "count": 11,
+      "first_time": 8.017,
+      "last_time": 8.183
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "8_calculator_0 contacts 2_laptop_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    }
+  ]
+}

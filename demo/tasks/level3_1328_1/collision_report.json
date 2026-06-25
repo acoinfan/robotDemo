@@ -1,0 +1,150 @@
+{
+  "task": "level3_1328_1",
+  "status": "error",
+  "object": "9_stapler_1",
+  "target": "9_stapler_1",
+  "position_delta_cm": 37.07963400199347,
+  "max_speed_mps": 0.1853981700099673,
+  "events": [
+    {
+      "time": 1.717,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 7_sticky_note_2",
+      "count": 18,
+      "first_time": 1.717,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 7_sticky_note_2",
+      "count": 17,
+      "first_time": 2.017,
+      "last_time": 2.283
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "9_stapler_1 contacts 1_printer_0",
+      "count": 67,
+      "first_time": 4.017,
+      "last_time": 5.117
+    },
+    {
+      "time": 4.1,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_printer_0",
+      "count": 71,
+      "first_time": 4.1,
+      "last_time": 5.267
+    },
+    {
+      "time": 5.567,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "9_stapler_1 contacts 6_briefcase_0",
+      "count": 27,
+      "first_time": 5.567,
+      "last_time": 6.0
+    },
+    {
+      "time": 5.85,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 6_briefcase_0",
+      "count": 10,
+      "first_time": 5.85,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "9_stapler_1 contacts 6_briefcase_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 6_briefcase_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "9_stapler_1 contacts 11_list_0",
+      "count": 60,
+      "first_time": 7.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.017,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 2_eyeglasses_0",
+      "count": 60,
+      "first_time": 7.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "9_stapler_1 contacts 11_list_0",
+      "count": 59,
+      "first_time": 8.017,
+      "last_time": 8.983
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 2_eyeglasses_0",
+      "count": 59,
+      "first_time": 8.017,
+      "last_time": 8.983
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "9_stapler_1 contacts 6_briefcase_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 6_briefcase_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    }
+  ]
+}

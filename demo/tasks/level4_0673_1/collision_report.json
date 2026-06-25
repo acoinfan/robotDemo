@@ -1,0 +1,200 @@
+{
+  "task": "level4_0673_1",
+  "status": "error",
+  "object": "6_printer_0",
+  "target": "6_printer_0",
+  "position_delta_cm": 61.999358970781806,
+  "max_speed_mps": 0.309996794853909,
+  "events": [
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_printer_0 contacts 3_cup_0",
+      "count": 71,
+      "first_time": 4.017,
+      "last_time": 5.183
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 0.310 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    },
+    {
+      "time": 4.633,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_printer_0 contacts 13_computer_0",
+      "count": 83,
+      "first_time": 4.633,
+      "last_time": 6.0
+    },
+    {
+      "time": 5.017,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 13_computer_0",
+      "count": 60,
+      "first_time": 5.017,
+      "last_time": 6.0
+    },
+    {
+      "time": 5.817,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_printer_0 contacts 2_pot_plant_0",
+      "count": 12,
+      "first_time": 5.817,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_printer_0 contacts 13_computer_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 13_computer_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_printer_0 contacts 2_pot_plant_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.517,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_printer_0 contacts 10_stapler_0",
+      "count": 90,
+      "first_time": 6.517,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.917,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_printer_0 contacts 8_notebook_0",
+      "count": 66,
+      "first_time": 6.917,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.933,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_printer_0 contacts 4_keyboard_0",
+      "count": 65,
+      "first_time": 6.933,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.95,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 4_keyboard_0",
+      "count": 4,
+      "first_time": 7.95,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_printer_0 contacts 10_stapler_0",
+      "count": 89,
+      "first_time": 8.017,
+      "last_time": 9.483
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_printer_0 contacts 13_computer_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 13_computer_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_printer_0 contacts 2_pot_plant_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_printer_0 contacts 4_keyboard_0",
+      "count": 64,
+      "first_time": 8.017,
+      "last_time": 9.067
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 4_keyboard_0",
+      "count": 3,
+      "first_time": 8.017,
+      "last_time": 8.05
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_printer_0 contacts 8_notebook_0",
+      "count": 65,
+      "first_time": 8.017,
+      "last_time": 9.083
+    }
+  ]
+}

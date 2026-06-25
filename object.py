@@ -1,6 +1,5 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Tuple
-from franky import CartesianMotion, Affine
 from scipy.spatial.transform import Rotation
 import numpy as np
 
@@ -22,10 +21,15 @@ class Object:
     z_rotation: float
     size: Tuple[float, float, float]
     position: Tuple[float, float, float]
+
+    @property
+    def uid(self) -> str:
+        return self.selected_uid or self.retrieved_uid
+
     def __eq__(self, other):
         if not isinstance(other, Object):
             return NotImplemented
-        return self.name == other.name
+        return self.uid == other.uid
 
     def __lt__(self, other):
         if not isinstance(other, Object):
@@ -65,8 +69,11 @@ class Object:
     """
     返回需要的移动
     """
-    def get_movement(self) -> CartesianMotion:
-        return CartesianMotion(Affine(self.position, self.rotation))
+    def get_movement(self):
+        from franky import Affine, CartesianMotion
+
+        position_m = np.array(self.position, dtype=float) * 0.01
+        return CartesianMotion(Affine(position_m, self.rotation))
         
 
 @dataclass

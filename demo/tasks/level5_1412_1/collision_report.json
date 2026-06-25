@@ -1,0 +1,110 @@
+{
+  "task": "level5_1412_1",
+  "status": "error",
+  "object": "19_desk_organizer_1",
+  "target": "19_desk_organizer_1",
+  "position_delta_cm": 21.884390977761235,
+  "max_speed_mps": 0.10942195488880621,
+  "events": [
+    {
+      "time": 1.75,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 10_pencil_pen_4",
+      "count": 16,
+      "first_time": 1.75,
+      "last_time": 2.0
+    },
+    {
+      "time": 1.833,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 18_pencil_pen_9",
+      "count": 11,
+      "first_time": 1.833,
+      "last_time": 2.0
+    },
+    {
+      "time": 1.867,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 21_pencil_0",
+      "count": 9,
+      "first_time": 1.867,
+      "last_time": 2.0
+    },
+    {
+      "time": 1.9,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 8_pencil_pen_2",
+      "count": 7,
+      "first_time": 1.9,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 10_pencil_pen_4",
+      "count": 15,
+      "first_time": 2.017,
+      "last_time": 2.25
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 18_pencil_pen_9",
+      "count": 10,
+      "first_time": 2.017,
+      "last_time": 2.167
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 21_pencil_0",
+      "count": 8,
+      "first_time": 2.017,
+      "last_time": 2.133
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 8_pencil_pen_2",
+      "count": 6,
+      "first_time": 2.017,
+      "last_time": 2.1
+    },
+    {
+      "time": 7.733,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "19_desk_organizer_1 contacts 17_pencil_pen_8",
+      "count": 17,
+      "first_time": 7.733,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "19_desk_organizer_1 contacts 17_pencil_pen_8",
+      "count": 16,
+      "first_time": 8.017,
+      "last_time": 8.267
+    }
+  ]
+}

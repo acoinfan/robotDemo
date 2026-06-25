@@ -1,0 +1,50 @@
+{
+  "task": "level4_1861_0",
+  "status": "error",
+  "object": "18_paper_clips_0",
+  "target": "18_paper_clips_0",
+  "position_delta_cm": 15.937159921268046,
+  "max_speed_mps": 0.07968579960634022,
+  "events": [
+    {
+      "time": 0.567,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 12_blueprint_0",
+      "count": 87,
+      "first_time": 0.567,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 12_blueprint_0",
+      "count": 86,
+      "first_time": 2.017,
+      "last_time": 3.433
+    },
+    {
+      "time": 6.133,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_stapler_0",
+      "count": 113,
+      "first_time": 6.133,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_stapler_0",
+      "count": 112,
+      "first_time": 8.017,
+      "last_time": 9.867
+    }
+  ]
+}

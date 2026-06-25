@@ -1,0 +1,50 @@
+{
+  "task": "level3_1170_1",
+  "status": "error",
+  "object": "10_coaster_0",
+  "target": "10_coaster_0",
+  "position_delta_cm": 34.38167190500471,
+  "max_speed_mps": 0.17190835952502354,
+  "events": [
+    {
+      "time": 0.0,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_mug_0",
+      "count": 121,
+      "first_time": 0.0,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_mug_0",
+      "count": 120,
+      "first_time": 2.017,
+      "last_time": 4.0
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "10_coaster_0 contacts 3_mug_0",
+      "count": 64,
+      "first_time": 4.017,
+      "last_time": 5.067
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_mug_0",
+      "count": 64,
+      "first_time": 4.017,
+      "last_time": 5.067
+    }
+  ]
+}

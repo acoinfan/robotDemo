@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MesaSkill Pick Demo - level3_1492_1</title>
+    <style>
+:root {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #eef1f4;
+  color: #17202a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  height: 100vh;
+}
+
+.stage {
+  min-width: 0;
+  min-height: 0;
+  background: #d7dde3;
+}
+
+#scene {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 18px;
+  border-left: 1px solid #c4ccd4;
+  background: #f7f8fa;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+}
+
+label,
+dt {
+  color: #53606f;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+select,
+button,
+input {
+  font: inherit;
+}
+
+select {
+  width: 100%;
+  min-height: 36px;
+  padding: 6px 8px;
+  border: 1px solid #b5bfca;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #17202a;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+button {
+  min-height: 38px;
+  border: 1px solid #2f6fed;
+  border-radius: 6px;
+  background: #2f6fed;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button + button {
+  border-color: #a9b3bf;
+  background: #ffffff;
+  color: #17202a;
+}
+
+.timeline {
+  width: 100%;
+  accent-color: #2f6fed;
+}
+
+.stats {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.stats div {
+  display: grid;
+  gap: 3px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d6dce2;
+}
+
+dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+@media (max-width: 820px) {
+  body {
+    overflow: auto;
+  }
+
+  .shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(420px, 64vh) auto;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .panel {
+    border-left: 0;
+    border-top: 1px solid #c4ccd4;
+  }
+}
+
+</style>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="stage">
+        <canvas id="scene" width="1100" height="760"></canvas>
+      </section>
+      <aside class="panel">
+        <div class="field">
+          <label for="taskSelect">Task</label>
+          <select id="taskSelect"></select>
+        </div>
+        <div class="toolbar" aria-label="Playback controls">
+          <button id="playButton" type="button">Play</button>
+          <button id="resetButton" type="button">Reset</button>
+        </div>
+        <input id="timeline" class="timeline" type="range" min="0" max="1000" value="0">
+        <dl class="stats">
+          <div>
+            <dt>Object</dt>
+            <dd id="objectName">-</dd>
+          </div>
+          <div>
+            <dt>Move</dt>
+            <dd id="moveDelta">-</dd>
+          </div>
+          <div>
+            <dt>Grip</dt>
+            <dd id="gripWidth">-</dd>
+          </div>
+          <div>
+            <dt>Variant</dt>
+            <dd id="variantName">-</dd>
+          </div>
+        </dl>
+      </aside>
+    </main>
+    <script>
+window.DEMO_PAYLOAD = {"task": "level3_1492_1", "origin": {"scene_settings": {"units": "centimeters", "up_axis": "Z"}, "item_placement_zone": [0.0, 106.9, 0.0, 71.9], "objects": [{"name": "10_pencil_0_f6980f8fc24547348d15627d2af99c0c", "instance": "10_pencil_0", "retrieved_uid": "f6980f8fc24547348d15627d2af99c0c", "selected_uid": "f6980f8fc24547348d15627d2af99c0c", "original_size": [9.293651580810547, 0.51528000831604, 0.5152810215950012], "scale_factor": [1.4476417948708673, 1.447093709837999, 1.4470904782140155], "rotation": [0.0, 0.0, -0.711002767086029, 0.7031893134117126], "z_rotation": -1.5818463563919067, "size": [13.4, 0.7, 0.7], "position": [16.9, 54.8, 0.4]}, {"name": "12_pencil_1_4842e147554b4a06ad061cc2ab89ccda", "instance": "12_pencil_1", "retrieved_uid": "4842e147554b4a06ad061cc2ab89ccda", "selected_uid": "4842e147554b4a06ad061cc2ab89ccda", "original_size": [8.580266952514648, 0.40466922521591187, 0.41507580876350403], "scale_factor": [1.712631808759527, 1.7133681838078856, 1.7136300416692036], "rotation": [0.0, 0.0, -0.7130343317985535, 0.701129138469696], "z_rotation": -1.5876330137252808, "size": [14.6, 0.7, 0.7], "position": [19.9, 55.3, 0.4]}, {"name": "15_pencil_2_a64e9ce9bccb4b5ab52d6bf0f186bd97", "instance": "15_pencil_2", "retrieved_uid": "a64e9ce9bccb4b5ab52d6bf0f186bd97", "selected_uid": "a64e9ce9bccb4b5ab52d6bf0f186bd97", "original_size": [0.34547877311706543, 9.067113876342773, 0.34547924995422363], "scale_factor": [1.547393660691045, 1.5479680358761383, 1.5473914673804896], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [0.5, 14.0, 0.5], "position": [14.0, 54.1, 0.2]}, {"name": "17_pencil_3_4842e147554b4a06ad061cc2ab89ccda", "instance": "17_pencil_3", "retrieved_uid": "4842e147554b4a06ad061cc2ab89ccda", "selected_uid": "4842e147554b4a06ad061cc2ab89ccda", "original_size": [8.580266952514648, 0.40466922521591187, 0.41507580876350403], "scale_factor": [1.692285394966309, 1.6930130003462567, 1.6932726435360206], "rotation": [0.6793510913848877, -0.6756563186645508, -0.20189546048641205, 0.20299966633319855], "z_rotation": -1.5653427839279175, "size": [14.5, 0.7, 0.7], "position": [23.6, 53.9, 0.5]}, {"name": "1_clock_0_edc8c38a80f5419092f72e8febf3598b", "instance": "1_clock_0", "retrieved_uid": "edc8c38a80f5419092f72e8febf3598b", "selected_uid": "edc8c38a80f5419092f72e8febf3598b", "original_size": [209.97036743164062, 38.5103645324707, 209.97030639648438], "scale_factor": [0.030492555777181976, 0.030494766105890508, 0.030492567671957092], "rotation": [-0.6992963552474976, 0.0, 0.0, 0.7148318886756897], "z_rotation": 0.0, "size": [6.4, 6.5, 1.3], "position": [59.6, 44.2, 0.5]}, {"name": "21_pencil_4_48fd553e592e4289bec9a1df3c4a01cc", "instance": "21_pencil_4", "retrieved_uid": "48fd553e592e4289bec9a1df3c4a01cc", "selected_uid": "48fd553e592e4289bec9a1df3c4a01cc", "original_size": [2.336228847503662, 2.336228370666504, 27.847105026245117], "scale_factor": [0.5102917187099765, 0.5102919079941044, 0.5104587601233872], "rotation": [-0.7056620121002197, 0.0, 0.0, 0.7085486054420471], "z_rotation": 0.0, "size": [1.2, 14.2, 1.2], "position": [9.1, 53.4, 0.6]}, {"name": "22_pencil_5_48fd553e592e4289bec9a1df3c4a01cc", "instance": "22_pencil_5", "retrieved_uid": "48fd553e592e4289bec9a1df3c4a01cc", "selected_uid": "48fd553e592e4289bec9a1df3c4a01cc", "original_size": [2.336228847503662, 2.336228370666504, 27.847105026245117], "scale_factor": [0.5173238585696143, 0.517323879027521, 0.5174929639234819], "rotation": [-0.7040918469429016, 0.0, 0.0, 0.7101089358329773], "z_rotation": 0.0, "size": [1.2, 14.4, 1.2], "position": [11.9, 54.5, 0.6]}, {"name": "2_cup_0_275967704e5348689ab6b42fde76c775", "instance": "2_cup_0", "retrieved_uid": "275967704e5348689ab6b42fde76c775", "selected_uid": "275967704e5348689ab6b42fde76c775", "original_size": [7.993190765380859, 7.706489562988281, 4.038949966430664], "scale_factor": [1.7591370021063037, 1.7590955519025118, 1.7590708649099156], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [14.0, 13.6, 7.1], "position": [16.4, 37.9, 3.6]}, {"name": "3_plant_0_ac265d6dd72f483e9377a1da57c3038a", "instance": "3_plant_0", "retrieved_uid": "ac265d6dd72f483e9377a1da57c3038a", "selected_uid": "ac265d6dd72f483e9377a1da57c3038a", "original_size": [21.744705200195312, 21.744712829589844, 36.803367614746094], "scale_factor": [0.45002538311398577, 0.450025225217157, 0.4500088538719547], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [9.8, 9.8, 16.6], "position": [69.1, 43.9, 8.3]}, {"name": "6_wallet_0_4eb66e5c0b4f4e60b8e3e2e8e2c8b84c", "instance": "6_wallet_0", "retrieved_uid": "4eb66e5c0b4f4e60b8e3e2e8e2c8b84c", "selected_uid": "4eb66e5c0b4f4e60b8e3e2e8e2c8b84c", "original_size": [70.46826171875, 115.80784606933594, 28.0455322265625], "scale_factor": [0.17833701416581818, 0.17833603178961355, 0.17835773081660536], "rotation": [0.0, 0.0, 0.35633739829063416, 0.9343573451042175], "z_rotation": 0.7286900877952576, "size": [12.6, 20.6, 5.0], "position": [65.5, 17.5, 2.5]}, {"name": "8_clipboard_notebook_0_gen_312b8e2c-a764-4c74-b2ec-a6b7f97bb967", "instance": "8_clipboard_notebook_0", "retrieved_uid": "gen_312b8e2c-a764-4c74-b2ec-a6b7f97bb967", "selected_uid": "gen_312b8e2c-a764-4c74-b2ec-a6b7f97bb967", "original_size": [1.4175442457199097, 0.04152952879667282, 1.993722915649414], "scale_factor": [15.321240421838997, 15.310050023836121, 15.321731337770643], "rotation": [-0.7080398797988892, 0.0, 0.0, 0.7061724662780762], "z_rotation": 0.0, "size": [21.7, 30.6, 0.7], "position": [40.0, 55.6, 0.2]}, {"name": "9_clip_notebook_0_a820c3cc463a4ee49b87e1e9a4029abc", "instance": "9_clip_notebook_0", "retrieved_uid": "a820c3cc463a4ee49b87e1e9a4029abc", "selected_uid": "a820c3cc463a4ee49b87e1e9a4029abc", "original_size": [0.2698706388473511, 0.30859437584877014, 0.0747000128030777], "scale_factor": [77.54417021493921, 77.5452047267546, 77.54995664060506], "rotation": [0.0, 0.0, 0.0, 1.0], "z_rotation": 0.0, "size": [20.9, 23.9, 5.8], "position": [38.8, 26.0, 2.9]}]}, "end": {"scene_settings": {"units": "centimeters", "up_axis": "Z"}, "item_placement_zone": [0.0, 106.9, 0.0, 71.9], "objects": [{"name": "10_pencil_0_f6980f8fc24547348d15627d2af99c0c", "instance": "10_pencil_0", "retrieved_uid": "f6980f8fc24547348d15627d2af99c0c", "selected_uid": "f6980f8fc24547348d15627d2af99c0c", "original_size": [9.293651580810547, 0.51528000831604, 0.5152810215950012], "scale_factor": [1.4476417948708673, 1.447093709837999, 1.4470904782140155], "rotation": [0.06872787375495834, -0.06927668892958073, -0.7025706674910173, 0.7048912518405256], "z_rotation": -1.5818463563919067, "size": [13.4, 0.7, 0.7], "position": [16.901716232299805, 54.7912483215332, 0.3492380678653717]}, {"name": "12_pencil_1_4842e147554b4a06ad061cc2ab89ccda", "instance": "12_pencil_1", "retrieved_uid": "4842e147554b4a06ad061cc2ab89ccda", "selected_uid": "4842e147554b4a06ad061cc2ab89ccda", "original_size": [8.580266952514648, 0.40466922521591187, 0.41507580876350403], "scale_factor": [1.712631808759527, 1.7133681838078856, 1.7136300416692036], "rotation": [-0.07672831124681916, 0.07802769849506593, -0.7087616062954515, 0.6969084803345886], "z_rotation": -1.5876330137252808, "size": [14.6, 0.7, 0.7], "position": [19.967798233032227, 55.29884719848633, 0.31988880038261414]}, {"name": "15_pencil_2_a64e9ce9bccb4b5ab52d6bf0f186bd97", "instance": "15_pencil_2", "retrieved_uid": "a64e9ce9bccb4b5ab52d6bf0f186bd97", "selected_uid": "a64e9ce9bccb4b5ab52d6bf0f186bd97", "original_size": [0.34547877311706543, 9.067113876342773, 0.34547924995422363], "scale_factor": [1.547393660691045, 1.5479680358761383, 1.5473914673804896], "rotation": [0.0, 0.15079601815217114, 0.0, 0.9883971706514791], "z_rotation": 0.0, "size": [0.5, 14.0, 0.5], "position": [14.286312103271484, 54.09369659423828, 0.23921513557434082]}, {"name": "17_pencil_3_4842e147554b4a06ad061cc2ab89ccda", "instance": "17_pencil_3", "retrieved_uid": "4842e147554b4a06ad061cc2ab89ccda", "selected_uid": "4842e147554b4a06ad061cc2ab89ccda", "original_size": [8.580266952514648, 0.40466922521591187, 0.41507580876350403], "scale_factor": [1.692285394966309, 1.6930130003462567, 1.6932726435360206], "rotation": [-0.6709350678476527, 0.6672300228187574, 0.22809131829248155, -0.2294004836549916], "z_rotation": -1.5653427839279175, "size": [14.5, 0.7, 0.7], "position": [23.62523651123047, 53.90010070800781, 0.3384738564491272]}, {"name": "1_clock_0_edc8c38a80f5419092f72e8febf3598b", "instance": "1_clock_0", "retrieved_uid": "edc8c38a80f5419092f72e8febf3598b", "selected_uid": "edc8c38a80f5419092f72e8febf3598b", "original_size": [209.97036743164062, 38.5103645324707, 209.97030639648438], "scale_factor": [0.030492555777181976, 0.030494766105890508, 0.030492567671957092], "rotation": [-0.2936100278506987, 0.9558163293733642, 0.0, 0.0], "z_rotation": 0.0, "size": [6.4, 6.5, 1.3], "position": [33.60921859741211, 49.09856033325195, 0.6495910286903381]}, {"name": "21_pencil_4_48fd553e592e4289bec9a1df3c4a01cc", "instance": "21_pencil_4", "retrieved_uid": "48fd553e592e4289bec9a1df3c4a01cc", "selected_uid": "48fd553e592e4289bec9a1df3c4a01cc", "original_size": [2.336228847503662, 2.336228370666504, 27.847105026245117], "scale_factor": [0.5102917187099765, 0.5102919079941044, 0.5104587601233872], "rotation": [-0.34002413116494845, -0.5881554246998532, -0.35788991489930555, 0.640602525311152], "z_rotation": 0.0, "size": [1.2, 14.2, 1.2], "position": [7.008282661437988, 47.422061920166016, 0.5567276477813721]}, {"name": "22_pencil_5_48fd553e592e4289bec9a1df3c4a01cc", "instance": "22_pencil_5", "retrieved_uid": "48fd553e592e4289bec9a1df3c4a01cc", "selected_uid": "48fd553e592e4289bec9a1df3c4a01cc", "original_size": [2.336228847503662, 2.336228370666504, 27.847105026245117], "scale_factor": [0.5173238585696143, 0.517323879027521, 0.5174929639234819], "rotation": [0.0, 0.0, -0.4899408777137778, 0.8712676992509379], "z_rotation": 0.0, "size": [1.2, 14.4, 1.2], "position": [11.09798812866211, 47.669517517089844, 0.7915325164794922]}, {"name": "2_cup_0_275967704e5348689ab6b42fde76c775", "instance": "2_cup_0", "retrieved_uid": "275967704e5348689ab6b42fde76c775", "selected_uid": "275967704e5348689ab6b42fde76c775", "original_size": [7.993190765380859, 7.706489562988281, 4.038949966430664], "scale_factor": [1.7591370021063037, 1.7590955519025118, 1.7590708649099156], "rotation": [-0.5141485137389866, -0.8577007620758823, 0.0, 0.0], "z_rotation": 0.0, "size": [14.0, 13.6, 7.1], "position": [6.126699924468994, 38.980506896972656, 3.549025535583496]}, {"name": "3_plant_0_ac265d6dd72f483e9377a1da57c3038a", "instance": "3_plant_0", "retrieved_uid": "ac265d6dd72f483e9377a1da57c3038a", "selected_uid": "ac265d6dd72f483e9377a1da57c3038a", "original_size": [21.744705200195312, 21.744712829589844, 36.803367614746094], "scale_factor": [0.45002538311398577, 0.450025225217157, 0.4500088538719547], "rotation": [0.0, 0.0, 0.0, 0.9999999999774608], "z_rotation": 0.0, "size": [9.8, 9.8, 16.6], "position": [69.09993743896484, 43.90017318725586, 8.299996376037598]}, {"name": "6_wallet_0_4eb66e5c0b4f4e60b8e3e2e8e2c8b84c", "instance": "6_wallet_0", "retrieved_uid": "4eb66e5c0b4f4e60b8e3e2e8e2c8b84c", "selected_uid": "4eb66e5c0b4f4e60b8e3e2e8e2c8b84c", "original_size": [70.46826171875, 115.80784606933594, 28.0455322265625], "scale_factor": [0.17833701416581818, 0.17833603178961355, 0.17835773081660536], "rotation": [0.0, 0.0, 0.35510778060131737, 0.9343510221275987], "z_rotation": 0.7286900877952576, "size": [12.6, 20.6, 5.0], "position": [65.42566680908203, 17.447547912597656, 2.090364456176758]}, {"name": "8_clipboard_notebook_0_gen_312b8e2c-a764-4c74-b2ec-a6b7f97bb967", "instance": "8_clipboard_notebook_0", "retrieved_uid": "gen_312b8e2c-a764-4c74-b2ec-a6b7f97bb967", "selected_uid": "gen_312b8e2c-a764-4c74-b2ec-a6b7f97bb967", "original_size": [1.4175442457199097, 0.04152952879667282, 1.993722915649414], "scale_factor": [15.321240421838997, 15.310050023836121, 15.321731337770643], "rotation": [-0.058407390164718326, 0.08967767798914147, 0.10191904680274408, 0.9890192105027296], "z_rotation": 0.0, "size": [21.7, 30.6, 0.7], "position": [47.57040023803711, 42.766807556152344, 3.4570236206054688]}, {"name": "9_clip_notebook_0_a820c3cc463a4ee49b87e1e9a4029abc", "instance": "9_clip_notebook_0", "retrieved_uid": "a820c3cc463a4ee49b87e1e9a4029abc", "selected_uid": "a820c3cc463a4ee49b87e1e9a4029abc", "original_size": [0.2698706388473511, 0.30859437584877014, 0.0747000128030777], "scale_factor": [77.54417021493921, 77.5452047267546, 77.54995664060506], "rotation": [0.0, 0.0, 0.0, 0.9995748878275466], "z_rotation": 0.0, "size": [20.9, 23.9, 5.8], "position": [38.89906311035156, 26.001056671142578, 2.452036142349243]}]}, "plan": {"object_uid": "edc8c38a80f5419092f72e8febf3598b", "object_name": "1_clock_0_edc8c38a80f5419092f72e8febf3598b", "object_instance": "1_clock_0", "position_delta": 26.448799381663484, "rotation_delta": 2.72796676547561, "grasp_width": 0.0512, "poses": [{"translation": [0.596, 0.44200000000000006, 0.10500000000000001], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.596, 0.44200000000000006, 0.005], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.596, 0.44200000000000006, 0.10500000000000001], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.3360921859741211, 0.49098560333251956, 0.10649591028690339], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.3360921859741211, 0.49098560333251956, 0.006495910286903382], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}, {"translation": [0.3360921859741211, 0.49098560333251956, 0.10649591028690339], "quaternion": [1.0, 0.0, 0.0, 6.123233995736766e-17]}]}};
+const CM_TO_M = 0.01;
+const APPROACH_HEIGHT_M = 0.1;
+const GRIPPER_MAX_WIDTH_M = 0.08;
+
+const canvas = document.getElementById("scene");
+const ctx = canvas.getContext("2d");
+const taskSelect = document.getElementById("taskSelect");
+const playButton = document.getElementById("playButton");
+const resetButton = document.getElementById("resetButton");
+const timeline = document.getElementById("timeline");
+
+let tasks = [];
+let current = null;
+let progress = 0;
+let playing = false;
+let lastFrame = 0;
+
+init().catch((error) => {
+  console.error(error);
+  drawMessage(`Failed to load demo data: ${error.message}`);
+});
+
+async function init() {
+  if (window.DEMO_PAYLOAD) {
+    initStandalone(window.DEMO_PAYLOAD);
+    requestAnimationFrame(tick);
+    return;
+  }
+
+  const index = await fetchJson("../data/tasks/index.json");
+  tasks = index.tasks;
+  for (const task of tasks) {
+    const option = document.createElement("option");
+    option.value = task.task;
+    option.textContent = `${task.task}  ${task.variant}`;
+    taskSelect.appendChild(option);
+  }
+
+  taskSelect.addEventListener("change", () => loadTask(taskSelect.value));
+  playButton.addEventListener("click", togglePlay);
+  resetButton.addEventListener("click", reset);
+  timeline.addEventListener("input", () => {
+    progress = Number(timeline.value) / 1000;
+    playing = false;
+    playButton.textContent = "Play";
+    render();
+  });
+  window.addEventListener("resize", render);
+
+  await loadTask(tasks[0].task);
+  requestAnimationFrame(tick);
+}
+
+function initStandalone(payload) {
+  tasks = [{ task: payload.task, variant: "standalone" }];
+  const option = document.createElement("option");
+  option.value = payload.task;
+  option.textContent = payload.task;
+  taskSelect.appendChild(option);
+  taskSelect.disabled = true;
+
+  playButton.addEventListener("click", togglePlay);
+  resetButton.addEventListener("click", reset);
+  timeline.addEventListener("input", () => {
+    progress = Number(timeline.value) / 1000;
+    playing = false;
+    playButton.textContent = "Play";
+    render();
+  });
+  window.addEventListener("resize", render);
+
+  current = buildDemoState(tasks[0], payload.origin, payload.end);
+  reset();
+}
+
+async function loadTask(taskName) {
+  const meta = tasks.find((item) => item.task === taskName);
+  const [origin, end] = await Promise.all([
+    fetchJson(`../data/tasks/${taskName}/origin.json`),
+    fetchJson(`../data/tasks/${taskName}/end.json`),
+  ]);
+  current = buildDemoState(meta, origin, end);
+  reset();
+}
+
+function buildDemoState(meta, origin, end) {
+  const moved = findMovedObject(origin, end);
+  const originObj = moved.origin;
+  const endObj = moved.end;
+  const pick = cmToM(originObj.position);
+  const place = cmToM(endObj.position);
+  const poses = [
+    addZ(pick, APPROACH_HEIGHT_M),
+    pick,
+    addZ(pick, APPROACH_HEIGHT_M),
+    addZ(place, APPROACH_HEIGHT_M),
+    place,
+    addZ(place, APPROACH_HEIGHT_M),
+  ];
+  return {
+    meta,
+    origin,
+    end,
+    moved,
+    poses,
+    gripWidth: Math.min(Math.max(Math.min(originObj.size[0], originObj.size[1]) * CM_TO_M * 0.8, 0.005), GRIPPER_MAX_WIDTH_M),
+  };
+}
+
+function findMovedObject(origin, end) {
+  const endByUid = new Map(end.objects.map((object) => [uid(object), object]));
+  const diffs = [];
+  for (const object of origin.objects) {
+    const target = endByUid.get(uid(object));
+    if (!target) continue;
+    const positionDelta = distance(object.position, target.position);
+    const rotationDelta = quatAngle(object.rotation, target.rotation);
+    diffs.push({
+      score: positionDelta + rotationDelta * 10,
+      positionDelta,
+      rotationDelta,
+      origin: object,
+      end: target,
+    });
+  }
+  diffs.sort((a, b) => b.score - a.score);
+  return diffs[0];
+}
+
+function tick(timestamp) {
+  if (!lastFrame) lastFrame = timestamp;
+  const dt = Math.min(timestamp - lastFrame, 48);
+  lastFrame = timestamp;
+
+  if (playing) {
+    progress += dt / 6500;
+    if (progress >= 1) {
+      progress = 1;
+      playing = false;
+      playButton.textContent = "Play";
+    }
+    timeline.value = String(Math.round(progress * 1000));
+    render();
+  }
+  requestAnimationFrame(tick);
+}
+
+function togglePlay() {
+  if (!current) return;
+  if (progress >= 1) progress = 0;
+  playing = !playing;
+  playButton.textContent = playing ? "Pause" : "Play";
+}
+
+function reset() {
+  progress = 0;
+  playing = false;
+  timeline.value = "0";
+  playButton.textContent = "Play";
+  render();
+}
+
+function render() {
+  resizeCanvas();
+  if (!current) {
+    drawMessage("Loading...");
+    return;
+  }
+
+  const bounds = current.origin.item_placement_zone;
+  const view = tableView(bounds);
+  drawBackground(view);
+  drawObjects(current, view);
+  drawPath(current, view);
+  drawGripper(current, view);
+  updateStats(current);
+}
+
+function drawBackground(view) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#d7dde3";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.fillStyle = "#f4f0e7";
+  ctx.strokeStyle = "#596675";
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.rect(view.x, view.y, view.w, view.h);
+  ctx.fill();
+  ctx.stroke();
+
+  ctx.fillStyle = "#596675";
+  ctx.font = "14px system-ui, sans-serif";
+  ctx.fillText("table frame, cm", view.x, view.y - 12);
+}
+
+function drawObjects(state, view) {
+  const movedUid = uid(state.moved.origin);
+  const animated = animatedObjectPosition(state);
+
+  for (const object of state.origin.objects) {
+    if (uid(object) === movedUid) continue;
+    drawObject(object, object.position, view, "#9aa8b6", "#697887", 0.9);
+  }
+
+  for (const object of state.end.objects) {
+    if (uid(object) !== movedUid) continue;
+    drawObject(object, object.position, view, "rgba(47,111,237,0.08)", "#2f6fed", 1, true);
+  }
+
+  drawObject(state.moved.origin, animated, view, "#f2b84b", "#9a6400", 1);
+}
+
+function drawObject(object, position, view, fill, stroke, alpha = 1, dashed = false) {
+  const center = toCanvas(position, view);
+  const width = Math.max(object.size[0] * view.scale, 6);
+  const height = Math.max(object.size[1] * view.scale, 6);
+
+  ctx.save();
+  ctx.globalAlpha = alpha;
+  ctx.translate(center.x, center.y);
+  ctx.rotate(-(object.z_rotation || 0));
+  ctx.fillStyle = fill;
+  ctx.strokeStyle = stroke;
+  ctx.lineWidth = dashed ? 2 : 1.5;
+  ctx.setLineDash(dashed ? [7, 6] : []);
+  ctx.beginPath();
+  roundRect(-width / 2, -height / 2, width, height, 5);
+  ctx.fill();
+  ctx.stroke();
+  ctx.restore();
+}
+
+function drawPath(state, view) {
+  const points = state.poses.map((pose) => toCanvas(mToCm(pose), view));
+  ctx.save();
+  ctx.strokeStyle = "#2f6fed";
+  ctx.lineWidth = 3;
+  ctx.setLineDash([10, 8]);
+  ctx.beginPath();
+  for (let i = 0; i < points.length; i += 1) {
+    if (i === 0) ctx.moveTo(points[i].x, points[i].y);
+    else ctx.lineTo(points[i].x, points[i].y);
+  }
+  ctx.stroke();
+  ctx.restore();
+}
+
+function drawGripper(state, view) {
+  const position = gripperPosition(state);
+  const point = toCanvas(mToCm(position), view);
+  const zCm = position[2] * 100;
+  const open = progress < 0.18 || progress > 0.82;
+  const span = open ? 22 : 12;
+
+  ctx.save();
+  ctx.translate(point.x, point.y);
+  ctx.strokeStyle = "#16202b";
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.moveTo(0, -18);
+  ctx.lineTo(0, 18);
+  ctx.moveTo(-span, -12);
+  ctx.lineTo(0, -12);
+  ctx.moveTo(-span, 12);
+  ctx.lineTo(0, 12);
+  ctx.moveTo(span, -12);
+  ctx.lineTo(0, -12);
+  ctx.moveTo(span, 12);
+  ctx.lineTo(0, 12);
+  ctx.stroke();
+
+  ctx.fillStyle = "#16202b";
+  ctx.font = "12px system-ui, sans-serif";
+  ctx.fillText(`${zCm.toFixed(1)} cm`, 16, -18);
+  ctx.restore();
+}
+
+function animatedObjectPosition(state) {
+  if (progress < 0.22) return state.moved.origin.position;
+  if (progress > 0.82) return state.moved.end.position;
+  const gripper = gripperPosition(state);
+  return mToCm(gripper);
+}
+
+function gripperPosition(state) {
+  const segments = state.poses.length - 1;
+  const scaled = progress * segments;
+  const index = Math.min(Math.floor(scaled), segments - 1);
+  const local = scaled - index;
+  return lerpVec(state.poses[index], state.poses[index + 1], ease(local));
+}
+
+function updateStats(state) {
+  document.getElementById("objectName").textContent = state.moved.origin.instance;
+  document.getElementById("moveDelta").textContent = `${state.moved.positionDelta.toFixed(2)} cm`;
+  document.getElementById("gripWidth").textContent = `${state.gripWidth.toFixed(3)} m`;
+  document.getElementById("variantName").textContent = state.meta.variant;
+}
+
+function tableView(bounds) {
+  const margin = Math.max(36, Math.min(canvas.width, canvas.height) * 0.08);
+  const minX = bounds[0];
+  const maxX = bounds[1];
+  const minY = bounds[2];
+  const maxY = bounds[3];
+  const tableW = maxX - minX;
+  const tableH = maxY - minY;
+  const scale = Math.min((canvas.width - margin * 2) / tableW, (canvas.height - margin * 2) / tableH);
+  const w = tableW * scale;
+  const h = tableH * scale;
+  return {
+    minX,
+    maxY,
+    scale,
+    x: (canvas.width - w) / 2,
+    y: (canvas.height - h) / 2,
+    w,
+    h,
+  };
+}
+
+function toCanvas(positionCm, view) {
+  return {
+    x: view.x + (positionCm[0] - view.minX) * view.scale,
+    y: view.y + (view.maxY - positionCm[1]) * view.scale,
+  };
+}
+
+function resizeCanvas() {
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = Math.max(1, Math.round(rect.width));
+  canvas.height = Math.max(1, Math.round(rect.height));
+}
+
+function drawMessage(message) {
+  resizeCanvas();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#17202a";
+  ctx.font = "18px system-ui, sans-serif";
+  ctx.fillText(message, 32, 48);
+}
+
+async function fetchJson(path) {
+  const response = await fetch(path);
+  if (!response.ok) throw new Error(`${path}: ${response.status}`);
+  return response.json();
+}
+
+function uid(object) {
+  return object.selected_uid || object.retrieved_uid;
+}
+
+function cmToM(position) {
+  return position.map((value) => value * CM_TO_M);
+}
+
+function mToCm(position) {
+  return position.map((value) => value / CM_TO_M);
+}
+
+function addZ(position, dz) {
+  return [position[0], position[1], position[2] + dz];
+}
+
+function distance(a, b) {
+  return Math.hypot(a[0] - b[0], a[1] - b[1], a[2] - b[2]);
+}
+
+function quatAngle(a, b) {
+  const dot = Math.abs(a[0] * b[0] + a[1] * b[1] + a[2] * b[2] + a[3] * b[3]);
+  return 2 * Math.acos(Math.min(1, Math.max(-1, dot)));
+}
+
+function lerpVec(a, b, t) {
+  return [
+    a[0] + (b[0] - a[0]) * t,
+    a[1] + (b[1] - a[1]) * t,
+    a[2] + (b[2] - a[2]) * t,
+  ];
+}
+
+function ease(t) {
+  return t * t * (3 - 2 * t);
+}
+
+function roundRect(x, y, w, h, r) {
+  const radius = Math.min(r, Math.abs(w) / 2, Math.abs(h) / 2);
+  ctx.moveTo(x + radius, y);
+  ctx.lineTo(x + w - radius, y);
+  ctx.quadraticCurveTo(x + w, y, x + w, y + radius);
+  ctx.lineTo(x + w, y + h - radius);
+  ctx.quadraticCurveTo(x + w, y + h, x + w - radius, y + h);
+  ctx.lineTo(x + radius, y + h);
+  ctx.quadraticCurveTo(x, y + h, x, y + h - radius);
+  ctx.lineTo(x, y + radius);
+  ctx.quadraticCurveTo(x, y, x + radius, y);
+}
+
+</script>
+  </body>
+</html>

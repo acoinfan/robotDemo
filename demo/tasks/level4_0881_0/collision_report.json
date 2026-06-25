@@ -1,0 +1,90 @@
+{
+  "task": "level4_0881_0",
+  "status": "error",
+  "object": "2_pen_0",
+  "target": "2_pen_0",
+  "position_delta_cm": 29.90632731728045,
+  "max_speed_mps": 0.14953163658640228,
+  "events": [
+    {
+      "time": 1.533,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 14_plant_2",
+      "count": 29,
+      "first_time": 1.533,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 14_plant_2",
+      "count": 28,
+      "first_time": 2.017,
+      "last_time": 2.467
+    },
+    {
+      "time": 7.217,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 12_pencil_case_0",
+      "count": 47,
+      "first_time": 7.217,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.25,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 10_notebook_1",
+      "count": 46,
+      "first_time": 7.25,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.333,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_pen_0 contacts 10_notebook_1",
+      "count": 41,
+      "first_time": 7.333,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_pen_0 contacts 10_notebook_1",
+      "count": 40,
+      "first_time": 8.017,
+      "last_time": 8.667
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 10_notebook_1",
+      "count": 45,
+      "first_time": 8.017,
+      "last_time": 8.75
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 12_pencil_case_0",
+      "count": 46,
+      "first_time": 8.017,
+      "last_time": 8.783
+    }
+  ]
+}

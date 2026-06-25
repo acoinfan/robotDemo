@@ -1,0 +1,60 @@
+{
+  "task": "level1_1181_1",
+  "status": "error",
+  "object": "4_pen_0",
+  "target": "4_pen_0",
+  "position_delta_cm": 43.125756867772,
+  "max_speed_mps": 0.21562878433885996,
+  "events": [
+    {
+      "time": 0.883,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_clipboard_0",
+      "count": 68,
+      "first_time": 0.883,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_clipboard_0",
+      "count": 67,
+      "first_time": 2.017,
+      "last_time": 3.117
+    },
+    {
+      "time": 5.917,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_pen_0 contacts 2_speaker_1",
+      "count": 6,
+      "first_time": 5.917,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_pen_0 contacts 2_speaker_1",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "4_pen_0 contacts 2_speaker_1",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    }
+  ]
+}

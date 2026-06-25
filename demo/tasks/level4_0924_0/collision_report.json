@@ -1,0 +1,70 @@
+{
+  "task": "level4_0924_0",
+  "status": "error",
+  "object": "7_wallet_0",
+  "target": "7_wallet_0",
+  "position_delta_cm": 15.230394984940647,
+  "max_speed_mps": 0.07615197492470323,
+  "events": [
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "7_wallet_0 contacts 11_pencil_holder_1",
+      "count": 17,
+      "first_time": 4.017,
+      "last_time": 4.283
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "7_wallet_0 contacts 1_laptop_0",
+      "count": 47,
+      "first_time": 4.017,
+      "last_time": 4.783
+    },
+    {
+      "time": 7.25,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "7_wallet_0 contacts 10_planner_notebook_0",
+      "count": 46,
+      "first_time": 7.25,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.467,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 10_planner_notebook_0",
+      "count": 33,
+      "first_time": 7.467,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "7_wallet_0 contacts 10_planner_notebook_0",
+      "count": 45,
+      "first_time": 8.017,
+      "last_time": 8.75
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 10_planner_notebook_0",
+      "count": 32,
+      "first_time": 8.017,
+      "last_time": 8.533
+    }
+  ]
+}

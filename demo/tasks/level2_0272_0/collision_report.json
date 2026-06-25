@@ -1,0 +1,60 @@
+{
+  "task": "level2_0272_0",
+  "status": "error",
+  "object": "18_tablet_file_0",
+  "target": "18_tablet_file_0",
+  "position_delta_cm": 464.20343776991956,
+  "max_speed_mps": 2.321017188849598,
+  "events": [
+    {
+      "time": 0.467,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 5_earphones_0",
+      "count": 93,
+      "first_time": 0.467,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 5_earphones_0",
+      "count": 92,
+      "first_time": 2.017,
+      "last_time": 3.533
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 2.321 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    },
+    {
+      "time": 4.033,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "18_tablet_file_0 contacts 5_earphones_0",
+      "count": 3,
+      "first_time": 4.033,
+      "last_time": 4.067
+    },
+    {
+      "time": 4.2,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "18_tablet_file_0 contacts 22_file_1",
+      "count": 1,
+      "first_time": 4.2,
+      "last_time": 4.2
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "task": "level3_0350_1",
+  "status": "error",
+  "object": "6_notebook_0",
+  "target": "6_notebook_0",
+  "position_delta_cm": 71.76099070216411,
+  "max_speed_mps": 0.3588049535108206,
+  "events": [
+    {
+      "time": 1.033,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 9_pen_0",
+      "count": 59,
+      "first_time": 1.033,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 9_pen_0",
+      "count": 58,
+      "first_time": 2.017,
+      "last_time": 2.967
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_notebook_0 contacts 1_laptop_0",
+      "count": 95,
+      "first_time": 4.017,
+      "last_time": 5.583
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 0.359 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    },
+    {
+      "time": 4.15,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_laptop_0",
+      "count": 80,
+      "first_time": 4.15,
+      "last_time": 5.467
+    },
+    {
+      "time": 4.267,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_notebook_0 contacts 5_plant_0",
+      "count": 10,
+      "first_time": 4.267,
+      "last_time": 4.417
+    },
+    {
+      "time": 5.133,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_notebook_0 contacts 3_desk_lamp_0",
+      "count": 53,
+      "first_time": 5.133,
+      "last_time": 6.0
+    },
+    {
+      "time": 5.25,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_desk_lamp_0",
+      "count": 46,
+      "first_time": 5.25,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_notebook_0 contacts 3_desk_lamp_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_desk_lamp_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.133,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_notebook_0 contacts 7_headphones_0",
+      "count": 53,
+      "first_time": 7.133,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.133,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 7_headphones_0",
+      "count": 53,
+      "first_time": 7.133,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_notebook_0 contacts 3_desk_lamp_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_desk_lamp_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "6_notebook_0 contacts 7_headphones_0",
+      "count": 52,
+      "first_time": 8.017,
+      "last_time": 8.867
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 7_headphones_0",
+      "count": 52,
+      "first_time": 8.017,
+      "last_time": 8.867
+    }
+  ]
+}

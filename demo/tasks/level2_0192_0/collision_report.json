@@ -1,0 +1,20 @@
+{
+  "task": "level2_0192_0",
+  "status": "warning",
+  "object": "9_notebook_0",
+  "target": "9_notebook_0",
+  "position_delta_cm": 274.10953738180797,
+  "max_speed_mps": 1.3705476869090398,
+  "events": [
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 1.371 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    }
+  ]
+}

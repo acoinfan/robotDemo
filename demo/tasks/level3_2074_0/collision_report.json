@@ -1,0 +1,100 @@
+{
+  "task": "level3_2074_0",
+  "status": "error",
+  "object": "7_notepad_notebook_0",
+  "target": "7_notepad_notebook_0",
+  "position_delta_cm": 221.62516340503774,
+  "max_speed_mps": 1.1081258170251886,
+  "events": [
+    {
+      "time": 1.033,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 4_pen_0",
+      "count": 59,
+      "first_time": 1.033,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 4_pen_0",
+      "count": 58,
+      "first_time": 2.017,
+      "last_time": 2.967
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 1.108 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    },
+    {
+      "time": 4.283,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "7_notepad_notebook_0 contacts 12_folder_1",
+      "count": 18,
+      "first_time": 4.283,
+      "last_time": 4.567
+    },
+    {
+      "time": 4.283,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "7_notepad_notebook_0 contacts 9_computer_folder_0",
+      "count": 17,
+      "first_time": 4.283,
+      "last_time": 4.55
+    },
+    {
+      "time": 4.3,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "7_notepad_notebook_0 contacts 8_calendar_0",
+      "count": 13,
+      "first_time": 4.3,
+      "last_time": 4.5
+    },
+    {
+      "time": 4.333,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 12_folder_1",
+      "count": 12,
+      "first_time": 4.333,
+      "last_time": 4.517
+    },
+    {
+      "time": 4.333,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 9_computer_folder_0",
+      "count": 11,
+      "first_time": 4.333,
+      "last_time": 4.5
+    },
+    {
+      "time": 4.35,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 8_calendar_0",
+      "count": 7,
+      "first_time": 4.35,
+      "last_time": 4.45
+    }
+  ]
+}

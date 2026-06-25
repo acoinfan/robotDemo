@@ -1,0 +1,60 @@
+{
+  "task": "level3_0884_0",
+  "status": "error",
+  "object": "2_tablet_0",
+  "target": "2_tablet_0",
+  "position_delta_cm": 7.358436880227644,
+  "max_speed_mps": 0.05,
+  "events": [
+    {
+      "time": 4.817,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_tablet_0 contacts 6_clock_0",
+      "count": 72,
+      "first_time": 4.817,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_tablet_0 contacts 6_clock_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.767,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_tablet_0 contacts 3_pen_0",
+      "count": 15,
+      "first_time": 7.767,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_tablet_0 contacts 3_pen_0",
+      "count": 14,
+      "first_time": 8.017,
+      "last_time": 8.233
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_tablet_0 contacts 6_clock_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    }
+  ]
+}

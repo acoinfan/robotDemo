@@ -1,0 +1,90 @@
+{
+  "task": "level3_1400_1",
+  "status": "error",
+  "object": "9_telephone_0",
+  "target": "9_telephone_0",
+  "position_delta_cm": 53.92043534267155,
+  "max_speed_mps": 0.2696021767133578,
+  "events": [
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 0.270 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    },
+    {
+      "time": 4.2,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "9_telephone_0 contacts 11_plant_paperip_1",
+      "count": 26,
+      "first_time": 4.2,
+      "last_time": 4.617
+    },
+    {
+      "time": 7.1,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "9_telephone_0 contacts 1_mouse_0",
+      "count": 55,
+      "first_time": 7.1,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.417,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "9_telephone_0 contacts 6_pencil_pen_1",
+      "count": 36,
+      "first_time": 7.417,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.55,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "9_telephone_0 contacts 3_mouse_pad_0",
+      "count": 28,
+      "first_time": 7.55,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "9_telephone_0 contacts 1_mouse_0",
+      "count": 54,
+      "first_time": 8.017,
+      "last_time": 8.9
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "9_telephone_0 contacts 3_mouse_pad_0",
+      "count": 27,
+      "first_time": 8.017,
+      "last_time": 8.45
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "9_telephone_0 contacts 6_pencil_pen_1",
+      "count": 35,
+      "first_time": 8.017,
+      "last_time": 8.583
+    }
+  ]
+}

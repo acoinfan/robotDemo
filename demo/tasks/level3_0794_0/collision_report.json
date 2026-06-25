@@ -1,0 +1,20 @@
+{
+  "task": "level3_0794_0",
+  "status": "warning",
+  "object": "11_remote_1",
+  "target": "11_remote_1",
+  "position_delta_cm": 69.70180601853575,
+  "max_speed_mps": 0.34850903009267875,
+  "events": [
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 0.349 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    }
+  ]
+}

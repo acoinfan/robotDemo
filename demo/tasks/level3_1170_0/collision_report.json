@@ -1,0 +1,150 @@
+{
+  "task": "level3_1170_0",
+  "status": "error",
+  "object": "10_coaster_0",
+  "target": "10_coaster_0",
+  "position_delta_cm": 21.6108431257235,
+  "max_speed_mps": 0.1080542156286175,
+  "events": [
+    {
+      "time": 0.0,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_mug_0",
+      "count": 121,
+      "first_time": 0.0,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_mug_0",
+      "count": 120,
+      "first_time": 2.017,
+      "last_time": 4.0
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "10_coaster_0 contacts 3_mug_0",
+      "count": 58,
+      "first_time": 4.017,
+      "last_time": 4.967
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_mug_0",
+      "count": 57,
+      "first_time": 4.017,
+      "last_time": 4.95
+    },
+    {
+      "time": 4.5,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "10_coaster_0 contacts 9_computer_0",
+      "count": 91,
+      "first_time": 4.5,
+      "last_time": 6.0
+    },
+    {
+      "time": 4.517,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 9_computer_0",
+      "count": 90,
+      "first_time": 4.517,
+      "last_time": 6.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "10_coaster_0 contacts 9_computer_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.017,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 9_computer_0",
+      "count": 120,
+      "first_time": 6.017,
+      "last_time": 8.0
+    },
+    {
+      "time": 6.9,
+      "segment": 3,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 2_keyboard_0",
+      "count": 67,
+      "first_time": 6.9,
+      "last_time": 8.0
+    },
+    {
+      "time": 7.083,
+      "segment": 3,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "10_coaster_0 contacts 2_keyboard_0",
+      "count": 56,
+      "first_time": 7.083,
+      "last_time": 8.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "10_coaster_0 contacts 2_keyboard_0",
+      "count": 55,
+      "first_time": 8.017,
+      "last_time": 8.917
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 2_keyboard_0",
+      "count": 66,
+      "first_time": 8.017,
+      "last_time": 9.1
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "10_coaster_0 contacts 9_computer_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    },
+    {
+      "time": 8.017,
+      "segment": 4,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 9_computer_0",
+      "count": 120,
+      "first_time": 8.017,
+      "last_time": 10.0
+    }
+  ]
+}

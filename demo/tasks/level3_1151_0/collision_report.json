@@ -1,0 +1,20 @@
+{
+  "task": "level3_1151_0",
+  "status": "warning",
+  "object": "8_keyboard_0",
+  "target": "8_keyboard_0",
+  "position_delta_cm": 481.180935066811,
+  "max_speed_mps": 2.405904675334055,
+  "events": [
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 2.406 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    }
+  ]
+}

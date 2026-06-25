@@ -1,0 +1,40 @@
+{
+  "task": "level2_0412_0",
+  "status": "error",
+  "object": "4_bowl_0",
+  "target": "4_bowl_0",
+  "position_delta_cm": 211.21471187136893,
+  "max_speed_mps": 1.0560735593568444,
+  "events": [
+    {
+      "time": 1.617,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_ipad_0",
+      "count": 24,
+      "first_time": 1.617,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_ipad_0",
+      "count": 23,
+      "first_time": 2.017,
+      "last_time": 2.383
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 1.056 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    }
+  ]
+}

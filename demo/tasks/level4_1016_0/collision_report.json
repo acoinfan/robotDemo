@@ -1,0 +1,30 @@
+{
+  "task": "level4_1016_0",
+  "status": "error",
+  "object": "2_desk_lamp_0",
+  "target": "2_desk_lamp_0",
+  "position_delta_cm": 86.58943649950042,
+  "max_speed_mps": 0.4329471824975021,
+  "events": [
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 0.433 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    },
+    {
+      "time": 4.117,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "2_desk_lamp_0 contacts 7_notebook_0",
+      "count": 4,
+      "first_time": 4.117,
+      "last_time": 4.167
+    }
+  ]
+}

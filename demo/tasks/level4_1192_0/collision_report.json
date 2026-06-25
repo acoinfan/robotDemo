@@ -1,0 +1,60 @@
+{
+  "task": "level4_1192_0",
+  "status": "error",
+  "object": "5_mouse_0",
+  "target": "5_mouse_0",
+  "position_delta_cm": 194.85435205892514,
+  "max_speed_mps": 0.9742717602946258,
+  "events": [
+    {
+      "time": 0.0,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 7_laptop_0",
+      "count": 121,
+      "first_time": 0.0,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 7_laptop_0",
+      "count": 120,
+      "first_time": 2.017,
+      "last_time": 4.0
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "5_mouse_0 contacts 7_laptop_0",
+      "count": 27,
+      "first_time": 4.017,
+      "last_time": 4.45
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 7_laptop_0",
+      "count": 28,
+      "first_time": 4.017,
+      "last_time": 4.467
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "speed",
+      "severity": "warning",
+      "message": "speed 0.974 m/s exceeds 0.250 m/s",
+      "count": 120,
+      "first_time": 4.017,
+      "last_time": 6.0
+    }
+  ]
+}

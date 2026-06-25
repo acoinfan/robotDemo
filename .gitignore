@@ -3,4 +3,6 @@ data
 office_table.zip
 __pycache__
 venv
-
+.agents
+.codex
+docs

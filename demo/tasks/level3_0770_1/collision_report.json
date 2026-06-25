@@ -1,0 +1,80 @@
+{
+  "task": "level3_0770_1",
+  "status": "error",
+  "object": "10_bottle_0",
+  "target": "10_bottle_0",
+  "position_delta_cm": 37.99633472685806,
+  "max_speed_mps": 0.18998167363429028,
+  "events": [
+    {
+      "time": 0.0,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_desk_lamp_0",
+      "count": 121,
+      "first_time": 0.0,
+      "last_time": 2.0
+    },
+    {
+      "time": 1.433,
+      "segment": 0,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_alarm_clock_0",
+      "count": 35,
+      "first_time": 1.433,
+      "last_time": 2.0
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 1_alarm_clock_0",
+      "count": 34,
+      "first_time": 2.017,
+      "last_time": 2.567
+    },
+    {
+      "time": 2.017,
+      "segment": 1,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_desk_lamp_0",
+      "count": 120,
+      "first_time": 2.017,
+      "last_time": 4.0
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "10_bottle_0 contacts 3_desk_lamp_0",
+      "count": 50,
+      "first_time": 4.017,
+      "last_time": 4.833
+    },
+    {
+      "time": 4.017,
+      "segment": 2,
+      "kind": "physx_gripper_contact",
+      "severity": "error",
+      "message": "gripper contacts 3_desk_lamp_0",
+      "count": 53,
+      "first_time": 4.017,
+      "last_time": 4.883
+    },
+    {
+      "time": 4.05,
+      "segment": 2,
+      "kind": "physx_carried_object_contact",
+      "severity": "error",
+      "message": "10_bottle_0 contacts 1_alarm_clock_0",
+      "count": 40,
+      "first_time": 4.05,
+      "last_time": 4.7
+    }
+  ]
+}
